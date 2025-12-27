@@ -1,0 +1,675 @@
+/* 
+ * 2025 ULTIMATE DESIGN SYSTEM - "ETHEREAL BENTO"
+ * Direction: Linear-grade quality, Matte Glass, Physical Touch
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* --- PALETTE: MATTE & ETHEREAL --- */
+  /* Brand: Electric yet restrained Blue/Violet */
+  --vp-c-brand-1: #5E6AD2; /* Deep Indigo */
+  --vp-c-brand-2: #7C88EA; /* Soft Indigo */
+  --vp-c-brand-3: #4F5ABF; /* Darker interaction state */
+  --vp-c-brand-soft: rgba(94, 106, 210, 0.08);
+  --vp-c-brand-glow: rgba(94, 106, 210, 0.4);
+
+  /* Backgrounds: Matte, layered, not flat */
+  --vp-c-bg: #F9FAFB; /* Cool Gray 50 */
+  --vp-c-bg-alt: #FFFFFF;
+  --vp-c-bg-soft: #F3F4F6; /* Cool Gray 100 */
+  
+  /* Surfaces: Floating cards */
+  --vp-c-surface-1: #FFFFFF;
+  --vp-c-surface-2: #FAFAFA;
+  --vp-c-surface-glass: rgba(255, 255, 255, 0.7);
+
+  /* Text: High Contrast & Readability */
+  --vp-c-text-1: #111827; /* Gray 900 */
+  --vp-c-text-2: #4B5563; /* Gray 600 */
+  --vp-c-text-3: #9CA3AF; /* Gray 400 */
+
+  /* Borders: Extremely subtle */
+  --vp-c-border: rgba(0, 0, 0, 0.06);
+  --vp-c-divider: rgba(0, 0, 0, 0.06);
+  --vp-c-gutter: rgba(0, 0, 0, 0.06);
+
+  /* --- PHYSICAL SYSTEM --- */
+  --card-radius: 16px;
+  --btn-radius: 8px;
+  --inner-radius: 12px;
+  
+  /* Shadows: Floating & Diffused */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 8px 16px -4px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.05), 
+    0 10px 10px -5px rgba(0, 0, 0, 0.02),
+    0 0 0 1px rgba(0,0,0,0.03); /* Physical Border */
+  --shadow-glow: 0 0 0 4px rgba(94, 106, 210, 0.15);
+
+  /* Layout - Golden Ratio inspired (1:1.618) */
+  --vp-layout-max-width: 1440px;
+  --vp-sidebar-width: 260px;
+  --vp-aside-width: 220px;
+  --vp-layout-gap: 32px;
+  
+  /* Typography */
+  --vp-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --vp-font-family-mono: "JetBrains Mono", monospace;
+}
+
+/* Dark Mode: Deep Space Matte */
+.dark {
+  --vp-c-brand-1: #818CF8;
+  --vp-c-brand-2: #6366F1;
+  --vp-c-brand-3: #A5B4FC;
+  --vp-c-brand-soft: rgba(129, 140, 248, 0.12);
+  --vp-c-brand-glow: rgba(129, 140, 248, 0.4);
+
+  --vp-c-bg: #030304; /* Almost Black */
+  --vp-c-bg-alt: #0B0B0D;
+  --vp-c-bg-soft: #141417;
+
+  --vp-c-surface-1: #101012; /* Card Surface */
+  --vp-c-surface-2: #18181B;
+  --vp-c-surface-glass: rgba(16, 16, 18, 0.7);
+
+  --vp-c-text-1: #F9FAFB;
+  --vp-c-text-2: #9CA3AF;
+  --vp-c-text-3: #6B7280;
+
+  --vp-c-border: rgba(255, 255, 255, 0.08);
+  --vp-c-divider: rgba(255, 255, 255, 0.08);
+  --vp-c-gutter: rgba(255, 255, 255, 0.08);
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.6);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 8px 16px -4px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 
+    0 24px 48px -12px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255,255,255,0.08);
+}
+
+/* --- GLOBAL TEXTURE & RESET --- */
+html {
+  scroll-behavior: smooth; /* 开启平滑滚动 */
+}
+
+body {
+  background-color: var(--vp-c-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Performance Fix: Separate layer for noise to avoid repaint on scroll */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Subtle Noise Texture */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0; /* Keep it low */
+  mix-blend-mode: overlay;
+  /* Hardware Acceleration */
+  transform: translate3d(0, 0, 0); 
+  will-change: transform; 
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-border);
+  border-radius: 99px;
+  transition: background 0.3s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-text-3);
+}
+
+/* --- NAV BAR: FLOATING DOCK --- */
+.VPNav {
+  background-color: rgba(255, 255, 255, 0.6) !important; /* 更通透 */
+  backdrop-filter: blur(12px) saturate(160%);
+  border-bottom: 1px solid rgba(0,0,0,0.03) !important; /* 极弱的边界，几乎不可见 */
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.dark .VPNav {
+  background-color: rgba(3, 3, 4, 0.6) !important;
+}
+
+.VPNavBarTitle {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* --- SEARCH: ETHEREAL INPUT --- */
+/* 搜索按钮容器重置 */
+.VPNavBarSearch {
+  margin-right: 12px;
+}
+
+/* 搜索按钮主体 */
+.DocSearch-Button {
+  background: var(--vp-c-bg-soft) !important;
+  border-radius: 12px !important;
+  padding: 0 12px !important;
+  height: 40px !important;
+  border: 1px solid var(--vp-c-border) !important;
+  transition: all 0.2s ease !important;
+  box-shadow: var(--shadow-xs) !important;
+}
+
+.DocSearch-Button:hover {
+  background: var(--vp-c-surface-1) !important;
+  border-color: var(--vp-c-brand-2) !important;
+  box-shadow: 0 0 0 2px var(--vp-c-brand-soft) !important;
+  transform: translateY(-1px);
+}
+
+.DocSearch-Button-Placeholder {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+.DocSearch-Search-Icon {
+  color: var(--vp-c-text-3) !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* 快捷键提示 Ctrl+K */
+.DocSearch-Button-Key {
+  background: rgba(0,0,0,0.05) !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--vp-c-text-3) !important;
+  font-family: var(--vp-font-family-mono) !important;
+  font-size: 11px !important;
+  padding-bottom: 2px !important;
+  border-radius: 4px !important;
+  margin-left: 6px !important;
+  top: 0 !important; /* Fix alignment */
+}
+.dark .DocSearch-Button-Key {
+  background: rgba(255,255,255,0.1) !important;
+}
+
+
+/* --- SIDEBAR: UNIFIED & CLEAN (GOLDEN RATIO) --- */
+@media (min-width: 960px) {
+  :root {
+    --vp-sidebar-width: 240px;
+  }
+
+  .VPSidebar {
+    background-color: var(--vp-c-bg-soft) !important;
+    border-right: none !important;
+    padding-left: 0 !important;
+    padding-top: var(--vp-nav-height) !important;
+    width: var(--vp-sidebar-width) !important;
+    backdrop-filter: none;
+    z-index: 10;
+    left: 0 !important; /* 确保靠左 */
+  }
+  
+  .VPSidebar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.03) 20%, rgba(0,0,0,0.03) 80%, transparent);
+  }
+  .dark .VPSidebar::after {
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.03) 20%, rgba(255,255,255,0.03) 80%, transparent);
+  }
+
+  .VPSidebar .nav {
+    padding: 0 16px 0 20px !important; /* 内容往内靠 */
+  }
+}
+
+/* 大屏幕布局 */
+@media (min-width: 1280px) {
+  :root {
+    --vp-sidebar-width: 260px;
+  }
+  
+  .VPSidebar .nav {
+    padding: 0 20px 0 28px !important;
+  }
+}
+
+/* --- CONTENT: GOLDEN LAYOUT --- */
+.VPContent {
+  padding-top: var(--vp-nav-height) !important;
+}
+
+@media (min-width: 960px) {
+  /* Only apply sidebar padding when sidebar is visible */
+  .has-sidebar .VPContent {
+    padding-left: calc(var(--vp-sidebar-width) + var(--vp-layout-gap)) !important;
+    padding-right: 0 !important;
+  }
+  
+  .VPDoc {
+    padding: 32px 48px 64px !important;
+    width: 100% !important;
+    max-width: 1000px !important;
+    margin: 32px auto !important;
+    
+    /* Card effect for the document */
+    background: var(--vp-c-surface-1) !important;
+    border: 1px solid var(--vp-c-border) !important;
+    border-radius: var(--card-radius) !important;
+    box-shadow: var(--shadow-md) !important;
+  }
+
+  /* 核心修复：只限制正文内容的宽度，不影响右侧目录 */
+  .VPDoc .content-container {
+    max-width: 768px !important;
+    margin: 0 !important; /* 靠左对齐，配合父级 padding */
+  }
+  
+  /* 确保右侧目录显示且吸附 */
+  .VPDoc .aside {
+    display: block !important;
+  }
+  
+  .VPDoc .container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    gap: 64px; 
+  }
+  
+  .VPDoc .aside-container {
+    width: 224px !important;
+    flex-shrink: 0;
+  }
+}
+
+/* Sidebar Item 样式微调 - 更紧凑的黄金节奏 */
+
+/* Sidebar Item 样式 */
+.VPSidebarItem.level-0 {
+  padding-bottom: 8px !important;
+}
+
+.VPSidebarItem.level-0 .text {
+  font-weight: 700 !important;
+  color: var(--vp-c-text-1) !important;
+  font-size: 13px !important;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.VPSidebarItem.level-1 .text,
+.VPSidebarItem.level-2 .text {
+  font-size: 14px !important;
+  line-height: 24px !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+/* 选中态优化 */
+.VPSidebarItem.is-active > .item > .link, 
+.VPSidebarItem.is-active > .item > .text {
+  color: var(--vp-c-brand-1) !important;
+  font-weight: 600;
+}
+
+.VPSidebarItem.is-active > .item > .link::before {
+  /* 微调指示线位置 */
+  left: -20px; 
+  width: 2px;
+  background-color: var(--vp-c-brand-1);
+}
+
+/* Typography Enhancements */
+.vp-doc h1 {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, var(--vp-c-text-1) 30%, var(--vp-c-text-2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.vp-doc h2 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: none; /* 移除讨厌的横线 */
+}
+
+.vp-doc p {
+  line-height: 1.75;
+  color: var(--vp-c-text-2);
+  margin-bottom: 24px;
+}
+
+/* Links */
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s;
+}
+.vp-doc a:hover {
+  color: var(--vp-c-brand-2);
+  border-bottom-color: var(--vp-c-brand-2);
+}
+
+/* Code Blocks */
+.vp-doc div[class*='language-'] {
+  border-radius: var(--inner-radius);
+  margin: 24px 0;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--vp-c-border);
+  background: #1e1e2e !important; /* Catppuccin-style dark, better contrast */
+  transition: transform 0.2s;
+}
+.vp-doc div[class*='language-']:hover {
+  transform: scale(1.005);
+}
+
+/* Code block text - improve readability */
+.vp-doc div[class*='language-'] code {
+  color: #cdd6f4 !important; /* Light text for contrast */
+}
+
+.vp-doc div[class*='language-'] .line {
+  line-height: 1.7;
+}
+
+/* Line numbers */
+.vp-doc div[class*='language-'] .line-numbers-wrapper {
+  color: #6c7086 !important;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Inline code */
+.vp-doc :not(pre) > code {
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-brand-1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  border: 1px solid var(--vp-c-border);
+}
+
+.dark .vp-doc :not(pre) > code {
+  background: rgba(255,255,255,0.08);
+  color: var(--vp-c-brand-3);
+}
+
+/* --- HOME: GOLDEN RATIO LAYOUT --- */
+.VPHome {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+.VPHero {
+  padding-top: 60px !important;
+  padding-bottom: 48px !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+}
+
+/* Hero 内容区域 - 黄金分割 */
+.VPHero .container {
+  display: flex !important;
+  align-items: center !important;
+  gap: 48px !important;
+}
+
+.VPHero .main {
+  flex: 1.618 !important; /* 黄金比例 */
+  max-width: 600px !important;
+}
+
+.VPHero .image {
+  flex: 1 !important;
+  max-width: 280px !important;
+}
+
+.VPHero .name {
+  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 12px var(--vp-c-brand-soft));
+}
+
+.VPHero .actions .action-button {
+  border-radius: var(--btn-radius) !important;
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.VPHero .actions .action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+.VPHero .actions .action-button:active {
+  transform: translateY(1px);
+}
+
+/* Feature Grid - 3列黄金布局 */
+.VPFeatures {
+  padding: 32px 0 64px !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+}
+
+.VPFeatures .container {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.VPFeatures .items {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+}
+
+@media (max-width: 960px) {
+  .VPFeatures .items {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .VPFeatures .items {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .VPHero .container {
+    flex-direction: column !important;
+  }
+}
+
+.VPFeature {
+  background-color: var(--vp-c-surface-1) !important;
+  border: 1px solid var(--vp-c-border) !important;
+  border-radius: var(--card-radius) !important;
+  padding: 24px !important;
+  height: 100%;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.VPFeature:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--shadow-md) !important;
+  border-color: var(--vp-c-brand-soft) !important;
+}
+
+/* Spotlight Effect on Bento Items */
+.VPFeature::after, .glass-card::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(
+    800px circle at var(--mouse-x, -100px) var(--mouse-y, -100px),
+    rgba(94, 106, 210, 0.06),
+    transparent 40%
+  );
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.VPFeature:hover::after, .glass-card:hover::after {
+  opacity: 1;
+}
+
+.VPFeature .icon {
+  background: var(--vp-c-bg-soft) !important;
+  border-radius: 12px !important;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.VPFeature .title {
+  font-weight: 700 !important;
+  font-size: 20px !important;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px !important;
+}
+
+.VPFeature .details {
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+/* --- CUSTOM COMPONENTS --- */
+
+/* Callout */
+.callout {
+  position: relative;
+  padding: 24px;
+  margin: 32px 0;
+  border-radius: var(--card-radius);
+  background: var(--vp-c-surface-2);
+  border: 1px solid var(--vp-c-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.callout::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--vp-c-brand-1);
+}
+.callout-info { background: rgba(59, 130, 246, 0.04); }
+.callout-warning { background: rgba(234, 179, 8, 0.04); }
+.callout-tip { background: rgba(16, 185, 129, 0.04); }
+.callout-danger { background: rgba(239, 68, 68, 0.04); }
+
+/* Steps */
+.step-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: var(--vp-c-surface-1);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--vp-c-brand-1);
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.step-item:hover .step-number {
+  transform: scale(1.15) rotate(-5deg);
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-1);
+  color: #fff;
+}
+.step-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 50px;
+  bottom: -30px;
+  width: 2px;
+  background: var(--vp-c-border);
+  z-index: 1;
+}
+
+/* Glass Card Helper */
+.glass-card {
+  background: var(--vp-c-surface-1);
+  border: 1px solid var(--vp-c-border);
+  border-radius: var(--card-radius);
+  padding: 24px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: var(--shadow-sm);
+}
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Animations - Page Level Fade */
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: pageFadeIn 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .VPDoc {
+    padding: 24px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .VPFeature {
+    padding: 24px !important;
+  }
+}

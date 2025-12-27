@@ -1,0 +1,49 @@
+{
+  "name": "deepractice-docs-site",
+  "version": "1.0.0",
+  "description": "Deepractice Agents 智能体开发教程 - 企业级文档站点",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "node scripts/prebuild.js && vitepress build docs",
+    "preview": "vitepress preview docs",
+    "sync": "node scripts/sync-content.js",
+    "lint": "node scripts/lint-content.js",
+    "generate:nav": "node scripts/generate-nav.js",
+    "generate:search": "node scripts/generate-search-index.js",
+    "check:links": "node scripts/check-links.js",
+    "validate": "npm run lint && npm run check:links"
+  },
+  "dependencies": {
+    "vitepress": "^1.5.0",
+    "vue": "^3.4.0",
+    "mermaid": "^11.4.0",
+    "medium-zoom": "^1.1.0",
+    "minisearch": "^7.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "gray-matter": "^4.0.3",
+    "glob": "^11.0.0",
+    "chalk": "^5.3.0",
+    "markdown-it": "^14.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT",
+  "author": "Deepractice Team",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deepractice/deepractice-agents"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "llm",
+    "typescript",
+    "agentx",
+    "promptx",
+    "documentation"
+  ]
+}

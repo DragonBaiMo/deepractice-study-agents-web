@@ -1,0 +1,94 @@
+{
+  "version": "1.0",
+  "updated": "2024-12-27",
+  "resources": [
+    {
+      "id": "openai-docs",
+      "name": "OpenAI Platform Documentation",
+      "url": "https://platform.openai.com/docs",
+      "provider": "OpenAI",
+      "type": "doc",
+      "tags": ["llm", "api", "gpt"],
+      "audience": "public",
+      "status": "active",
+      "note": "GPT 系列模型官方文档"
+    },
+    {
+      "id": "anthropic-docs",
+      "name": "Anthropic Documentation",
+      "url": "https://docs.anthropic.com",
+      "provider": "Anthropic",
+      "type": "doc",
+      "tags": ["llm", "api", "claude"],
+      "audience": "public",
+      "status": "active",
+      "note": "Claude 系列模型官方文档"
+    },
+    {
+      "id": "langchain-docs",
+      "name": "LangChain Documentation",
+      "url": "https://python.langchain.com/docs",
+      "provider": "LangChain",
+      "type": "doc",
+      "tags": ["framework", "llm", "agent"],
+      "audience": "public",
+      "status": "active",
+      "note": "LangChain 框架官方文档"
+    },
+    {
+      "id": "react-paper",
+      "name": "ReAct: Synergizing Reasoning and Acting",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "provider": "arXiv",
+      "type": "paper",
+      "tags": ["agent", "reasoning", "react"],
+      "audience": "public",
+      "status": "active",
+      "note": "ReAct 范式原始论文"
+    },
+    {
+      "id": "cot-paper",
+      "name": "Chain-of-Thought Prompting",
+      "url": "https://arxiv.org/abs/2201.11903",
+      "provider": "arXiv",
+      "type": "paper",
+      "tags": ["prompting", "reasoning", "cot"],
+      "audience": "public",
+      "status": "active",
+      "note": "思维链提示原始论文"
+    },
+    {
+      "id": "generative-agents-paper",
+      "name": "Generative Agents: Interactive Simulacra",
+      "url": "https://arxiv.org/abs/2304.03442",
+      "provider": "arXiv",
+      "type": "paper",
+      "tags": ["agent", "simulation", "memory"],
+      "audience": "public",
+      "status": "active",
+      "note": "生成式智能体论文"
+    },
+    {
+      "id": "deeplearning-ai-llm",
+      "name": "LLM Application Development",
+      "url": "https://www.deeplearning.ai/short-courses/",
+      "provider": "DeepLearning.AI",
+      "type": "course",
+      "tags": ["llm", "course", "beginner"],
+      "audience": "public",
+      "status": "active",
+      "note": "Andrew Ng 主讲的 LLM 应用开发课程"
+    },
+    {
+      "id": "huggingface-agents",
+      "name": "Hugging Face Agents Course",
+      "url": "https://huggingface.co/learn/agents-course",
+      "provider": "Hugging Face",
+      "type": "course",
+      "tags": ["agent", "course", "transformers"],
+      "audience": "public",
+      "status": "active",
+      "note": "Hugging Face 智能体开发课程"
+    }
+  ]
+}

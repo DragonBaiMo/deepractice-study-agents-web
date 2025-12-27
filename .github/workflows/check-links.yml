@@ -1,0 +1,73 @@
+name: Check External Links
+
+on:
+  schedule:
+    # 每周一凌晨 2 点运行
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check external links
+        run: npm run check:links -- --external
+        continue-on-error: true
+
+      - name: Create issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = '🔗 外部链接检查发现问题'
+            const body = `
+            外部链接检查发现部分链接可能已失效。
+
+            请查看 [工作流运行日志](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}) 获取详情。
+
+            建议操作：
+            1. 检查失效链接是否确实无法访问
+            2. 更新或移除失效链接
+            3. 考虑添加链接的存档版本
+            `
+
+            // 检查是否已存在相同标题的 issue
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'link-check'
+            })
+
+            const existingIssue = issues.data.find(i => i.title === title)
+
+            if (existingIssue) {
+              // 更新现有 issue
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existingIssue.number,
+                body: `检查时间: ${new Date().toISOString()}\n\n${body}`
+              })
+            } else {
+              // 创建新 issue
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: body,
+                labels: ['link-check', 'maintenance']
+              })
+            }
