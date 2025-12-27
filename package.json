@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "description": "智能体开发教程 - 基于 TypeScript + AgentX + PromptX",
   "private": true,
+  "scripts": {
+    "lint": "node scripts/lint-content.js",
+    "check:links": "node scripts/check-links.js",
+    "build": "node scripts/prebuild.js && vitepress build docs"
+  },
   "keywords": [
     "ai",
     "agent",
