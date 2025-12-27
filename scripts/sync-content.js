@@ -9,7 +9,11 @@ import { glob } from 'glob'
 import matter from 'gray-matter'
 import chalk from 'chalk'
 
-const SOURCE_DIR = path.resolve('../deepractice-agents-main/docs')
+const SOURCE_DIR_CANDIDATES = [
+  process.env.DEEPRACTICE_SOURCE_DIR,
+  path.resolve('deepractice-agents-main/docs'),
+  path.resolve('../deepractice-agents-main/docs')
+].filter(Boolean)
 const TARGET_DIR = path.resolve('docs/docs')
 
 // 章节标题映射
@@ -31,6 +35,17 @@ const chapterTitles = {
   'chapter15': '自动化深度研究',
   'chapter16': '构建赛博小镇'
 }
+
+function resolveSourceDir() {
+  for (const candidate of SOURCE_DIR_CANDIDATES) {
+    if (fs.existsSync(candidate)) {
+      return candidate
+    }
+  }
+  return null
+}
+
+const SOURCE_DIR = resolveSourceDir()
 
 /**
  * 修复 HTML 属性中的嵌套引号问题
@@ -228,8 +243,8 @@ async function main() {
   console.log(chalk.blue('📥 开始同步内容...\n'))
   
   // 检查源目录
-  if (!fs.existsSync(SOURCE_DIR)) {
-    console.error(chalk.red(`❌ 源目录不存在: ${SOURCE_DIR}`))
+  if (!SOURCE_DIR) {
+    console.error(chalk.red(`? 源目录不存在: ${SOURCE_DIR_CANDIDATES.join(", ")}`))
     process.exit(1)
   }
   

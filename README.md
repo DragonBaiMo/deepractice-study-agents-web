@@ -1,189 +1,96 @@
-# Deepractice Agents 文档站点
+# Deepractice Agents 智能体开发教程
 
-> 基于 VitePress 构建的企业级教学资料网站
+> 基于 TypeScript + AgentX + PromptX 的现代 AI 智能体开发指南
 
-[![Deploy](https://github.com/yejunhao159/deepractice-agents/actions/workflows/deploy.yml/badge.svg)](https://github.com/yejunhao159/deepractice-agents/actions/workflows/deploy.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## 📚 教程简介
 
-## 📖 简介
+本教程由 **深度实践 (Deepractice)** 团队为白云学院定制开发，是一套理论与实战并重的智能体开发教程。
 
-本项目是 Deepractice Agents 智能体开发教程的文档站点，提供：
+**技术选型：**
+- **TypeScript** - 现代 AI 开发首选语言
+- **AgentX** - 事件驱动的 Agent 框架
+- **PromptX** - AI 角色认知系统
 
-- 📚 16 章完整教程内容
-- 🗺️ 学习地图与路径规划
-- 📦 外部资源聚合与管理
-- 🔍 全文搜索功能
-- 📱 响应式设计，支持移动端
+## 📖 教程目录
 
-## 🚀 快速开始
+### 第一部分：智能体与LLM基础
 
-### 环境要求
+| 章节 | 内容 | 状态 |
+|------|------|------|
+| [第1章](./docs/chapter01/) | 初识智能体 | 📝 |
+| [第2章](./docs/chapter02/) | 智能体发展史 | 📝 |
+| [第3章](./docs/chapter03/) | 大语言模型基础 | 📝 |
 
-- Node.js >= 18.0.0
-- npm >= 9.0.0
+### 第二部分：构建AI智能体
 
-### 安装
+| 章节 | 内容 | 状态 |
+|------|------|------|
+| [第4章](./docs/chapter04/) | 智能体经典范式构建 | 📝 |
+| [第5章](./docs/chapter05/) | PromptX 智能体上下文平台 | ✅ |
+| [第6章](./docs/chapter06/) | Deepractice 智能体框架体系 | ✅ |
+| [第7章](./docs/chapter07/) | AgentX 事件驱动智能体框架 | ✅ |
+| [第8章](./docs/chapter08/) | 主流多智能体框架实践 | ✅ |
 
-```bash
-# 克隆仓库
-git clone https://github.com/yejunhao159/deepractice-agents.git
-cd deepractice-agents/docs-site
+### 第三部分：高级知识扩展
 
-# 安装依赖
-npm install
-```
+| 章节 | 内容 | 状态 |
+|------|------|------|
+| [第9章](./docs/chapter09/) | Monogent 认知架构深度实践 | ✅ |
+| [第10章](./docs/chapter10/) | 上下文工程 | 📝 |
+| [第11章](./docs/chapter11/) | 智能体通信协议 | 📝 |
+| [第12章](./docs/chapter12/) | Agentic-RL | 📝 |
+| [第13章](./docs/chapter13/) | 智能体性能评估 | 📝 |
 
-### 开发
+### 第四部分：综合案例进阶
 
-```bash
-# 启动开发服务器
-npm run dev
-```
+| 章节 | 内容 | 状态 |
+|------|------|------|
+| [第14章](./docs/chapter14/) | 智能旅行助手 | 📝 |
+| [第15章](./docs/chapter15/) | 自动化深度研究智能体 | 📝 |
+| [第16章](./docs/chapter16/) | 构建赛博小镇 | 📝 |
 
-访问 http://localhost:5173 查看站点。
+### 第五部分：毕业设计
 
-### 构建
+| 章节 | 内容 | 状态 |
+|------|------|------|
+| [第17章](./docs/chapter17/) | 毕业设计 | 📝 |
 
-```bash
-# 构建生产版本
-npm run build
-
-# 预览构建结果
-npm run preview
-```
+> ✅ = 已完成
+> 📝 = 原始内容已导入，待逐章精细打磨
+> 🔄 = 待重写（将替换为 AgentX/PromptX 内容）
 
 ## 📁 项目结构
 
 ```
-docs-site/
-├── docs/                          # 文档内容
-│   ├── .vitepress/               # VitePress 配置
-│   │   ├── config.ts             # 站点配置
-│   │   └── theme/                # 主题定制
-│   │       ├── index.ts          # 主题入口
-│   │       ├── sidebar.ts        # 侧边栏配置
-│   │       ├── styles/           # 自定义样式
-│   │       └── components/       # 增强组件
-│   ├── docs/                     # 教程章节
-│   ├── learning-map/             # 学习地图
-│   ├── resources/                # 资源库
-│   └── public/                   # 静态资源
-├── scripts/                      # 构建脚本
-│   ├── prebuild.js              # 预构建
-│   ├── lint-content.js          # 内容校验
-│   ├── generate-nav.js          # 导航生成
-│   ├── generate-search-index.js # 搜索索引
-│   └── check-links.js           # 链接检查
-├── .github/workflows/            # CI/CD 配置
+deepractice-agents/
+├── docs/
+│   ├── 前言.md
+│   ├── chapter01/ ~ chapter16/   # 16章完整内容
+│   └── images/                    # 图片资源 (60MB)
+├── MIGRATION_PLAN.md              # 改造规划
+├── .env.example
 ├── package.json
-├── tsconfig.json
 └── README.md
 ```
 
-## 🛠️ 可用命令
+## 🎯 改造计划
 
-| 命令 | 描述 |
-|------|------|
-| `npm run dev` | 启动开发服务器 |
-| `npm run build` | 构建生产版本 |
-| `npm run preview` | 预览构建结果 |
-| `npm run lint` | 检查内容规范 |
-| `npm run check:links` | 检查链接有效性 |
-| `npm run validate` | 完整验证（lint + links） |
+本教程基于 [Datawhale Hello-Agents](https://github.com/datawhalechina/hello-agents) 进行改造：
 
-## 📝 内容规范
+- **保留精华**：理论框架、架构设计、概念图表
+- **融合创新**：整合 AgentX 事件驱动框架 + PromptX 角色认知系统
+- **逐章打磨**：每章每节精细讨论，形成完整教材
 
-### Frontmatter 字段
-
-每篇文档应包含以下 Frontmatter：
-
-```yaml
----
-title: 文档标题        # 必填
-order: 1              # 排序号（推荐）
-tags: [tag1, tag2]    # 标签（推荐）
-status: stable        # 状态：draft/stable/deprecated
----
-```
-
-### 目录规范
-
-- `docs/` 为内容根目录
-- `docs/chapterXX/` 为章节目录
-- 每章必须有 `README.md` 作为章首页
-- 图片统一放在 `docs/images/` 或章节内 `assets/`
-
-### 增强组件
-
-支持以下 Markdown 增强组件：
-
-```vue
-<!-- 提示块 -->
-<Callout type="info" title="提示">
-  这是一条提示信息
-</Callout>
-
-<!-- 步骤块 -->
-<Steps>
-  <Step>第一步</Step>
-  <Step>第二步</Step>
-</Steps>
-
-<!-- 演示块 -->
-<Demo title="演示">
-  演示内容
-</Demo>
-
-<!-- 代码运行 -->
-<CodeRun language="javascript">
-```javascript
-console.log('Hello, World!')
-```
-</CodeRun>
-```
-
-## 🔄 CI/CD
-
-项目使用 GitHub Actions 实现自动化：
-
-1. **内容校验**：检查 Frontmatter、标题层级、图片引用
-2. **链接检查**：验证内部链接有效性
-3. **自动构建**：生成导航、搜索索引、站点产物
-4. **自动部署**：部署到 GitHub Pages
-5. **定期巡检**：每周检查外部链接
-
-## 📊 可观测性
-
-- 页面访问统计（可接入 Google Analytics）
-- 搜索词统计
-- 404 页面统计
-- 构建产物大小监控
-
-## 🔒 安全
-
-- Markdown 渲染防 XSS
-- 外部链接安全策略（nofollow、新窗口）
-- CSP 内容安全策略
-- 资源大小限制
-
-## 🤝 贡献指南
-
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/amazing-feature`)
-3. 提交更改 (`git commit -m 'Add amazing feature'`)
-4. 推送到分支 (`git push origin feature/amazing-feature`)
-5. 创建 Pull Request
+详见 [MIGRATION_PLAN.md](./MIGRATION_PLAN.md)
 
 ## 📄 许可证
 
-本项目采用 [MIT 许可证](LICENSE)。
+MIT License
 
 ## 🙏 致谢
 
-- [VitePress](https://vitepress.dev/) - 静态站点生成器
 - [Datawhale Hello-Agents](https://github.com/datawhalechina/hello-agents) - 原始教程内容
-- [Deepractice](https://github.com/yejunhao159/deepractice-agents) - 技术支持
 
 ---
 
-**Deepractice Team** - 让 AI 开发更简单
+**深度实践 (Deepractice)** - 让 AI 开发更简单
