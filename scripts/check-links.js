@@ -23,14 +23,21 @@ const brokenLinks = []
  * 提取文档中的链接
  */
 function extractLinks(content, filePath) {
+  const sanitizedContent = content
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/`[^`]*`/g, '')
   const links = []
+  const skipUrls = new Set(['链接'])
   
   // Markdown 链接 [text](url)
   const mdLinkRegex = /\[([^\]]*)\]\(([^)]+)\)/g
   let match
   
-  while ((match = mdLinkRegex.exec(content)) !== null) {
+  while ((match = mdLinkRegex.exec(sanitizedContent)) !== null) {
     const url = match[2].split('#')[0].trim()
+    if (!url || skipUrls.has(url)) {
+      continue
+    }
     if (url) {
       links.push({
         text: match[1],
