@@ -1,7 +1,339 @@
 {
   "version": "1.0",
-  "generated": "2025-12-27T12:30:58.590Z",
+  "generated": "2025-12-27T13:18:05.709Z",
   "documents": [
+    {
+      "id": "章节重构建议.md",
+      "title": "Hello-Agents 教程章节重构建议",
+      "path": "/章节重构建议",
+      "summary": "> 分析人: Claude\r > 分析日期: 2025-12-17\r > 分析范围: 16章完整教程\r \r ---\r \r \r \r \r \r 根据前言描述,教程分为5个部分:\r \r 1. 基础篇 (第1-3章): AI与LLM基础知识\r 2. 单体篇 (第4-5章): 构建功能完备的单体智能体\r 3. 高级篇 (第6-12章): 思考、记忆、工具、通信、评估\r 4. 实战篇 (第13-15章): 综合...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "📊 现状分析",
+          "anchor": "📊-现状分析"
+        },
+        {
+          "level": 3,
+          "text": "当前教程的五大部分结构",
+          "anchor": "当前教程的五大部分结构"
+        },
+        {
+          "level": 3,
+          "text": "已完成章节内容",
+          "anchor": "已完成章节内容"
+        },
+        {
+          "level": 2,
+          "text": "🎯 核心问题诊断",
+          "anchor": "🎯-核心问题诊断"
+        },
+        {
+          "level": 3,
+          "text": "问题1: 第一章与第二章的衔接",
+          "anchor": "问题1:-第一章与第二章的衔接"
+        },
+        {
+          "level": 2,
+          "text": "从现在到过去",
+          "anchor": "从现在到过去"
+        },
+        {
+          "level": 3,
+          "text": "问题2: 第三章的定位偏移",
+          "anchor": "问题2:-第三章的定位偏移"
+        },
+        {
+          "level": 3,
+          "text": "问题3: 第四章与AgentX的关系不明",
+          "anchor": "问题3:-第四章与agentx的关系不明"
+        },
+        {
+          "level": 2,
+          "text": "4.X 从手写到框架的跃迁",
+          "anchor": "4.x-从手写到框架的跃迁"
+        },
+        {
+          "level": 2,
+          "text": "🏗️ 完整章节重构方案",
+          "anchor": "🏗️-完整章节重构方案"
+        },
+        {
+          "level": 3,
+          "text": "第一部分:基础篇(1-3章)",
+          "anchor": "第一部分:基础篇(1-3章)"
+        },
+        {
+          "level": 3,
+          "text": "第二部分:单体篇(4-5章)",
+          "anchor": "第二部分:单体篇(4-5章)"
+        },
+        {
+          "level": 3,
+          "text": "第三部分:高级篇(6-12章)",
+          "anchor": "第三部分:高级篇(6-12章)"
+        },
+        {
+          "level": 3,
+          "text": "第四部分:实战篇(13-15章)",
+          "anchor": "第四部分:实战篇(13-15章)"
+        },
+        {
+          "level": 3,
+          "text": "第五部分:展望篇(16章)",
+          "anchor": "第五部分:展望篇(16章)"
+        },
+        {
+          "level": 2,
+          "text": "📋 优先级与时间规划",
+          "anchor": "📋-优先级与时间规划"
+        },
+        {
+          "level": 3,
+          "text": "立即执行(必须完成才能完整发布)",
+          "anchor": "立即执行(必须完成才能完整发布)"
+        },
+        {
+          "level": 3,
+          "text": "第二阶段(实战项目重写)",
+          "anchor": "第二阶段(实战项目重写)"
+        },
+        {
+          "level": 3,
+          "text": "第三阶段(可选增强)",
+          "anchor": "第三阶段(可选增强)"
+        },
+        {
+          "level": 2,
+          "text": "🎨 建议的学习路径设计",
+          "anchor": "🎨-建议的学习路径设计"
+        },
+        {
+          "level": 3,
+          "text": "路径1: 快速入门(适合急于上手的开发者)",
+          "anchor": "路径1:-快速入门(适合急于上手的开发者)"
+        },
+        {
+          "level": 3,
+          "text": "路径2: 全面学习(适合系统学习者)",
+          "anchor": "路径2:-全面学习(适合系统学习者)"
+        },
+        {
+          "level": 3,
+          "text": "路径3: 深度研究(适合研究者)",
+          "anchor": "路径3:-深度研究(适合研究者)"
+        },
+        {
+          "level": 2,
+          "text": "🔍 关于第二章2.2节的特殊分析",
+          "anchor": "🔍-关于第二章2.2节的特殊分析"
+        },
+        {
+          "level": 3,
+          "text": "2.2节的定位",
+          "anchor": "2.2节的定位"
+        },
+        {
+          "level": 3,
+          "text": "是否合理?",
+          "anchor": "是否合理?"
+        },
+        {
+          "level": 3,
+          "text": "微调建议",
+          "anchor": "微调建议"
+        },
+        {
+          "level": 2,
+          "text": "2.2.X 从ELIZA到现代LLM智能体的跃迁",
+          "anchor": "2.2.x-从eliza到现代llm智能体的跃迁"
+        },
+        {
+          "level": 2,
+          "text": "📌 总结与行动建议",
+          "anchor": "📌-总结与行动建议"
+        },
+        {
+          "level": 3,
+          "text": "核心结论",
+          "anchor": "核心结论"
+        },
+        {
+          "level": 3,
+          "text": "立即行动清单",
+          "anchor": "立即行动清单"
+        },
+        {
+          "level": 3,
+          "text": "发布策略建议",
+          "anchor": "发布策略建议"
+        },
+        {
+          "level": 2,
+          "text": "💡 最后的思考",
+          "anchor": "💡-最后的思考"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "教材章节重构建议-完整版.md",
+      "title": "《Deepractice AI 智能体开发实战指南》章节重构建议",
+      "path": "/教材章节重构建议-完整版",
+      "summary": "> 文档版本: v2.0\r > 创建日期: 2025-12-19\r > 状态: 待执行\r > 作者: Writer AI (基于 Deepractice 组织技术栈分析)\r \r ---\r \r \r \r \r \r 1. 保留章节：第1-4章（通用基础）完全不动\r 2. 重构章节：第5-8章聚焦 Deepractice 技术体系\r 3. 新增内容：综合实战项目（第9-11章）\r 4. 调整定位：第12章改...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "📊 重构概述",
+          "anchor": "📊-重构概述"
+        },
+        {
+          "level": 3,
+          "text": "核心调整",
+          "anchor": "核心调整"
+        },
+        {
+          "level": 3,
+          "text": "认知递进路径",
+          "anchor": "认知递进路径"
+        },
+        {
+          "level": 2,
+          "text": "📚 详细章节规划",
+          "anchor": "📚-详细章节规划"
+        },
+        {
+          "level": 3,
+          "text": "第一部分：通用基础（保留）",
+          "anchor": "第一部分：通用基础（保留）"
+        },
+        {
+          "level": 3,
+          "text": "第二部分：Deepractice 技术体系（重点重构）",
+          "anchor": "第二部分：deepractice-技术体系（重点重构）"
+        },
+        {
+          "level": 3,
+          "text": "第三部分：综合实战项目",
+          "anchor": "第三部分：综合实战项目"
+        },
+        {
+          "level": 3,
+          "text": "第四部分：框架对比与选型",
+          "anchor": "第四部分：框架对比与选型"
+        },
+        {
+          "level": 2,
+          "text": "🎨 写作风格规范",
+          "anchor": "🎨-写作风格规范"
+        },
+        {
+          "level": 3,
+          "text": "阮一峰式技术博客特征",
+          "anchor": "阮一峰式技术博客特征"
+        },
+        {
+          "level": 2,
+          "text": "为什么需要记忆系统？",
+          "anchor": "为什么需要记忆系统？"
+        },
+        {
+          "level": 2,
+          "text": "📊 学术支撑资源",
+          "anchor": "📊-学术支撑资源"
+        },
+        {
+          "level": 3,
+          "text": "需要引用的论文领域",
+          "anchor": "需要引用的论文领域"
+        },
+        {
+          "level": 2,
+          "text": "🔄 执行计划",
+          "anchor": "🔄-执行计划"
+        },
+        {
+          "level": 3,
+          "text": "阶段一：内容准备（1周）",
+          "anchor": "阶段一：内容准备（1周）"
+        },
+        {
+          "level": 3,
+          "text": "阶段二：第5章重写（2周）",
+          "anchor": "阶段二：第5章重写（2周）"
+        },
+        {
+          "level": 3,
+          "text": "阶段三：第6-8章编写（3周）",
+          "anchor": "阶段三：第6-8章编写（3周）"
+        },
+        {
+          "level": 3,
+          "text": "阶段四：实战项目（2周）",
+          "anchor": "阶段四：实战项目（2周）"
+        },
+        {
+          "level": 3,
+          "text": "阶段五：框架对比（1周）",
+          "anchor": "阶段五：框架对比（1周）"
+        },
+        {
+          "level": 2,
+          "text": "✅ 质量检查清单",
+          "anchor": "✅-质量检查清单"
+        },
+        {
+          "level": 3,
+          "text": "内容质量",
+          "anchor": "内容质量"
+        },
+        {
+          "level": 3,
+          "text": "写作风格",
+          "anchor": "写作风格"
+        },
+        {
+          "level": 3,
+          "text": "读者体验",
+          "anchor": "读者体验"
+        },
+        {
+          "level": 2,
+          "text": "📝 附录",
+          "anchor": "📝-附录"
+        },
+        {
+          "level": 3,
+          "text": "A. 参考文献格式",
+          "anchor": "a.-参考文献格式"
+        },
+        {
+          "level": 3,
+          "text": "B. 代码规范",
+          "anchor": "b.-代码规范"
+        },
+        {
+          "level": 3,
+          "text": "C. 图示设计规范",
+          "anchor": "c.-图示设计规范"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "前言.md",
+      "title": "前言",
+      "path": "/前言",
+      "summary": "<div align=\"right\">\r   <a href=\"./Preface.md\">English</a> | 中文\r </div>\r \r \r 自 2022 年底以来，以 ChatGPT 为代表的大语言模型（Large Language Model, LLM）如同一场技术海啸，彻底改变了我们与人工智能交互的方式。LLM 强大的自然语言理解和生成能力，让我们看到了通往通用人工智能（AGI）的...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "写给读者的建议",
+          "anchor": "写给读者的建议"
+        }
+      ],
+      "tags": []
+    },
     {
       "id": "index.md",
       "title": "Deepractice AI",
@@ -183,6 +515,6410 @@
           "level": 3,
           "text": "第五部分：实战篇",
           "anchor": "第五部分：实战篇"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter16\\README.md",
+      "title": "第十六章 毕业设计：构建属于你的多智能体应用",
+      "path": "/chapter16/",
+      "summary": "恭喜你来到 Hello-Agents 教程的最后一章！在前面的 15 章中，我们从零开始构建了 HelloAgents 框架，学习了智能体的核心概念、多种范式、工具系统、记忆机制、通信协议、强化学习训练和性能评估等知识。在第 13-15 章中，我们还通过三个完整的实战项目（智能旅行助手、自动化深度研究智能体、赛博小镇）展示了如何将所学知识融会贯通。\r \r 现在，是时候让你成为真正的智能体系统构建者...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "16.1 毕业设计的意义",
+          "anchor": "16.1-毕业设计的意义"
+        },
+        {
+          "level": 3,
+          "text": "16.1.1 为什么要做毕业设计",
+          "anchor": "16.1.1-为什么要做毕业设计"
+        },
+        {
+          "level": 3,
+          "text": "16.1.2 毕业设计的形式",
+          "anchor": "16.1.2-毕业设计的形式"
+        },
+        {
+          "level": 2,
+          "text": "16.2 项目选题指南",
+          "anchor": "16.2-项目选题指南"
+        },
+        {
+          "level": 3,
+          "text": "16.2.1 选题原则",
+          "anchor": "16.2.1-选题原则"
+        },
+        {
+          "level": 3,
+          "text": "16.2.2 推荐选题方向",
+          "anchor": "16.2.2-推荐选题方向"
+        },
+        {
+          "level": 3,
+          "text": "16.2.3 选题示例",
+          "anchor": "16.2.3-选题示例"
+        },
+        {
+          "level": 2,
+          "text": "16.3 开发环境准备",
+          "anchor": "16.3-开发环境准备"
+        },
+        {
+          "level": 3,
+          "text": "16.3.1 安装必要工具",
+          "anchor": "16.3.1-安装必要工具"
+        },
+        {
+          "level": 3,
+          "text": "16.3.2 Fork 项目仓库",
+          "anchor": "16.3.2-fork-项目仓库"
+        },
+        {
+          "level": 3,
+          "text": "16.3.3 项目目录结构",
+          "anchor": "16.3.3-项目目录结构"
+        },
+        {
+          "level": 2,
+          "text": "16.4 项目开发指南",
+          "anchor": "16.4-项目开发指南"
+        },
+        {
+          "level": 3,
+          "text": "16.4.1 编写 README 文档",
+          "anchor": "16.4.1-编写-readme-文档"
+        },
+        {
+          "level": 2,
+          "text": "📝 项目简介",
+          "anchor": "📝-项目简介"
+        },
+        {
+          "level": 2,
+          "text": "✨ 核心功能",
+          "anchor": "✨-核心功能"
+        },
+        {
+          "level": 2,
+          "text": "🛠️ 技术栈",
+          "anchor": "🛠️-技术栈"
+        },
+        {
+          "level": 2,
+          "text": "🚀 快速开始",
+          "anchor": "🚀-快速开始"
+        },
+        {
+          "level": 3,
+          "text": "环境要求",
+          "anchor": "环境要求"
+        },
+        {
+          "level": 3,
+          "text": "安装依赖",
+          "anchor": "安装依赖"
+        },
+        {
+          "level": 3,
+          "text": "配置API密钥",
+          "anchor": "配置api密钥"
+        },
+        {
+          "level": 3,
+          "text": "运行项目",
+          "anchor": "运行项目"
+        },
+        {
+          "level": 2,
+          "text": "📖 使用示例",
+          "anchor": "📖-使用示例"
+        },
+        {
+          "level": 2,
+          "text": "🎯 项目亮点",
+          "anchor": "🎯-项目亮点"
+        },
+        {
+          "level": 2,
+          "text": "📊 性能评估",
+          "anchor": "📊-性能评估"
+        },
+        {
+          "level": 2,
+          "text": "🔮 未来计划",
+          "anchor": "🔮-未来计划"
+        },
+        {
+          "level": 2,
+          "text": "🤝 贡献指南",
+          "anchor": "🤝-贡献指南"
+        },
+        {
+          "level": 2,
+          "text": "📄 许可证",
+          "anchor": "📄-许可证"
+        },
+        {
+          "level": 2,
+          "text": "👤 作者",
+          "anchor": "👤-作者"
+        },
+        {
+          "level": 2,
+          "text": "🙏 致谢",
+          "anchor": "🙏-致谢"
+        },
+        {
+          "level": 3,
+          "text": "16.4.2 编写 requirements.txt",
+          "anchor": "16.4.2-编写-requirements.txt"
+        },
+        {
+          "level": 3,
+          "text": "16.4.3 开发 Jupyter Notebook",
+          "anchor": "16.4.3-开发-jupyter-notebook"
+        },
+        {
+          "level": 2,
+          "text": "项目简介",
+          "anchor": "项目简介"
+        },
+        {
+          "level": 2,
+          "text": "作者信息",
+          "anchor": "作者信息"
+        },
+        {
+          "level": 2,
+          "text": "项目总结",
+          "anchor": "项目总结"
+        },
+        {
+          "level": 3,
+          "text": "实现的功能",
+          "anchor": "实现的功能"
+        },
+        {
+          "level": 3,
+          "text": "遇到的挑战",
+          "anchor": "遇到的挑战"
+        },
+        {
+          "level": 3,
+          "text": "未来改进方向",
+          "anchor": "未来改进方向"
+        },
+        {
+          "level": 3,
+          "text": "16.4.4 测试你的项目",
+          "anchor": "16.4.4-测试你的项目"
+        },
+        {
+          "level": 3,
+          "text": "16.4.5 大文件处理指南",
+          "anchor": "16.4.5-大文件处理指南"
+        },
+        {
+          "level": 2,
+          "text": "数据集",
+          "anchor": "数据集"
+        },
+        {
+          "level": 2,
+          "text": "项目资源",
+          "anchor": "项目资源"
+        },
+        {
+          "level": 3,
+          "text": "使用方法",
+          "anchor": "使用方法"
+        },
+        {
+          "level": 2,
+          "text": "数据说明",
+          "anchor": "数据说明"
+        },
+        {
+          "level": 2,
+          "text": "数据和资源",
+          "anchor": "数据和资源"
+        },
+        {
+          "level": 3,
+          "text": "示例数据",
+          "anchor": "示例数据"
+        },
+        {
+          "level": 3,
+          "text": "完整数据集",
+          "anchor": "完整数据集"
+        },
+        {
+          "level": 3,
+          "text": "演示视频",
+          "anchor": "演示视频"
+        },
+        {
+          "level": 2,
+          "text": "16.5 提交 Pull Request",
+          "anchor": "16.5-提交-pull-request"
+        },
+        {
+          "level": 3,
+          "text": "16.5.1 提交代码到 GitHub",
+          "anchor": "16.5.1-提交代码到-github"
+        },
+        {
+          "level": 3,
+          "text": "16.5.2 创建 Pull Request",
+          "anchor": "16.5.2-创建-pull-request"
+        },
+        {
+          "level": 2,
+          "text": "项目信息",
+          "anchor": "项目信息"
+        },
+        {
+          "level": 2,
+          "text": "项目简介",
+          "anchor": "项目简介"
+        },
+        {
+          "level": 2,
+          "text": "核心功能",
+          "anchor": "核心功能"
+        },
+        {
+          "level": 2,
+          "text": "技术亮点",
+          "anchor": "技术亮点"
+        },
+        {
+          "level": 2,
+          "text": "演示效果",
+          "anchor": "演示效果"
+        },
+        {
+          "level": 2,
+          "text": "自检清单",
+          "anchor": "自检清单"
+        },
+        {
+          "level": 2,
+          "text": "其他说明",
+          "anchor": "其他说明"
+        },
+        {
+          "level": 3,
+          "text": "16.5.3 响应 Review 意见",
+          "anchor": "16.5.3-响应-review-意见"
+        },
+        {
+          "level": 2,
+          "text": "16.6 示例项目展示",
+          "anchor": "16.6-示例项目展示"
+        },
+        {
+          "level": 2,
+          "text": "📝 项目简介",
+          "anchor": "📝-项目简介"
+        },
+        {
+          "level": 3,
+          "text": "核心功能",
+          "anchor": "核心功能"
+        },
+        {
+          "level": 2,
+          "text": "🛠️ 技术栈",
+          "anchor": "🛠️-技术栈"
+        },
+        {
+          "level": 2,
+          "text": "🚀 快速开始",
+          "anchor": "🚀-快速开始"
+        },
+        {
+          "level": 3,
+          "text": "安装依赖",
+          "anchor": "安装依赖"
+        },
+        {
+          "level": 3,
+          "text": "配置LLM参数",
+          "anchor": "配置llm参数"
+        },
+        {
+          "level": 3,
+          "text": "运行项目",
+          "anchor": "运行项目"
+        },
+        {
+          "level": 2,
+          "text": "📖 使用示例",
+          "anchor": "📖-使用示例"
+        },
+        {
+          "level": 2,
+          "text": "🎯 项目亮点",
+          "anchor": "🎯-项目亮点"
+        },
+        {
+          "level": 2,
+          "text": "👤 作者",
+          "anchor": "👤-作者"
+        },
+        {
+          "level": 2,
+          "text": "🙏 致谢",
+          "anchor": "🙏-致谢"
+        },
+        {
+          "level": 2,
+          "text": "16.7 总结与展望",
+          "anchor": "16.7-总结与展望"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter15\\README.md",
+      "title": "第15章：构建赛博小镇",
+      "path": "/chapter15/",
+      "summary": "> 🔄 本章待用 AgentX 多智能体系统重写\r \r \r \r 构建一个充满生命力的 AI 小镇，探索智能体与游戏引擎的结合。\r \r \r \r 1. 智能 NPC 对话系统 - 自然语言对话，角色化回应\r 2. 记忆系统 - 短期记忆 + 长期记忆\r 3. 好感度系统 - 动态关系演变\r 4. 游戏化交互 - 2D 像素风格场景\r 5. 实时日志 - 对话记录与分析\r \r \r \r - 游戏引擎：G...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "项目目标",
+          "anchor": "项目目标"
+        },
+        {
+          "level": 2,
+          "text": "核心功能",
+          "anchor": "核心功能"
+        },
+        {
+          "level": 2,
+          "text": "技术架构",
+          "anchor": "技术架构"
+        },
+        {
+          "level": 2,
+          "text": "章节规划",
+          "anchor": "章节规划"
+        },
+        {
+          "level": 3,
+          "text": "15.1 项目概述与架构设计",
+          "anchor": "15.1-项目概述与架构设计"
+        },
+        {
+          "level": 3,
+          "text": "15.2 NPC 智能体设计",
+          "anchor": "15.2-npc-智能体设计"
+        },
+        {
+          "level": 3,
+          "text": "15.3 记忆与好感度系统",
+          "anchor": "15.3-记忆与好感度系统"
+        },
+        {
+          "level": 3,
+          "text": "15.4 AgentX 多 Agent 协调",
+          "anchor": "15.4-agentx-多-agent-协调"
+        },
+        {
+          "level": 3,
+          "text": "15.5 游戏引擎集成",
+          "anchor": "15.5-游戏引擎集成"
+        },
+        {
+          "level": 3,
+          "text": "15.6 部署与优化",
+          "anchor": "15.6-部署与优化"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter14\\README.md",
+      "title": "第14章：自动化深度研究智能体",
+      "path": "/chapter14/",
+      "summary": "> 🔄 本章待用 AgentX + PromptX 重写\r \r \r \r 构建能够自动执行深度研究任务的智能体系统。\r \r \r \r 1. 问题剖析 - 将开放主题拆解为可检索的查询\r 2. 多轮信息采集 - 持续挖掘和整合资料\r 3. 反思与总结 - 识别知识空白，生成结构化报告\r \r \r \r - AgentX 多智能体协作\r - PromptX 角色：规划者、研究者、总结者\r - 搜索工具集成\r...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "项目目标",
+          "anchor": "项目目标"
+        },
+        {
+          "level": 2,
+          "text": "核心能力",
+          "anchor": "核心能力"
+        },
+        {
+          "level": 2,
+          "text": "技术架构",
+          "anchor": "技术架构"
+        },
+        {
+          "level": 2,
+          "text": "章节规划",
+          "anchor": "章节规划"
+        },
+        {
+          "level": 3,
+          "text": "14.1 项目概述与架构设计",
+          "anchor": "14.1-项目概述与架构设计"
+        },
+        {
+          "level": 3,
+          "text": "14.2 研究流程设计",
+          "anchor": "14.2-研究流程设计"
+        },
+        {
+          "level": 3,
+          "text": "14.3 AgentX 智能体实现",
+          "anchor": "14.3-agentx-智能体实现"
+        },
+        {
+          "level": 3,
+          "text": "14.4 搜索与信息整合",
+          "anchor": "14.4-搜索与信息整合"
+        },
+        {
+          "level": 3,
+          "text": "14.5 报告生成",
+          "anchor": "14.5-报告生成"
+        },
+        {
+          "level": 3,
+          "text": "14.6 实战演示",
+          "anchor": "14.6-实战演示"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter11\\README.md",
+      "title": "第11章：智能体强化学习 (Agentic-RL)",
+      "path": "/chapter11/",
+      "summary": "> 🔄 本章待重写\r \r \r \r \r - RL 核心概念回顾\r - 与 LLM Agent 的关系\r \r \r - RLHF 原理简介\r - DPO/PPO 核心思想\r \r \r - 事件驱动的反馈循环\r - 经验积累与策略优化\r \r ---\r \r 本章内容待补充，将结合 AgentX 框架特性进行讲解",
+      "headings": [
+        {
+          "level": 2,
+          "text": "章节规划",
+          "anchor": "章节规划"
+        },
+        {
+          "level": 3,
+          "text": "11.1 强化学习基础",
+          "anchor": "11.1-强化学习基础"
+        },
+        {
+          "level": 3,
+          "text": "11.2 RLHF 与 Agent 训练",
+          "anchor": "11.2-rlhf-与-agent-训练"
+        },
+        {
+          "level": 3,
+          "text": "11.3 AgentX 中的反馈机制",
+          "anchor": "11.3-agentx-中的反馈机制"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter12\\README.md",
+      "title": "第12章：智能体性能评估",
+      "path": "/chapter12/",
+      "summary": "> 🔄 本章待重写\r \r \r \r \r - 评估的核心价值\r - 评估的挑战\r \r \r - 能力评估\r - 效率评估\r - 可靠性评估\r \r \r - GAIA\r - AgentBench\r - 其他评估基准\r \r \r - 评估工具集成\r - 自定义评估指标\r \r ---\r \r 本章内容待补充",
+      "headings": [
+        {
+          "level": 2,
+          "text": "章节规划",
+          "anchor": "章节规划"
+        },
+        {
+          "level": 3,
+          "text": "12.1 为什么需要评估",
+          "anchor": "12.1-为什么需要评估"
+        },
+        {
+          "level": 3,
+          "text": "12.2 评估维度框架",
+          "anchor": "12.2-评估维度框架"
+        },
+        {
+          "level": 3,
+          "text": "12.3 主流 Benchmark",
+          "anchor": "12.3-主流-benchmark"
+        },
+        {
+          "level": 3,
+          "text": "12.4 AgentX 评估实践",
+          "anchor": "12.4-agentx-评估实践"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter10\\README.md",
+      "title": "第十章 智能体通信协议",
+      "path": "/chapter10/",
+      "summary": "在前面的章节中，我们构建了功能完备的单体智能体，它们具备推理、工具调用和记忆能力。然而，当我们尝试构建更复杂的 AI 系统时，自然会有疑问：<strong>如何让智能体与外部世界高效交互？如何让多个智能体相互协作？</strong>\r \r 这正是智能体通信协议要解决的核心问题。本章将为 HelloAgents 框架引入三种通信协议：<strong>MCP（Model Context Protoco...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "10.1 智能体通信协议基础",
+          "anchor": "10.1-智能体通信协议基础"
+        },
+        {
+          "level": 3,
+          "text": "10.1.1 为何需要通信协议",
+          "anchor": "10.1.1-为何需要通信协议"
+        },
+        {
+          "level": 3,
+          "text": "10.1.2 三种协议设计理念比较",
+          "anchor": "10.1.2-三种协议设计理念比较"
+        },
+        {
+          "level": 3,
+          "text": "10.1.3 HelloAgents 通信协议架构设计",
+          "anchor": "10.1.3-helloagents-通信协议架构设计"
+        },
+        {
+          "level": 3,
+          "text": "10.1.4 本章学习目标与快速体验",
+          "anchor": "10.1.4-本章学习目标与快速体验"
+        },
+        {
+          "level": 2,
+          "text": "10.2 MCP 协议实战",
+          "anchor": "10.2-mcp-协议实战"
+        },
+        {
+          "level": 3,
+          "text": "10.2.1 MCP 协议概念介绍",
+          "anchor": "10.2.1-mcp-协议概念介绍"
+        },
+        {
+          "level": 3,
+          "text": "10.2.2 使用 MCP 客户端",
+          "anchor": "10.2.2-使用-mcp-客户端"
+        },
+        {
+          "level": 3,
+          "text": "10.2.3 MCP 传输方式详解",
+          "anchor": "10.2.3-mcp-传输方式详解"
+        },
+        {
+          "level": 3,
+          "text": "10.2.4 在智能体中使用 MCP 工具",
+          "anchor": "10.2.4-在智能体中使用-mcp-工具"
+        },
+        {
+          "level": 3,
+          "text": "10.2.5 MCP 社区生态",
+          "anchor": "10.2.5-mcp-社区生态"
+        },
+        {
+          "level": 2,
+          "text": "10.3 A2A 协议实战",
+          "anchor": "10.3-a2a-协议实战"
+        },
+        {
+          "level": 3,
+          "text": "10.3.1 协议设计动机",
+          "anchor": "10.3.1-协议设计动机"
+        },
+        {
+          "level": 3,
+          "text": "10.3.2 使用 A2A 协议实战",
+          "anchor": "10.3.2-使用-a2a-协议实战"
+        },
+        {
+          "level": 3,
+          "text": "10.3.3 使用 HelloAgents A2A 工具",
+          "anchor": "10.3.3-使用-helloagents-a2a-工具"
+        },
+        {
+          "level": 3,
+          "text": "10.3.4 在智能体中使用 A2A 工具",
+          "anchor": "10.3.4-在智能体中使用-a2a-工具"
+        },
+        {
+          "level": 2,
+          "text": "10.4 ANP 协议实战",
+          "anchor": "10.4-anp-协议实战"
+        },
+        {
+          "level": 3,
+          "text": "10.4.1 协议目标",
+          "anchor": "10.4.1-协议目标"
+        },
+        {
+          "level": 3,
+          "text": "10.4.2 使用 ANP 服务发现",
+          "anchor": "10.4.2-使用-anp-服务发现"
+        },
+        {
+          "level": 3,
+          "text": "10.4.3 实战案例",
+          "anchor": "10.4.3-实战案例"
+        },
+        {
+          "level": 2,
+          "text": "10.5 构建自定义 MCP 服务器",
+          "anchor": "10.5-构建自定义-mcp-服务器"
+        },
+        {
+          "level": 3,
+          "text": "10.5.1 创建你的第一个 MCP 服务器",
+          "anchor": "10.5.1-创建你的第一个-mcp-服务器"
+        },
+        {
+          "level": 3,
+          "text": "10.5.2 上传 MCP 服务器",
+          "anchor": "10.5.2-上传-mcp-服务器"
+        },
+        {
+          "level": 2,
+          "text": "10.6 本章总结",
+          "anchor": "10.6-本章总结"
+        },
+        {
+          "level": 2,
+          "text": "习题",
+          "anchor": "习题"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter09\\README.md",
+      "title": "第9章：Monogent 认知架构深度实践",
+      "path": "/chapter09/",
+      "summary": "> 从记忆到认知 —— 构建有思考能力的智能体\r \r 在第五章中，我们初步了解了 PromptX 的 Engram 记忆网络和 Monogent 认知架构的基本概念。本章将深入实践 Monogent，将理论转化为可运行的代码。\r \r Monogent 是 Deepractice 团队开发的认知架构系统，它定义了体验如何被处理、如何演化、以及如何形成连贯的认知链。如果说 Engram 是记忆的\"存储...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "本章核心问题",
+          "anchor": "本章核心问题"
+        },
+        {
+          "level": 2,
+          "text": "本章目录",
+          "anchor": "本章目录"
+        },
+        {
+          "level": 2,
+          "text": "学习目标",
+          "anchor": "学习目标"
+        },
+        {
+          "level": 2,
+          "text": "知识图谱",
+          "anchor": "知识图谱"
+        },
+        {
+          "level": 2,
+          "text": "核心概念预览",
+          "anchor": "核心概念预览"
+        },
+        {
+          "level": 3,
+          "text": "从记忆到认知",
+          "anchor": "从记忆到认知"
+        },
+        {
+          "level": 3,
+          "text": "Experience（体验单子）",
+          "anchor": "experience（体验单子）"
+        },
+        {
+          "level": 3,
+          "text": "双基质模型",
+          "anchor": "双基质模型"
+        },
+        {
+          "level": 3,
+          "text": "七阶段管道",
+          "anchor": "七阶段管道"
+        },
+        {
+          "level": 2,
+          "text": "与其他章节的关系",
+          "anchor": "与其他章节的关系"
+        },
+        {
+          "level": 2,
+          "text": "官方资源",
+          "anchor": "官方资源"
+        },
+        {
+          "level": 3,
+          "text": "Monogent 项目",
+          "anchor": "monogent-项目"
+        },
+        {
+          "level": 3,
+          "text": "快速体验",
+          "anchor": "快速体验"
+        },
+        {
+          "level": 2,
+          "text": "开始学习",
+          "anchor": "开始学习"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter09\\9.6-本章小结.md",
+      "title": "9.6 本章小结",
+      "path": "/chapter09/9.6-本章小结",
+      "summary": "> 认知，是记忆的觉醒\r \r 恭喜你完成了 Monogent 认知架构的学习！本节将回顾核心概念、检查学习成果，并展望认知智能体的未来发展。\r \r ---\r \r \r \r \r \r \r \r \r \r | 概念 | 定义 | 关键洞察 |\r |-----|------|---------|\r | Experience | 认知的原子单位 | 不可分割、可链接、可演化 |\r | Evolution | 体验...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "9.6.1 核心概念回顾",
+          "anchor": "9.6.1-核心概念回顾"
+        },
+        {
+          "level": 3,
+          "text": "从记忆到认知",
+          "anchor": "从记忆到认知"
+        },
+        {
+          "level": 3,
+          "text": "四大核心概念",
+          "anchor": "四大核心概念"
+        },
+        {
+          "level": 3,
+          "text": "七阶段管道",
+          "anchor": "七阶段管道"
+        },
+        {
+          "level": 3,
+          "text": "双基质模型",
+          "anchor": "双基质模型"
+        },
+        {
+          "level": 2,
+          "text": "9.6.2 学习检查",
+          "anchor": "9.6.2-学习检查"
+        },
+        {
+          "level": 3,
+          "text": "概念理解",
+          "anchor": "概念理解"
+        },
+        {
+          "level": 3,
+          "text": "代码实践",
+          "anchor": "代码实践"
+        },
+        {
+          "level": 2,
+          "text": "9.6.3 关键洞察总结",
+          "anchor": "9.6.3-关键洞察总结"
+        },
+        {
+          "level": 3,
+          "text": "1. 认知不是存储，是处理",
+          "anchor": "1.-认知不是存储，是处理"
+        },
+        {
+          "level": 3,
+          "text": "2. 体验是可追踪的",
+          "anchor": "2.-体验是可追踪的"
+        },
+        {
+          "level": 3,
+          "text": "3. 双基质各有所长",
+          "anchor": "3.-双基质各有所长"
+        },
+        {
+          "level": 3,
+          "text": "4. 管道是可配置的",
+          "anchor": "4.-管道是可配置的"
+        },
+        {
+          "level": 3,
+          "text": "5. 集成才是完整",
+          "anchor": "5.-集成才是完整"
+        },
+        {
+          "level": 2,
+          "text": "9.6.4 与其他章节的关系",
+          "anchor": "9.6.4-与其他章节的关系"
+        },
+        {
+          "level": 2,
+          "text": "9.6.5 实践建议",
+          "anchor": "9.6.5-实践建议"
+        },
+        {
+          "level": 3,
+          "text": "入门路径",
+          "anchor": "入门路径"
+        },
+        {
+          "level": 3,
+          "text": "常见陷阱",
+          "anchor": "常见陷阱"
+        },
+        {
+          "level": 2,
+          "text": "9.6.6 延伸阅读",
+          "anchor": "9.6.6-延伸阅读"
+        },
+        {
+          "level": 3,
+          "text": "理论基础",
+          "anchor": "理论基础"
+        },
+        {
+          "level": 3,
+          "text": "技术资源",
+          "anchor": "技术资源"
+        },
+        {
+          "level": 3,
+          "text": "进阶主题",
+          "anchor": "进阶主题"
+        },
+        {
+          "level": 2,
+          "text": "9.6.7 章节总结",
+          "anchor": "9.6.7-章节总结"
+        },
+        {
+          "level": 3,
+          "text": "核心公式",
+          "anchor": "核心公式"
+        },
+        {
+          "level": 3,
+          "text": "最终洞察",
+          "anchor": "最终洞察"
+        },
+        {
+          "level": 2,
+          "text": "继续学习",
+          "anchor": "继续学习"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter09\\9.5-与AgentX-PromptX集成.md",
+      "title": "9.5 与 AgentX/PromptX 集成",
+      "path": "/chapter09/9.5-与AgentX-PromptX集成",
+      "summary": "> 让认知架构在真实环境中运行\r \r 前面我们实现了 Monogent 的核心组件：Experience 数据结构、七阶段管道、双基质策略。现在是时候将它们整合到完整的智能体系统中了。\r \r 本节将展示如何将 Monogent 与 AgentX 运行时和 PromptX 记忆系统集成，构建一个真正具有认知能力的智能体。\r \r ---\r \r \r \r 在开始集成之前，让我们回顾三个系统的职责：\r \r ...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "9.5.1 三层架构回顾",
+          "anchor": "9.5.1-三层架构回顾"
+        },
+        {
+          "level": 2,
+          "text": "9.5.2 与 PromptX Engram 集成",
+          "anchor": "9.5.2-与-promptx-engram-集成"
+        },
+        {
+          "level": 3,
+          "text": "创建 Engram 适配器",
+          "anchor": "创建-engram-适配器"
+        },
+        {
+          "level": 3,
+          "text": "集成到认知管道",
+          "anchor": "集成到认知管道"
+        },
+        {
+          "level": 2,
+          "text": "9.5.3 与 AgentX 运行时集成",
+          "anchor": "9.5.3-与-agentx-运行时集成"
+        },
+        {
+          "level": 3,
+          "text": "创建认知处理器",
+          "anchor": "创建认知处理器"
+        },
+        {
+          "level": 3,
+          "text": "创建完整的认知智能体",
+          "anchor": "创建完整的认知智能体"
+        },
+        {
+          "level": 2,
+          "text": "9.5.4 完整使用示例",
+          "anchor": "9.5.4-完整使用示例"
+        },
+        {
+          "level": 3,
+          "text": "基本使用",
+          "anchor": "基本使用"
+        },
+        {
+          "level": 3,
+          "text": "高级场景：多轮对话",
+          "anchor": "高级场景：多轮对话"
+        },
+        {
+          "level": 2,
+          "text": "9.5.5 实际应用模式",
+          "anchor": "9.5.5-实际应用模式"
+        },
+        {
+          "level": 3,
+          "text": "模式 1：知识助手",
+          "anchor": "模式-1：知识助手"
+        },
+        {
+          "level": 3,
+          "text": "模式 2：任务执行器",
+          "anchor": "模式-2：任务执行器"
+        },
+        {
+          "level": 3,
+          "text": "模式 3：学习型助手",
+          "anchor": "模式-3：学习型助手"
+        },
+        {
+          "level": 2,
+          "text": "9.5.6 集成检查清单",
+          "anchor": "9.5.6-集成检查清单"
+        },
+        {
+          "level": 3,
+          "text": "PromptX 集成",
+          "anchor": "promptx-集成"
+        },
+        {
+          "level": 3,
+          "text": "AgentX 集成",
+          "anchor": "agentx-集成"
+        },
+        {
+          "level": 3,
+          "text": "Monogent 核心",
+          "anchor": "monogent-核心"
+        },
+        {
+          "level": 2,
+          "text": "9.5.7 本节小结",
+          "anchor": "9.5.7-本节小结"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter09\\9.4-双基质策略设计.md",
+      "title": "9.4 双基质策略设计",
+      "path": "/chapter09/9.4-双基质策略设计",
+      "summary": "> Computation vs Generation：智能选择处理方式\r \r 本节将深入双基质模型的设计与实现，学习如何在 Computation（计算）和 Generation（生成）之间智能选择。\r \r ---\r \r \r \r \r \r \r \r \r \r | 维度 | Computation | Generation |\r |-----|-------------|------------|\r |...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "9.4.1 双基质的设计理念",
+          "anchor": "9.4.1-双基质的设计理念"
+        },
+        {
+          "level": 3,
+          "text": "为什么需要两种基质",
+          "anchor": "为什么需要两种基质"
+        },
+        {
+          "level": 3,
+          "text": "两种基质对比",
+          "anchor": "两种基质对比"
+        },
+        {
+          "level": 2,
+          "text": "9.4.2 基质接口设计",
+          "anchor": "9.4.2-基质接口设计"
+        },
+        {
+          "level": 3,
+          "text": "核心接口",
+          "anchor": "核心接口"
+        },
+        {
+          "level": 3,
+          "text": "ComputationEngine 实现",
+          "anchor": "computationengine-实现"
+        },
+        {
+          "level": 3,
+          "text": "GenerationEngine 实现",
+          "anchor": "generationengine-实现"
+        },
+        {
+          "level": 2,
+          "text": "9.4.3 智能选择策略",
+          "anchor": "9.4.3-智能选择策略"
+        },
+        {
+          "level": 3,
+          "text": "SubstrateSelector 接口",
+          "anchor": "substrateselector-接口"
+        },
+        {
+          "level": 3,
+          "text": "基于规则的选择器",
+          "anchor": "基于规则的选择器"
+        },
+        {
+          "level": 3,
+          "text": "基于成本的选择器",
+          "anchor": "基于成本的选择器"
+        },
+        {
+          "level": 3,
+          "text": "混合选择器",
+          "anchor": "混合选择器"
+        },
+        {
+          "level": 2,
+          "text": "9.4.4 基质管理器",
+          "anchor": "9.4.4-基质管理器"
+        },
+        {
+          "level": 3,
+          "text": "SubstrateManager",
+          "anchor": "substratemanager"
+        },
+        {
+          "level": 2,
+          "text": "9.4.5 实战示例",
+          "anchor": "9.4.5-实战示例"
+        },
+        {
+          "level": 3,
+          "text": "完整使用示例",
+          "anchor": "完整使用示例"
+        },
+        {
+          "level": 3,
+          "text": "输出示例",
+          "anchor": "输出示例"
+        },
+        {
+          "level": 2,
+          "text": "本节要点",
+          "anchor": "本节要点"
+        },
+        {
+          "level": 2,
+          "text": "下一步",
+          "anchor": "下一步"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter09\\9.3-七阶段管道实现.md",
+      "title": "9.3 七阶段管道实现",
+      "path": "/chapter09/9.3-七阶段管道实现",
+      "summary": "> 从感觉到整合的完整认知流程\r \r 本节将实现 Monogent 的七阶段认知管道，这是将原始输入转化为有意义输出的核心处理流程。\r \r ---\r \r \r \r \r \r \r \r \r \r \r \r ---\r \r \r \r 感觉阶段负责接收和标准化原始输入。\r \r \r \r ---\r \r \r \r 知觉阶段负责特征检测和意图识别。\r \r |function|const |let |var |class |im...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "9.3.1 管道架构",
+          "anchor": "9.3.1-管道架构"
+        },
+        {
+          "level": 3,
+          "text": "七阶段概览",
+          "anchor": "七阶段概览"
+        },
+        {
+          "level": 3,
+          "text": "阶段接口定义",
+          "anchor": "阶段接口定义"
+        },
+        {
+          "level": 2,
+          "text": "9.3.2 Sensation（感觉）",
+          "anchor": "9.3.2-sensation（感觉）"
+        },
+        {
+          "level": 2,
+          "text": "9.3.3 Perception（知觉）",
+          "anchor": "9.3.3-perception（知觉）"
+        },
+        {
+          "level": 2,
+          "text": "9.3.4 Representation（表征）",
+          "anchor": "9.3.4-representation（表征）"
+        },
+        {
+          "level": 2,
+          "text": "9.3.5 Activation（激活）",
+          "anchor": "9.3.5-activation（激活）"
+        },
+        {
+          "level": 2,
+          "text": "9.3.6 Association（联想）",
+          "anchor": "9.3.6-association（联想）"
+        },
+        {
+          "level": 2,
+          "text": "9.3.7 Recollection（回忆）",
+          "anchor": "9.3.7-recollection（回忆）"
+        },
+        {
+          "level": 2,
+          "text": "9.3.8 Integration（整合）",
+          "anchor": "9.3.8-integration（整合）"
+        },
+        {
+          "level": 2,
+          "text": "9.3.9 组装完整管道",
+          "anchor": "9.3.9-组装完整管道"
+        },
+        {
+          "level": 2,
+          "text": "本节要点",
+          "anchor": "本节要点"
+        },
+        {
+          "level": 2,
+          "text": "下一步",
+          "anchor": "下一步"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter09\\9.2-Experience与Evolution实战.md",
+      "title": "9.2 Experience 与 Evolution 实战",
+      "path": "/chapter09/9.2-Experience与Evolution实战",
+      "summary": "> 认知的原子单位与演化机制\r \r 本节将深入实现 Experience 数据结构和演化机制，这是 Monogent 认知系统的核心基础。\r \r ---\r \r \r \r \r \r \r \r \r \r \r \r ---\r \r \r \r \r \r [${exp.metadata.source}]${prefix}─ ${stage} ${source} ${content}...\r \r \r \r \r \r ---\r \r...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "9.2.1 Experience 数据结构",
+          "anchor": "9.2.1-experience-数据结构"
+        },
+        {
+          "level": 3,
+          "text": "完整定义",
+          "anchor": "完整定义"
+        },
+        {
+          "level": 3,
+          "text": "使用示例",
+          "anchor": "使用示例"
+        },
+        {
+          "level": 2,
+          "text": "9.2.2 体验链（Experience Chain）",
+          "anchor": "9.2.2-体验链（experience-chain）"
+        },
+        {
+          "level": 3,
+          "text": "ExperienceChain 实现",
+          "anchor": "experiencechain-实现"
+        },
+        {
+          "level": 3,
+          "text": "使用示例",
+          "anchor": "使用示例"
+        },
+        {
+          "level": 2,
+          "text": "9.2.3 微演化（Micro Evolution）",
+          "anchor": "9.2.3-微演化（micro-evolution）"
+        },
+        {
+          "level": 3,
+          "text": "实现",
+          "anchor": "实现"
+        },
+        {
+          "level": 3,
+          "text": "微演化示例",
+          "anchor": "微演化示例"
+        },
+        {
+          "level": 2,
+          "text": "9.2.4 宏演化（Macro Evolution）",
+          "anchor": "9.2.4-宏演化（macro-evolution）"
+        },
+        {
+          "level": 3,
+          "text": "实现",
+          "anchor": "实现"
+        },
+        {
+          "level": 3,
+          "text": "宏演化示例",
+          "anchor": "宏演化示例"
+        },
+        {
+          "level": 2,
+          "text": "9.2.5 演化工具函数",
+          "anchor": "9.2.5-演化工具函数"
+        },
+        {
+          "level": 3,
+          "text": "常用演化操作",
+          "anchor": "常用演化操作"
+        },
+        {
+          "level": 3,
+          "text": "实战示例",
+          "anchor": "实战示例"
+        },
+        {
+          "level": 2,
+          "text": "9.2.6 体验追踪与调试",
+          "anchor": "9.2.6-体验追踪与调试"
+        },
+        {
+          "level": 3,
+          "text": "ExperienceTracer",
+          "anchor": "experiencetracer"
+        },
+        {
+          "level": 3,
+          "text": "使用追踪器",
+          "anchor": "使用追踪器"
+        },
+        {
+          "level": 2,
+          "text": "本节要点",
+          "anchor": "本节要点"
+        },
+        {
+          "level": 2,
+          "text": "下一步",
+          "anchor": "下一步"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter09\\9.1-Monogent架构深入.md",
+      "title": "9.1 Monogent 架构深入",
+      "path": "/chapter09/9.1-Monogent架构深入",
+      "summary": "> 理解认知系统的设计哲学\r \r 本节将深入探讨 Monogent 的架构设计，理解它为什么这样设计，以及它在整个智能体生态中的定位。\r \r ---\r \r \r \r \r \r 在第五章中，我们学习了 Engram 记忆网络。但仅有记忆是不够的：\r \r \r \r \r \r | 方案 | 做法 | 局限 |\r |-----|------|------|\r | 纯 LLM | 所有处理交给模型 | 成本高、速度...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "9.1.1 为什么需要认知架构",
+          "anchor": "9.1.1-为什么需要认知架构"
+        },
+        {
+          "level": 3,
+          "text": "记忆不等于认知",
+          "anchor": "记忆不等于认知"
+        },
+        {
+          "level": 3,
+          "text": "现有方案的局限",
+          "anchor": "现有方案的局限"
+        },
+        {
+          "level": 3,
+          "text": "Monogent 的定位",
+          "anchor": "monogent-的定位"
+        },
+        {
+          "level": 2,
+          "text": "9.1.2 设计哲学",
+          "anchor": "9.1.2-设计哲学"
+        },
+        {
+          "level": 3,
+          "text": "哲学一：单子论（Monadology）",
+          "anchor": "哲学一：单子论（monadology）"
+        },
+        {
+          "level": 3,
+          "text": "哲学二：双基质（Dual Substrate）",
+          "anchor": "哲学二：双基质（dual-substrate）"
+        },
+        {
+          "level": 3,
+          "text": "哲学三：演化论（Evolution）",
+          "anchor": "哲学三：演化论（evolution）"
+        },
+        {
+          "level": 2,
+          "text": "9.1.3 核心架构",
+          "anchor": "9.1.3-核心架构"
+        },
+        {
+          "level": 3,
+          "text": "分层架构",
+          "anchor": "分层架构"
+        },
+        {
+          "level": 3,
+          "text": "组件关系",
+          "anchor": "组件关系"
+        },
+        {
+          "level": 2,
+          "text": "9.1.4 与 Engram 的关系",
+          "anchor": "9.1.4-与-engram-的关系"
+        },
+        {
+          "level": 3,
+          "text": "分工协作",
+          "anchor": "分工协作"
+        },
+        {
+          "level": 3,
+          "text": "数据流示例",
+          "anchor": "数据流示例"
+        },
+        {
+          "level": 2,
+          "text": "9.1.5 与 AgentX 的关系",
+          "anchor": "9.1.5-与-agentx-的关系"
+        },
+        {
+          "level": 3,
+          "text": "运行时集成",
+          "anchor": "运行时集成"
+        },
+        {
+          "level": 3,
+          "text": "事件扩展",
+          "anchor": "事件扩展"
+        },
+        {
+          "level": 2,
+          "text": "9.1.6 五大认知能力",
+          "anchor": "9.1.6-五大认知能力"
+        },
+        {
+          "level": 3,
+          "text": "Understanding（理解）",
+          "anchor": "understanding（理解）"
+        },
+        {
+          "level": 3,
+          "text": "Learning（学习）",
+          "anchor": "learning（学习）"
+        },
+        {
+          "level": 3,
+          "text": "Thinking（思考）",
+          "anchor": "thinking（思考）"
+        },
+        {
+          "level": 3,
+          "text": "Creating（创造）",
+          "anchor": "creating（创造）"
+        },
+        {
+          "level": 3,
+          "text": "Deciding（决策）",
+          "anchor": "deciding（决策）"
+        },
+        {
+          "level": 2,
+          "text": "本节要点",
+          "anchor": "本节要点"
+        },
+        {
+          "level": 2,
+          "text": "下一步",
+          "anchor": "下一步"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter07\\README.md",
+      "title": "第7章：AgentX 事件驱动智能体框架",
+      "path": "/chapter07/",
+      "summary": "> 从理论到实践 —— 用事件驱动架构构建生产级智能体\r \r 在第六章中，我们学习了 Deepractice 团队提出的多智能体协作方法论：4P 理论、AI 任务状态机、PATEOAS 和 AI 组织化。这些方法论回答了\"应该如何设计\"的问题。\r \r 本章将介绍 AgentX —— Deepractice 团队开发的事件驱动智能体框架。AgentX 是这些方法论的工程实现，它将第五章 Prompt...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "本章核心问题",
+          "anchor": "本章核心问题"
+        },
+        {
+          "level": 2,
+          "text": "本章目录",
+          "anchor": "本章目录"
+        },
+        {
+          "level": 2,
+          "text": "学习目标",
+          "anchor": "学习目标"
+        },
+        {
+          "level": 2,
+          "text": "知识图谱",
+          "anchor": "知识图谱"
+        },
+        {
+          "level": 2,
+          "text": "核心概念预览",
+          "anchor": "核心概念预览"
+        },
+        {
+          "level": 3,
+          "text": "事件驱动 vs 请求-响应",
+          "anchor": "事件驱动-vs-请求-响应"
+        },
+        {
+          "level": 3,
+          "text": "Mealy Machine 状态转换",
+          "anchor": "mealy-machine-状态转换"
+        },
+        {
+          "level": 3,
+          "text": "四层事件模型",
+          "anchor": "四层事件模型"
+        },
+        {
+          "level": 2,
+          "text": "与其他章节的关系",
+          "anchor": "与其他章节的关系"
+        },
+        {
+          "level": 2,
+          "text": "官方资源",
+          "anchor": "官方资源"
+        },
+        {
+          "level": 3,
+          "text": "AgentX 项目",
+          "anchor": "agentx-项目"
+        },
+        {
+          "level": 3,
+          "text": "快速体验",
+          "anchor": "快速体验"
+        },
+        {
+          "level": 2,
+          "text": "开始学习",
+          "anchor": "开始学习"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter07\\7.6-本章小结.md",
+      "title": "7.6 本章小结",
+      "path": "/chapter07/7.6-本章小结",
+      "summary": "> 回顾与展望\r \r 本章我们学习了 AgentX —— Deepractice 团队开发的事件驱动智能体框架。让我们回顾核心内容，并检查学习成果。\r \r ---\r \r \r \r \r \r AgentX 的核心设计理念是事件驱动：\r \r \r \r 优势：\r - 松耦合：组件通过事件通信，互不依赖\r - 可观测：所有事件可追踪、可重放\r - 可扩展：添加新功能不影响现有代码\r - 实时性：流式输出，即时反...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "7.6.1 核心概念回顾",
+          "anchor": "7.6.1-核心概念回顾"
+        },
+        {
+          "level": 3,
+          "text": "事件驱动架构",
+          "anchor": "事件驱动架构"
+        },
+        {
+          "level": 3,
+          "text": "Mealy Machine 模式",
+          "anchor": "mealy-machine-模式"
+        },
+        {
+          "level": 3,
+          "text": "四层事件模型",
+          "anchor": "四层事件模型"
+        },
+        {
+          "level": 2,
+          "text": "7.6.2 架构组件总结",
+          "anchor": "7.6.2-架构组件总结"
+        },
+        {
+          "level": 3,
+          "text": "核心组件",
+          "anchor": "核心组件"
+        },
+        {
+          "level": 3,
+          "text": "Driver/Presenter 模式",
+          "anchor": "driver/presenter-模式"
+        },
+        {
+          "level": 2,
+          "text": "7.6.3 与 PromptX 集成",
+          "anchor": "7.6.3-与-promptx-集成"
+        },
+        {
+          "level": 3,
+          "text": "集成方式",
+          "anchor": "集成方式"
+        },
+        {
+          "level": 3,
+          "text": "认知能力",
+          "anchor": "认知能力"
+        },
+        {
+          "level": 3,
+          "text": "认知循环",
+          "anchor": "认知循环"
+        },
+        {
+          "level": 2,
+          "text": "7.6.4 学习检查",
+          "anchor": "7.6.4-学习检查"
+        },
+        {
+          "level": 3,
+          "text": "概念理解",
+          "anchor": "概念理解"
+        },
+        {
+          "level": 3,
+          "text": "实践检查",
+          "anchor": "实践检查"
+        },
+        {
+          "level": 2,
+          "text": "7.6.5 与其他章节的关系",
+          "anchor": "7.6.5-与其他章节的关系"
+        },
+        {
+          "level": 2,
+          "text": "7.6.6 快速参考",
+          "anchor": "7.6.6-快速参考"
+        },
+        {
+          "level": 3,
+          "text": "快速启动",
+          "anchor": "快速启动"
+        },
+        {
+          "level": 3,
+          "text": "代码模板",
+          "anchor": "代码模板"
+        },
+        {
+          "level": 3,
+          "text": "关键 API",
+          "anchor": "关键-api"
+        },
+        {
+          "level": 2,
+          "text": "7.6.7 下一步学习",
+          "anchor": "7.6.7-下一步学习"
+        },
+        {
+          "level": 2,
+          "text": "本章要点总结",
+          "anchor": "本章要点总结"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter07\\7.5-与PromptX集成.md",
+      "title": "7.5 与 PromptX 集成",
+      "path": "/chapter07/7.5-与PromptX集成",
+      "summary": "> 让 AgentX 拥有认知能力\r \r 在第五章中，我们学习了 PromptX 的认知系统——角色、工具和记忆。本节将介绍如何将这些能力集成到 AgentX 运行时中。\r \r ---\r \r \r \r \r \r \r \r \r \r AgentX 通过 MCP 协议与 PromptX 集成：\r \r \r \r ---\r \r \r \r \r \r PromptX 提供  工具来激活角色：\r \r \r \r \r \r \r \r ...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "7.5.1 集成概述",
+          "anchor": "7.5.1-集成概述"
+        },
+        {
+          "level": 3,
+          "text": "AgentX + PromptX = 完整的智能体",
+          "anchor": "agentx-+-promptx-=-完整的智能体"
+        },
+        {
+          "level": 3,
+          "text": "集成方式",
+          "anchor": "集成方式"
+        },
+        {
+          "level": 2,
+          "text": "7.5.2 角色激活",
+          "anchor": "7.5.2-角色激活"
+        },
+        {
+          "level": 3,
+          "text": "使用 action 工具",
+          "anchor": "使用-action-工具"
+        },
+        {
+          "level": 3,
+          "text": "角色切换",
+          "anchor": "角色切换"
+        },
+        {
+          "level": 3,
+          "text": "自定义角色",
+          "anchor": "自定义角色"
+        },
+        {
+          "level": 3,
+          "text": "监听角色激活事件",
+          "anchor": "监听角色激活事件"
+        },
+        {
+          "level": 2,
+          "text": "7.5.3 工具调用",
+          "anchor": "7.5.3-工具调用"
+        },
+        {
+          "level": 3,
+          "text": "PromptX 工具系统",
+          "anchor": "promptx-工具系统"
+        },
+        {
+          "level": 3,
+          "text": "工具发现",
+          "anchor": "工具发现"
+        },
+        {
+          "level": 3,
+          "text": "组合使用",
+          "anchor": "组合使用"
+        },
+        {
+          "level": 3,
+          "text": "工具调用事件",
+          "anchor": "工具调用事件"
+        },
+        {
+          "level": 2,
+          "text": "7.5.4 记忆管理",
+          "anchor": "7.5.4-记忆管理"
+        },
+        {
+          "level": 3,
+          "text": "recall：记忆检索",
+          "anchor": "recall：记忆检索"
+        },
+        {
+          "level": 3,
+          "text": "remember：记忆存储",
+          "anchor": "remember：记忆存储"
+        },
+        {
+          "level": 3,
+          "text": "认知循环",
+          "anchor": "认知循环"
+        },
+        {
+          "level": 3,
+          "text": "记忆事件",
+          "anchor": "记忆事件"
+        },
+        {
+          "level": 2,
+          "text": "7.5.5 完整集成示例",
+          "anchor": "7.5.5-完整集成示例"
+        },
+        {
+          "level": 3,
+          "text": "项目配置",
+          "anchor": "项目配置"
+        },
+        {
+          "level": 3,
+          "text": "创建智能体",
+          "anchor": "创建智能体"
+        },
+        {
+          "level": 3,
+          "text": "事件处理",
+          "anchor": "事件处理"
+        },
+        {
+          "level": 3,
+          "text": "主程序",
+          "anchor": "主程序"
+        },
+        {
+          "level": 3,
+          "text": "运行",
+          "anchor": "运行"
+        },
+        {
+          "level": 3,
+          "text": "使用示例",
+          "anchor": "使用示例"
+        },
+        {
+          "level": 2,
+          "text": "本节要点",
+          "anchor": "本节要点"
+        },
+        {
+          "level": 2,
+          "text": "下一步",
+          "anchor": "下一步"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter07\\7.4-运行时系统.md",
+      "title": "7.4 运行时系统",
+      "path": "/chapter07/7.4-运行时系统",
+      "summary": "> AgentX 的基础设施层\r \r 本节将介绍 AgentX 运行时系统的核心组件，包括生命周期管理、外部环境接口和数据持久化。\r \r ---\r \r \r \r \r \r Container 是 AgentX 的生命周期容器，负责管理智能体实例的创建、运行和销毁。它是运行时的核心调度器。\r \r \r \r \r \r \r \r \r \r Container 提供完整的生命周期钩子：\r \r 准备创建: ${conf...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "7.4.1 Container：生命周期管理",
+          "anchor": "7.4.1-container：生命周期管理"
+        },
+        {
+          "level": 3,
+          "text": "什么是 Container",
+          "anchor": "什么是-container"
+        },
+        {
+          "level": 3,
+          "text": "智能体注册",
+          "anchor": "智能体注册"
+        },
+        {
+          "level": 3,
+          "text": "生命周期钩子",
+          "anchor": "生命周期钩子"
+        },
+        {
+          "level": 3,
+          "text": "实例管理",
+          "anchor": "实例管理"
+        },
+        {
+          "level": 3,
+          "text": "资源限制",
+          "anchor": "资源限制"
+        },
+        {
+          "level": 2,
+          "text": "7.4.2 Environment：外部环境接口",
+          "anchor": "7.4.2-environment：外部环境接口"
+        },
+        {
+          "level": 3,
+          "text": "什么是 Environment",
+          "anchor": "什么是-environment"
+        },
+        {
+          "level": 3,
+          "text": "LLM 接口",
+          "anchor": "llm-接口"
+        },
+        {
+          "level": 3,
+          "text": "MCP 工具管理",
+          "anchor": "mcp-工具管理"
+        },
+        {
+          "level": 3,
+          "text": "多 LLM 支持",
+          "anchor": "多-llm-支持"
+        },
+        {
+          "level": 3,
+          "text": "环境事件",
+          "anchor": "环境事件"
+        },
+        {
+          "level": 2,
+          "text": "7.4.3 Persistence：数据持久化",
+          "anchor": "7.4.3-persistence：数据持久化"
+        },
+        {
+          "level": 3,
+          "text": "什么是 Persistence",
+          "anchor": "什么是-persistence"
+        },
+        {
+          "level": 3,
+          "text": "MemoryDriver：内存存储",
+          "anchor": "memorydriver：内存存储"
+        },
+        {
+          "level": 3,
+          "text": "SQLiteDriver：SQLite 存储",
+          "anchor": "sqlitedriver：sqlite-存储"
+        },
+        {
+          "level": 3,
+          "text": "持久化接口",
+          "anchor": "持久化接口"
+        },
+        {
+          "level": 3,
+          "text": "使用示例",
+          "anchor": "使用示例"
+        },
+        {
+          "level": 3,
+          "text": "自定义驱动",
+          "anchor": "自定义驱动"
+        },
+        {
+          "level": 2,
+          "text": "7.4.4 运行时组装",
+          "anchor": "7.4.4-运行时组装"
+        },
+        {
+          "level": 3,
+          "text": "完整的运行时配置",
+          "anchor": "完整的运行时配置"
+        },
+        {
+          "level": 3,
+          "text": "优雅关闭",
+          "anchor": "优雅关闭"
+        },
+        {
+          "level": 2,
+          "text": "7.4.5 监控与调试",
+          "anchor": "7.4.5-监控与调试"
+        },
+        {
+          "level": 3,
+          "text": "健康检查",
+          "anchor": "健康检查"
+        },
+        {
+          "level": 3,
+          "text": "指标收集",
+          "anchor": "指标收集"
+        },
+        {
+          "level": 3,
+          "text": "调试日志",
+          "anchor": "调试日志"
+        },
+        {
+          "level": 2,
+          "text": "本节要点",
+          "anchor": "本节要点"
+        },
+        {
+          "level": 2,
+          "text": "下一步",
+          "anchor": "下一步"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter07\\7.3-核心概念.md",
+      "title": "7.3 核心概念",
+      "path": "/chapter07/7.3-核心概念",
+      "summary": "> 理解 AgentX 的架构基石\r \r 本节将深入讲解 AgentX 的核心组件，这些组件共同构成了事件驱动智能体的运行基础。\r \r ---\r \r \r \r \r \r AgentEngine 是 AgentX 的核心引擎，负责处理智能体的所有状态转换和事件流。它实现了 Mealy Machine 模式，将 LLM 的异步响应转换为可预测的事件流。\r \r \r \r \r \r AgentEngine 维护以...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "7.3.1 AgentEngine：智能体引擎",
+          "anchor": "7.3.1-agentengine：智能体引擎"
+        },
+        {
+          "level": 3,
+          "text": "什么是 AgentEngine",
+          "anchor": "什么是-agentengine"
+        },
+        {
+          "level": 3,
+          "text": "状态定义",
+          "anchor": "状态定义"
+        },
+        {
+          "level": 3,
+          "text": "状态转换图",
+          "anchor": "状态转换图"
+        },
+        {
+          "level": 3,
+          "text": "输入处理",
+          "anchor": "输入处理"
+        },
+        {
+          "level": 3,
+          "text": "输出事件",
+          "anchor": "输出事件"
+        },
+        {
+          "level": 2,
+          "text": "7.3.2 SystemBus：事件总线",
+          "anchor": "7.3.2-systembus：事件总线"
+        },
+        {
+          "level": 3,
+          "text": "什么是 SystemBus",
+          "anchor": "什么是-systembus"
+        },
+        {
+          "level": 3,
+          "text": "事件订阅",
+          "anchor": "事件订阅"
+        },
+        {
+          "level": 3,
+          "text": "事件发布",
+          "anchor": "事件发布"
+        },
+        {
+          "level": 3,
+          "text": "事件过滤",
+          "anchor": "事件过滤"
+        },
+        {
+          "level": 3,
+          "text": "事件历史",
+          "anchor": "事件历史"
+        },
+        {
+          "level": 2,
+          "text": "7.3.3 Driver 与 Presenter 模式",
+          "anchor": "7.3.3-driver-与-presenter-模式"
+        },
+        {
+          "level": 3,
+          "text": "什么是 Driver/Presenter",
+          "anchor": "什么是-driver/presenter"
+        },
+        {
+          "level": 3,
+          "text": "Driver：输入驱动",
+          "anchor": "driver：输入驱动"
+        },
+        {
+          "level": 3,
+          "text": "Presenter：输出展示",
+          "anchor": "presenter：输出展示"
+        },
+        {
+          "level": 3,
+          "text": "优势",
+          "anchor": "优势"
+        },
+        {
+          "level": 2,
+          "text": "7.3.4 Agent 接口",
+          "anchor": "7.3.4-agent-接口"
+        },
+        {
+          "level": 3,
+          "text": "创建 Agent",
+          "anchor": "创建-agent"
+        },
+        {
+          "level": 3,
+          "text": "Agent 方法",
+          "anchor": "agent-方法"
+        },
+        {
+          "level": 3,
+          "text": "高级配置",
+          "anchor": "高级配置"
+        },
+        {
+          "level": 2,
+          "text": "7.3.5 组件协作",
+          "anchor": "7.3.5-组件协作"
+        },
+        {
+          "level": 3,
+          "text": "完整的事件流",
+          "anchor": "完整的事件流"
+        },
+        {
+          "level": 3,
+          "text": "代码示例",
+          "anchor": "代码示例"
+        },
+        {
+          "level": 2,
+          "text": "本节要点",
+          "anchor": "本节要点"
+        },
+        {
+          "level": 2,
+          "text": "下一步",
+          "anchor": "下一步"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter07\\7.2-快速开始.md",
+      "title": "7.2 快速开始",
+      "path": "/chapter07/7.2-快速开始",
+      "summary": "> 五分钟启动你的第一个 AgentX 应用\r \r 本节将带你快速体验 AgentX，从安装到运行第一个智能体应用。\r \r ---\r \r \r \r \r \r | 要求 | 说明 |\r |-----|------|\r | Node.js | 20.0 或更高版本 |\r | 包管理器 | npm、yarn 或 pnpm |\r | API Key | Anthropic Claude API Key |\r ...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "7.2.1 环境准备",
+          "anchor": "7.2.1-环境准备"
+        },
+        {
+          "level": 3,
+          "text": "系统要求",
+          "anchor": "系统要求"
+        },
+        {
+          "level": 3,
+          "text": "获取 API Key",
+          "anchor": "获取-api-key"
+        },
+        {
+          "level": 2,
+          "text": "7.2.2 方式一：NPX 快速体验",
+          "anchor": "7.2.2-方式一：npx-快速体验"
+        },
+        {
+          "level": 3,
+          "text": "Portagent 特性",
+          "anchor": "portagent-特性"
+        },
+        {
+          "level": 2,
+          "text": "7.2.3 方式二：Docker 部署",
+          "anchor": "7.2.3-方式二：docker-部署"
+        },
+        {
+          "level": 3,
+          "text": "环境变量",
+          "anchor": "环境变量"
+        },
+        {
+          "level": 2,
+          "text": "7.2.4 方式三：项目集成",
+          "anchor": "7.2.4-方式三：项目集成"
+        },
+        {
+          "level": 3,
+          "text": "安装依赖",
+          "anchor": "安装依赖"
+        },
+        {
+          "level": 3,
+          "text": "创建第一个智能体",
+          "anchor": "创建第一个智能体"
+        },
+        {
+          "level": 3,
+          "text": "运行",
+          "anchor": "运行"
+        },
+        {
+          "level": 2,
+          "text": "7.2.5 事件监听示例",
+          "anchor": "7.2.5-事件监听示例"
+        },
+        {
+          "level": 2,
+          "text": "7.2.6 配置 MCP 工具",
+          "anchor": "7.2.6-配置-mcp-工具"
+        },
+        {
+          "level": 2,
+          "text": "7.2.7 与 PromptX 集成",
+          "anchor": "7.2.7-与-promptx-集成"
+        },
+        {
+          "level": 2,
+          "text": "7.2.8 项目结构建议",
+          "anchor": "7.2.8-项目结构建议"
+        },
+        {
+          "level": 3,
+          "text": "配置文件示例",
+          "anchor": "配置文件示例"
+        },
+        {
+          "level": 2,
+          "text": "本节要点",
+          "anchor": "本节要点"
+        },
+        {
+          "level": 2,
+          "text": "下一步",
+          "anchor": "下一步"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter07\\7.1-AgentX简介与设计哲学.md",
+      "title": "7.1 AgentX 简介与设计哲学",
+      "path": "/chapter07/7.1-AgentX简介与设计哲学",
+      "summary": "> 事件驱动的下一代智能体框架\r \r 在前面的章节中，我们学习了 PromptX 的认知能力和 Deepractice 的设计方法论。现在，是时候将这些理论付诸实践了。\r \r AgentX 是 Deepractice 团队开发的事件驱动智能体框架，它不仅是一个开发工具，更是一种全新的智能体构建范式。\r \r ---\r \r \r \r \r \r 在第四章中，我们手写实现了 ReAct、Plan-and-So...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "7.1.1 为什么需要 AgentX",
+          "anchor": "7.1.1-为什么需要-agentx"
+        },
+        {
+          "level": 3,
+          "text": "现有方案的局限",
+          "anchor": "现有方案的局限"
+        },
+        {
+          "level": 3,
+          "text": "AgentX 的解决方案",
+          "anchor": "agentx-的解决方案"
+        },
+        {
+          "level": 2,
+          "text": "7.1.2 事件驱动架构",
+          "anchor": "7.1.2-事件驱动架构"
+        },
+        {
+          "level": 3,
+          "text": "什么是事件驱动",
+          "anchor": "什么是事件驱动"
+        },
+        {
+          "level": 3,
+          "text": "在智能体中的应用",
+          "anchor": "在智能体中的应用"
+        },
+        {
+          "level": 2,
+          "text": "7.1.3 Mealy Machine 模式",
+          "anchor": "7.1.3-mealy-machine-模式"
+        },
+        {
+          "level": 3,
+          "text": "状态机基础",
+          "anchor": "状态机基础"
+        },
+        {
+          "level": 3,
+          "text": "为什么选择 Mealy Machine",
+          "anchor": "为什么选择-mealy-machine"
+        },
+        {
+          "level": 3,
+          "text": "AgentEngine 中的实现",
+          "anchor": "agentengine-中的实现"
+        },
+        {
+          "level": 3,
+          "text": "纯函数设计",
+          "anchor": "纯函数设计"
+        },
+        {
+          "level": 2,
+          "text": "7.1.4 四层事件模型",
+          "anchor": "7.1.4-四层事件模型"
+        },
+        {
+          "level": 3,
+          "text": "Layer 1: Stream Events（流事件）",
+          "anchor": "layer-1:-stream-events（流事件）"
+        },
+        {
+          "level": 3,
+          "text": "Layer 2: State Events（状态事件）",
+          "anchor": "layer-2:-state-events（状态事件）"
+        },
+        {
+          "level": 3,
+          "text": "Layer 3: Message Events（消息事件）",
+          "anchor": "layer-3:-message-events（消息事件）"
+        },
+        {
+          "level": 3,
+          "text": "Layer 4: Turn Events（轮次事件）",
+          "anchor": "layer-4:-turn-events（轮次事件）"
+        },
+        {
+          "level": 3,
+          "text": "四层关系",
+          "anchor": "四层关系"
+        },
+        {
+          "level": 2,
+          "text": "7.1.5 分层架构设计",
+          "anchor": "7.1.5-分层架构设计"
+        },
+        {
+          "level": 3,
+          "text": "各层职责",
+          "anchor": "各层职责"
+        },
+        {
+          "level": 2,
+          "text": "7.1.6 与 PATEOAS 的关系",
+          "anchor": "7.1.6-与-pateoas-的关系"
+        },
+        {
+          "level": 2,
+          "text": "本节要点",
+          "anchor": "本节要点"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter13\\README.md",
+      "title": "第13章：智能旅行助手",
+      "path": "/chapter13/",
+      "summary": "> 🔄 本章待用 AgentX + PromptX 重写\r \r \r \r 构建一个完整的智能旅行助手，展示 AgentX 多智能体协作能力。\r \r \r \r 1. 智能行程规划 - 根据用户偏好自动生成行程\r 2. 地图可视化 - 景点标注和路线绘制\r 3. 预算计算 - 自动计算各项费用\r 4. 行程编辑 - 支持实时调整\r 5. 导出功能 - PDF/图片导出\r \r \r \r - 前端：Vue3 ...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "项目目标",
+          "anchor": "项目目标"
+        },
+        {
+          "level": 2,
+          "text": "核心功能",
+          "anchor": "核心功能"
+        },
+        {
+          "level": 2,
+          "text": "技术架构",
+          "anchor": "技术架构"
+        },
+        {
+          "level": 2,
+          "text": "章节规划",
+          "anchor": "章节规划"
+        },
+        {
+          "level": 3,
+          "text": "13.1 项目概述与架构设计",
+          "anchor": "13.1-项目概述与架构设计"
+        },
+        {
+          "level": 3,
+          "text": "13.2 AgentX 多智能体设计",
+          "anchor": "13.2-agentx-多智能体设计"
+        },
+        {
+          "level": 3,
+          "text": "13.3 PromptX 角色定义",
+          "anchor": "13.3-promptx-角色定义"
+        },
+        {
+          "level": 3,
+          "text": "13.4 工具集成与 API 对接",
+          "anchor": "13.4-工具集成与-api-对接"
+        },
+        {
+          "level": 3,
+          "text": "13.5 前端实现",
+          "anchor": "13.5-前端实现"
+        },
+        {
+          "level": 3,
+          "text": "13.6 部署与优化",
+          "anchor": "13.6-部署与优化"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter06\\README.md",
+      "title": "第6章：Deepractice 智能体框架体系",
+      "path": "/chapter06/",
+      "summary": "> 从方法论到实践 —— 多智能体协作的系统化解决方案\r \r 在第五章中，我们深入探讨了如何通过 PromptX 为单个 AI 填补语义鸿沟。一个训练有素的专家固然强大，但现实世界中的复杂任务，往往需要多位专家协作才能完成。\r \r 本章将介绍 Deepractice 团队在多智能体协作领域的核心方法论和理论框架。这些方法论回答了一系列关键问题：\r \r - 为什么需要多智能体协作？（问题识别）\r -...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "本章核心问题",
+          "anchor": "本章核心问题"
+        },
+        {
+          "level": 2,
+          "text": "本章目录",
+          "anchor": "本章目录"
+        },
+        {
+          "level": 2,
+          "text": "学习目标",
+          "anchor": "学习目标"
+        },
+        {
+          "level": 2,
+          "text": "知识图谱",
+          "anchor": "知识图谱"
+        },
+        {
+          "level": 2,
+          "text": "核心概念预览",
+          "anchor": "核心概念预览"
+        },
+        {
+          "level": 3,
+          "text": "4P 理论的转化链",
+          "anchor": "4p-理论的转化链"
+        },
+        {
+          "level": 3,
+          "text": "AI 任务状态机的五元组",
+          "anchor": "ai-任务状态机的五元组"
+        },
+        {
+          "level": 3,
+          "text": "PATEOAS 的核心公式",
+          "anchor": "pateoas-的核心公式"
+        },
+        {
+          "level": 3,
+          "text": "AI 组织化的演进路径",
+          "anchor": "ai-组织化的演进路径"
+        },
+        {
+          "level": 2,
+          "text": "与其他章节的关系",
+          "anchor": "与其他章节的关系"
+        },
+        {
+          "level": 2,
+          "text": "官方资源",
+          "anchor": "官方资源"
+        },
+        {
+          "level": 3,
+          "text": "Deepractice 核心项目",
+          "anchor": "deepractice-核心项目"
+        },
+        {
+          "level": 3,
+          "text": "方法论文档",
+          "anchor": "方法论文档"
+        },
+        {
+          "level": 2,
+          "text": "开始学习",
+          "anchor": "开始学习"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter06\\6.6-本章小结.md",
+      "title": "6.6 本章小结",
+      "path": "/chapter06/6.6-本章小结",
+      "summary": "> 从方法论到实践的桥梁\r \r 恭喜你完成第六章！本章介绍了 Deepractice 团队在多智能体协作领域的核心方法论和理论框架。\r \r ---\r \r \r \r \r \r 核心问题：为什么单个专家不够？\r \r | 挑战 | 描述 | 影响 |\r |-----|------|------|\r | 上下文丢失 | 每个 AI 的上下文独立 | 信息传递断层 |\r | 目标漂移 | 缺乏持续的目标管理 |...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "本章核心内容回顾",
+          "anchor": "本章核心内容回顾"
+        },
+        {
+          "level": 3,
+          "text": "6.1 从单智能体到多智能体",
+          "anchor": "6.1-从单智能体到多智能体"
+        },
+        {
+          "level": 3,
+          "text": "6.2 4P 理论",
+          "anchor": "6.2-4p-理论"
+        },
+        {
+          "level": 3,
+          "text": "6.3 AI 任务状态机",
+          "anchor": "6.3-ai-任务状态机"
+        },
+        {
+          "level": 3,
+          "text": "6.4 PATEOAS",
+          "anchor": "6.4-pateoas"
+        },
+        {
+          "level": 3,
+          "text": "6.5 AI 组织化",
+          "anchor": "6.5-ai-组织化"
+        },
+        {
+          "level": 2,
+          "text": "核心概念关系图",
+          "anchor": "核心概念关系图"
+        },
+        {
+          "level": 2,
+          "text": "方法论对照表",
+          "anchor": "方法论对照表"
+        },
+        {
+          "level": 2,
+          "text": "学习检查清单",
+          "anchor": "学习检查清单"
+        },
+        {
+          "level": 3,
+          "text": "理解层面",
+          "anchor": "理解层面"
+        },
+        {
+          "level": 3,
+          "text": "实践层面",
+          "anchor": "实践层面"
+        },
+        {
+          "level": 2,
+          "text": "常见问题 FAQ",
+          "anchor": "常见问题-faq"
+        },
+        {
+          "level": 3,
+          "text": "Q1：这些方法论之间是什么关系？",
+          "anchor": "q1：这些方法论之间是什么关系？"
+        },
+        {
+          "level": 3,
+          "text": "Q2：这些方法论和 PromptX 是什么关系？",
+          "anchor": "q2：这些方法论和-promptx-是什么关系？"
+        },
+        {
+          "level": 3,
+          "text": "Q3：这些理论在实际项目中如何应用？",
+          "anchor": "q3：这些理论在实际项目中如何应用？"
+        },
+        {
+          "level": 3,
+          "text": "Q4：与下一章的框架有什么关系？",
+          "anchor": "q4：与下一章的框架有什么关系？"
+        },
+        {
+          "level": 2,
+          "text": "延伸学习",
+          "anchor": "延伸学习"
+        },
+        {
+          "level": 3,
+          "text": "Deepractice 官方资源",
+          "anchor": "deepractice-官方资源"
+        },
+        {
+          "level": 3,
+          "text": "相关技术",
+          "anchor": "相关技术"
+        },
+        {
+          "level": 2,
+          "text": "下一步学习建议",
+          "anchor": "下一步学习建议"
+        },
+        {
+          "level": 3,
+          "text": "巩固本章",
+          "anchor": "巩固本章"
+        },
+        {
+          "level": 3,
+          "text": "继续学习",
+          "anchor": "继续学习"
+        },
+        {
+          "level": 2,
+          "text": "结语",
+          "anchor": "结语"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter06\\6.5-AI组织化.md",
+      "title": "6.5 AI 组织化：通往集体智能",
+      "path": "/chapter06/6.5-AI组织化",
+      "summary": "> 从个体智能到组织智能，从协作到社会\r \r 在前几节中，我们讨论了多智能体协作的各种技术方案：4P 理论、任务状态机、PATEOAS。这些都是\"怎么做\"的问题。\r \r 但还有一个更根本的问题：我们要达成什么？\r \r 这就是 AI 组织化要回答的问题。\r \r ---\r \r \r \r \r \r 协作是临时的、任务驱动的：\r \r \r \r 组织是持续的、目标驱动的：\r \r \r \r \r \r 人类社会的组织形式...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "6.5.1 从协作到组织",
+          "anchor": "6.5.1-从协作到组织"
+        },
+        {
+          "level": 3,
+          "text": "协作 vs 组织",
+          "anchor": "协作-vs-组织"
+        },
+        {
+          "level": 3,
+          "text": "人类组织的启示",
+          "anchor": "人类组织的启示"
+        },
+        {
+          "level": 2,
+          "text": "6.5.2 AI 组织化的愿景",
+          "anchor": "6.5.2-ai-组织化的愿景"
+        },
+        {
+          "level": 3,
+          "text": "定义",
+          "anchor": "定义"
+        },
+        {
+          "level": 3,
+          "text": "三个层次",
+          "anchor": "三个层次"
+        },
+        {
+          "level": 3,
+          "text": "与 AGI 的关系",
+          "anchor": "与-agi-的关系"
+        },
+        {
+          "level": 2,
+          "text": "6.5.3 组织化的核心要素",
+          "anchor": "6.5.3-组织化的核心要素"
+        },
+        {
+          "level": 3,
+          "text": "要素一：角色分化",
+          "anchor": "要素一：角色分化"
+        },
+        {
+          "level": 3,
+          "text": "要素二：知识共享",
+          "anchor": "要素二：知识共享"
+        },
+        {
+          "level": 3,
+          "text": "要素三：流程规范",
+          "anchor": "要素三：流程规范"
+        },
+        {
+          "level": 3,
+          "text": "要素四：文化形成",
+          "anchor": "要素四：文化形成"
+        },
+        {
+          "level": 2,
+          "text": "6.5.4 从技术到组织的演进路径",
+          "anchor": "6.5.4-从技术到组织的演进路径"
+        },
+        {
+          "level": 3,
+          "text": "阶段一：工具阶段",
+          "anchor": "阶段一：工具阶段"
+        },
+        {
+          "level": 3,
+          "text": "阶段二：助手阶段",
+          "anchor": "阶段二：助手阶段"
+        },
+        {
+          "level": 3,
+          "text": "阶段三：代理阶段",
+          "anchor": "阶段三：代理阶段"
+        },
+        {
+          "level": 3,
+          "text": "阶段四：团队阶段",
+          "anchor": "阶段四：团队阶段"
+        },
+        {
+          "level": 3,
+          "text": "阶段五：组织阶段",
+          "anchor": "阶段五：组织阶段"
+        },
+        {
+          "level": 2,
+          "text": "6.5.5 实现路径",
+          "anchor": "6.5.5-实现路径"
+        },
+        {
+          "level": 3,
+          "text": "技术基础",
+          "anchor": "技术基础"
+        },
+        {
+          "level": 3,
+          "text": "组织架构设计",
+          "anchor": "组织架构设计"
+        },
+        {
+          "level": 3,
+          "text": "渐进式建设",
+          "anchor": "渐进式建设"
+        },
+        {
+          "level": 2,
+          "text": "6.5.6 挑战与思考",
+          "anchor": "6.5.6-挑战与思考"
+        },
+        {
+          "level": 3,
+          "text": "技术挑战",
+          "anchor": "技术挑战"
+        },
+        {
+          "level": 3,
+          "text": "伦理思考",
+          "anchor": "伦理思考"
+        },
+        {
+          "level": 3,
+          "text": "社会影响",
+          "anchor": "社会影响"
+        },
+        {
+          "level": 2,
+          "text": "6.5.7 愿景：AI 社会",
+          "anchor": "6.5.7-愿景：ai-社会"
+        },
+        {
+          "level": 3,
+          "text": "从组织到社会",
+          "anchor": "从组织到社会"
+        },
+        {
+          "level": 3,
+          "text": "人类的角色",
+          "anchor": "人类的角色"
+        },
+        {
+          "level": 3,
+          "text": "Deepractice 的使命",
+          "anchor": "deepractice-的使命"
+        },
+        {
+          "level": 2,
+          "text": "本节要点",
+          "anchor": "本节要点"
+        },
+        {
+          "level": 2,
+          "text": "延伸阅读",
+          "anchor": "延伸阅读"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter06\\6.4-PATEOAS.md",
+      "title": "6.4 PATEOAS：让 AI 拥有连续状态",
+      "path": "/chapter06/6.4-PATEOAS",
+      "summary": "> Prompt as the Engine of Application State\r \r 在上一节中，我们讨论了 AI 任务状态机如何保证协作的原子性和一致性。但状态机的关键在于：谁来管理状态？\r \r 传统架构中，状态由服务端管理。但在 AI 时代，我们需要一种新的思路。\r \r 这就是 PATEOAS —— Prompt as the Engine of Application State。\r...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "6.4.1 从 HATEOAS 到 PATEOAS",
+          "anchor": "6.4.1-从-hateoas-到-pateoas"
+        },
+        {
+          "level": 3,
+          "text": "REST 与 HATEOAS",
+          "anchor": "rest-与-hateoas"
+        },
+        {
+          "level": 3,
+          "text": "PATEOAS 的类比",
+          "anchor": "pateoas-的类比"
+        },
+        {
+          "level": 2,
+          "text": "6.4.2 PATEOAS 的核心概念",
+          "anchor": "6.4.2-pateoas-的核心概念"
+        },
+        {
+          "level": 3,
+          "text": "定义",
+          "anchor": "定义"
+        },
+        {
+          "level": 3,
+          "text": "三个关键要素",
+          "anchor": "三个关键要素"
+        },
+        {
+          "level": 3,
+          "text": "与传统方法的对比",
+          "anchor": "与传统方法的对比"
+        },
+        {
+          "level": 2,
+          "text": "6.4.3 状态在提示词中的表达",
+          "anchor": "6.4.3-状态在提示词中的表达"
+        },
+        {
+          "level": 3,
+          "text": "显式状态声明",
+          "anchor": "显式状态声明"
+        },
+        {
+          "level": 2,
+          "text": "当前状态",
+          "anchor": "当前状态"
+        },
+        {
+          "level": 3,
+          "text": "可用操作声明",
+          "anchor": "可用操作声明"
+        },
+        {
+          "level": 2,
+          "text": "可用操作",
+          "anchor": "可用操作"
+        },
+        {
+          "level": 3,
+          "text": "状态转换历史",
+          "anchor": "状态转换历史"
+        },
+        {
+          "level": 2,
+          "text": "状态转换历史",
+          "anchor": "状态转换历史"
+        },
+        {
+          "level": 2,
+          "text": "6.4.4 PATEOAS 的优势",
+          "anchor": "6.4.4-pateoas-的优势"
+        },
+        {
+          "level": 3,
+          "text": "优势一：自描述性",
+          "anchor": "优势一：自描述性"
+        },
+        {
+          "level": 3,
+          "text": "优势二：灵活演进",
+          "anchor": "优势二：灵活演进"
+        },
+        {
+          "level": 3,
+          "text": "优势三：可追溯性",
+          "anchor": "优势三：可追溯性"
+        },
+        {
+          "level": 3,
+          "text": "优势四：多智能体协调",
+          "anchor": "优势四：多智能体协调"
+        },
+        {
+          "level": 2,
+          "text": "6.4.5 实现模式",
+          "anchor": "6.4.5-实现模式"
+        },
+        {
+          "level": 3,
+          "text": "模式一：状态嵌入式",
+          "anchor": "模式一：状态嵌入式"
+        },
+        {
+          "level": 2,
+          "text": "任务上下文",
+          "anchor": "任务上下文"
+        },
+        {
+          "level": 2,
+          "text": "当前状态",
+          "anchor": "当前状态"
+        },
+        {
+          "level": 2,
+          "text": "可用操作",
+          "anchor": "可用操作"
+        },
+        {
+          "level": 2,
+          "text": "你的任务",
+          "anchor": "你的任务"
+        },
+        {
+          "level": 3,
+          "text": "模式二：状态引用式",
+          "anchor": "模式二：状态引用式"
+        },
+        {
+          "level": 2,
+          "text": "任务引用",
+          "anchor": "任务引用"
+        },
+        {
+          "level": 3,
+          "text": "模式三：混合式",
+          "anchor": "模式三：混合式"
+        },
+        {
+          "level": 2,
+          "text": "任务概要",
+          "anchor": "任务概要"
+        },
+        {
+          "level": 2,
+          "text": "状态概要（快速参考）",
+          "anchor": "状态概要（快速参考）"
+        },
+        {
+          "level": 2,
+          "text": "详细状态",
+          "anchor": "详细状态"
+        },
+        {
+          "level": 2,
+          "text": "可用操作",
+          "anchor": "可用操作"
+        },
+        {
+          "level": 2,
+          "text": "6.4.6 PATEOAS 与 PromptX 的结合",
+          "anchor": "6.4.6-pateoas-与-promptx-的结合"
+        },
+        {
+          "level": 3,
+          "text": "角色状态管理",
+          "anchor": "角色状态管理"
+        },
+        {
+          "level": 3,
+          "text": "工具调用状态",
+          "anchor": "工具调用状态"
+        },
+        {
+          "level": 3,
+          "text": "记忆状态演化",
+          "anchor": "记忆状态演化"
+        },
+        {
+          "level": 2,
+          "text": "6.4.7 实践案例",
+          "anchor": "6.4.7-实践案例"
+        },
+        {
+          "level": 3,
+          "text": "案例：多智能体开发团队",
+          "anchor": "案例：多智能体开发团队"
+        },
+        {
+          "level": 3,
+          "text": "状态转换可视化",
+          "anchor": "状态转换可视化"
+        },
+        {
+          "level": 2,
+          "text": "6.4.8 与其他范式的关系",
+          "anchor": "6.4.8-与其他范式的关系"
+        },
+        {
+          "level": 3,
+          "text": "PATEOAS vs 传统工作流",
+          "anchor": "pateoas-vs-传统工作流"
+        },
+        {
+          "level": 3,
+          "text": "PATEOAS vs 有限状态机",
+          "anchor": "pateoas-vs-有限状态机"
+        },
+        {
+          "level": 3,
+          "text": "PATEOAS 与 4P 理论",
+          "anchor": "pateoas-与-4p-理论"
+        },
+        {
+          "level": 2,
+          "text": "本节要点",
+          "anchor": "本节要点"
+        },
+        {
+          "level": 2,
+          "text": "延伸阅读",
+          "anchor": "延伸阅读"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter06\\6.3-AI任务状态机.md",
+      "title": "6.3 AI 任务状态机：原子性与一致性",
+      "path": "/chapter06/6.3-AI任务状态机",
+      "summary": "> 用状态机思想重新设计 AI 协作\r \r 在上一节中，我们学习了 4P 理论，建立了从提示词到产品的系统化路径。但还有一个关键问题没有解决：\r \r 如何保证 AI 协作过程的可靠性？\r \r 本节将介绍 Deepractice 提出的 AI 任务状态机模型，它用状态机思想解决了 AI 协作中的三大痛点。\r \r ---\r \r \r \r \r \r \r \r 问题本质：AI 没有\"工作记忆\"，重要约束在对话中...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "6.3.1 AI 协作的三大痛点",
+          "anchor": "6.3.1-ai-协作的三大痛点"
+        },
+        {
+          "level": 3,
+          "text": "痛点一：上下文丢失",
+          "anchor": "痛点一：上下文丢失"
+        },
+        {
+          "level": 3,
+          "text": "痛点二：目标漂移",
+          "anchor": "痛点二：目标漂移"
+        },
+        {
+          "level": 3,
+          "text": "痛点三：无法验证",
+          "anchor": "痛点三：无法验证"
+        },
+        {
+          "level": 2,
+          "text": "6.3.2 状态机思维的引入",
+          "anchor": "6.3.2-状态机思维的引入"
+        },
+        {
+          "level": 3,
+          "text": "什么是状态机？",
+          "anchor": "什么是状态机？"
+        },
+        {
+          "level": 3,
+          "text": "状态机的核心思想",
+          "anchor": "状态机的核心思想"
+        },
+        {
+          "level": 2,
+          "text": "6.3.3 AI 任务状态机：五要素模型",
+          "anchor": "6.3.3-ai-任务状态机：五要素模型"
+        },
+        {
+          "level": 3,
+          "text": "要素一：初始状态 (q₀)",
+          "anchor": "要素一：初始状态-(q₀)"
+        },
+        {
+          "level": 3,
+          "text": "要素二：目标状态 (F)",
+          "anchor": "要素二：目标状态-(f)"
+        },
+        {
+          "level": 3,
+          "text": "要素三：上下文空间 (Σ)",
+          "anchor": "要素三：上下文空间-(σ)"
+        },
+        {
+          "level": 3,
+          "text": "要素四：转移函数 (δ)",
+          "anchor": "要素四：转移函数-(δ)"
+        },
+        {
+          "level": 3,
+          "text": "要素五：生产态空间 (Q)",
+          "anchor": "要素五：生产态空间-(q)"
+        },
+        {
+          "level": 2,
+          "text": "6.3.4 两个核心保证",
+          "anchor": "6.3.4-两个核心保证"
+        },
+        {
+          "level": 3,
+          "text": "保证一：原子性",
+          "anchor": "保证一：原子性"
+        },
+        {
+          "level": 3,
+          "text": "保证二：一致性",
+          "anchor": "保证二：一致性"
+        },
+        {
+          "level": 2,
+          "text": "6.3.5 实战案例：用状态机定义任务",
+          "anchor": "6.3.5-实战案例：用状态机定义任务"
+        },
+        {
+          "level": 3,
+          "text": "需求：为博客系统添加评论功能",
+          "anchor": "需求：为博客系统添加评论功能"
+        },
+        {
+          "level": 2,
+          "text": "6.3.6 状态机与多智能体协作",
+          "anchor": "6.3.6-状态机与多智能体协作"
+        },
+        {
+          "level": 3,
+          "text": "多智能体状态机",
+          "anchor": "多智能体状态机"
+        },
+        {
+          "level": 3,
+          "text": "各阶段的状态定义",
+          "anchor": "各阶段的状态定义"
+        },
+        {
+          "level": 3,
+          "text": "状态传递协议",
+          "anchor": "状态传递协议"
+        },
+        {
+          "level": 2,
+          "text": "6.3.7 与 4P 理论的关系",
+          "anchor": "6.3.7-与-4p-理论的关系"
+        },
+        {
+          "level": 2,
+          "text": "本节要点",
+          "anchor": "本节要点"
+        },
+        {
+          "level": 2,
+          "text": "延伸阅读",
+          "anchor": "延伸阅读"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter06\\6.2-4P理论.md",
+      "title": "6.2 4P 理论：AI 工程的系统性解决方案",
+      "path": "/chapter06/6.2-4P理论",
+      "summary": "> 从提示词模式到实际产品的完整价值链\r \r 在上一节中，我们识别了多智能体协作的本质挑战。在深入具体的技术方案之前，我们需要先建立一个系统性的思考框架：如何将 AI 能力转化为实际价值？\r \r 这正是 Deepractice 4P 理论要回答的问题。\r \r ---\r \r \r \r \r \r 在第五章中，我们学习了 PromptX 的角色创建、工具集成和记忆管理。这些都是强大的\"设计模式\"。\r \r 但...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "6.2.1 从提示词到产品的鸿沟",
+          "anchor": "6.2.1-从提示词到产品的鸿沟"
+        },
+        {
+          "level": 3,
+          "text": "实践中的困境",
+          "anchor": "实践中的困境"
+        },
+        {
+          "level": 3,
+          "text": "一个真实的例子",
+          "anchor": "一个真实的例子"
+        },
+        {
+          "level": 2,
+          "text": "6.2.2 4P 理论的核心框架",
+          "anchor": "6.2.2-4p-理论的核心框架"
+        },
+        {
+          "level": 3,
+          "text": "转化公式",
+          "anchor": "转化公式"
+        },
+        {
+          "level": 2,
+          "text": "6.2.3 四个阶段详解",
+          "anchor": "6.2.3-四个阶段详解"
+        },
+        {
+          "level": 3,
+          "text": "第一层：Prompt Pattern（提示词模式）",
+          "anchor": "第一层：prompt-pattern（提示词模式）"
+        },
+        {
+          "level": 3,
+          "text": "第二层：Domain Prompt（领域提示词）",
+          "anchor": "第二层：domain-prompt（领域提示词）"
+        },
+        {
+          "level": 3,
+          "text": "第三层：Scenario Project（场景项目）",
+          "anchor": "第三层：scenario-project（场景项目）"
+        },
+        {
+          "level": 3,
+          "text": "第四层：Realization Product（实现产品）",
+          "anchor": "第四层：realization-product（实现产品）"
+        },
+        {
+          "level": 2,
+          "text": "6.2.4 层级特性对比",
+          "anchor": "6.2.4-层级特性对比"
+        },
+        {
+          "level": 2,
+          "text": "6.2.5 反馈优化循环",
+          "anchor": "6.2.5-反馈优化循环"
+        },
+        {
+          "level": 3,
+          "text": "反馈优化原则",
+          "anchor": "反馈优化原则"
+        },
+        {
+          "level": 3,
+          "text": "实例：从失败中学习",
+          "anchor": "实例：从失败中学习"
+        },
+        {
+          "level": 2,
+          "text": "6.2.6 4P 理论与多智能体协作",
+          "anchor": "6.2.6-4p-理论与多智能体协作"
+        },
+        {
+          "level": 3,
+          "text": "在多智能体系统中的应用",
+          "anchor": "在多智能体系统中的应用"
+        },
+        {
+          "level": 3,
+          "text": "示例：软件开发多智能体团队",
+          "anchor": "示例：软件开发多智能体团队"
+        },
+        {
+          "level": 2,
+          "text": "6.2.7 4P 理论的价值",
+          "anchor": "6.2.7-4p-理论的价值"
+        },
+        {
+          "level": 3,
+          "text": "对个人开发者",
+          "anchor": "对个人开发者"
+        },
+        {
+          "level": 3,
+          "text": "对团队/企业",
+          "anchor": "对团队/企业"
+        },
+        {
+          "level": 3,
+          "text": "成熟度演进路径",
+          "anchor": "成熟度演进路径"
+        },
+        {
+          "level": 2,
+          "text": "本节要点",
+          "anchor": "本节要点"
+        },
+        {
+          "level": 2,
+          "text": "延伸阅读",
+          "anchor": "延伸阅读"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter06\\6.1-从单智能体到多智能体.md",
+      "title": "6.1 从单智能体到多智能体",
+      "path": "/chapter06/6.1-从单智能体到多智能体",
+      "summary": "> 一个专家很强，但一个团队更强\r \r 在第五章中，我们深入探讨了如何通过 PromptX 为单个 AI 填补语义鸿沟——让它拥有专业身份（Nuwa）、工具能力（Luban）和持续记忆（Engram）。\r \r 一个训练有素的专家固然强大，但现实世界中的复杂任务，往往需要多位专家协作才能完成。\r \r ---\r \r \r \r 想象你有一个完美的 AI 助手，它通过 PromptX 获得了：\r - 资深架...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "6.1.1 专家的局限",
+          "anchor": "6.1.1-专家的局限"
+        },
+        {
+          "level": 2,
+          "text": "6.1.2 协作的本质挑战",
+          "anchor": "6.1.2-协作的本质挑战"
+        },
+        {
+          "level": 3,
+          "text": "挑战一：上下文丢失",
+          "anchor": "挑战一：上下文丢失"
+        },
+        {
+          "level": 3,
+          "text": "挑战二：目标漂移",
+          "anchor": "挑战二：目标漂移"
+        },
+        {
+          "level": 3,
+          "text": "挑战三：状态不一致",
+          "anchor": "挑战三：状态不一致"
+        },
+        {
+          "level": 2,
+          "text": "6.1.3 两种协作范式",
+          "anchor": "6.1.3-两种协作范式"
+        },
+        {
+          "level": 3,
+          "text": "范式一：涌现式协作",
+          "anchor": "范式一：涌现式协作"
+        },
+        {
+          "level": 3,
+          "text": "范式二：显式控制",
+          "anchor": "范式二：显式控制"
+        },
+        {
+          "level": 2,
+          "text": "6.1.4 Deepractice 的思考",
+          "anchor": "6.1.4-deepractice-的思考"
+        },
+        {
+          "level": 2,
+          "text": "本节要点",
+          "anchor": "本节要点"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter03\\README.md",
+      "title": "第三章 大语言模型与智能体",
+      "path": "/chapter03/",
+      "summary": "| 节次 | 标题 | 核心内容 | 阅读时间 |\r |:---:|------|----------|:--------:|\r | 3.1 | 语言模型简史 | 从N-gram到Transformer的演进 | 15分钟 |\r | 3.2 | 提示工程基础 | System Prompt设计与优化技术 | 35分钟 |\r | 3.3 | LLM的能力与边界 | 核心能力分析与技术局限 | 20分...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "章节导览",
+          "anchor": "章节导览"
+        },
+        {
+          "level": 2,
+          "text": "章节概述",
+          "anchor": "章节概述"
+        },
+        {
+          "level": 2,
+          "text": "学习目标",
+          "anchor": "学习目标"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter03\\3.4-从LLM到智能体架构.md",
+      "title": "3.4 从LLM到智能体架构",
+      "path": "/chapter03/3.4-从LLM到智能体架构",
+      "summary": "上一节我们看到了大语言模型的四大局限：知识截断、幻觉、计算弱、不会执行。这些局限看似棘手，但解决思路其实很清晰——用架构来弥补模型的不足。\r \r 这就是智能体存在的意义：让模型专注于它擅长的\"理解和推理\"，把它不擅长的事情交给专门的工具和机制来处理。\r \r ---\r \r \r \r 每一个局限都有对应的解决方案：\r \r | 大语言模型局限 | 表现形式 | 智能体增强方案 | 关键技术 | 参考章节 ...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "3.4.1 智能体如何弥补LLM的不足",
+          "anchor": "3.4.1-智能体如何弥补llm的不足"
+        },
+        {
+          "level": 3,
+          "text": "智能体的四层架构",
+          "anchor": "智能体的四层架构"
+        },
+        {
+          "level": 3,
+          "text": "四个增强维度详解",
+          "anchor": "四个增强维度详解"
+        },
+        {
+          "level": 2,
+          "text": "3.4.2 如何选择大语言模型",
+          "anchor": "3.4.2-如何选择大语言模型"
+        },
+        {
+          "level": 3,
+          "text": "主流模型一览",
+          "anchor": "主流模型一览"
+        },
+        {
+          "level": 3,
+          "text": "怎么选？看这棵决策树",
+          "anchor": "怎么选？看这棵决策树"
+        },
+        {
+          "level": 3,
+          "text": "成本优化的两个技巧",
+          "anchor": "成本优化的两个技巧"
+        },
+        {
+          "level": 2,
+          "text": "3.4.3 大语言模型的发展趋势",
+          "anchor": "3.4.3-大语言模型的发展趋势"
+        },
+        {
+          "level": 3,
+          "text": "趋势一：推理增强模型",
+          "anchor": "趋势一：推理增强模型"
+        },
+        {
+          "level": 3,
+          "text": "趋势二：原生工具调用能力",
+          "anchor": "趋势二：原生工具调用能力"
+        },
+        {
+          "level": 3,
+          "text": "趋势三：多模态智能体",
+          "anchor": "趋势三：多模态智能体"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter03\\3.3-LLM的能力与边界.md",
+      "title": "3.3 大语言模型的能力与边界",
+      "path": "/chapter03/3.3-LLM的能力与边界",
+      "summary": "在上一节中，我们学习了如何通过提示词与大语言模型\"对话\"。但仅仅会\"对话\"是不够的——要构建可靠的智能体，我们必须清楚地知道大语言模型能做什么、不能做什么。\r \r 这不是学术讨论，而是实战必备：理解能力，才能充分利用；认清边界，才能设计弥补方案。\r \r ---\r \r \r \r \r \r 这是大语言模型最基础也最强大的能力：\r - 理解复杂、模糊的自然语言指令\r - 生成连贯、流畅的文本内容\r - 完成...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "3.3.1 大语言模型能做什么",
+          "anchor": "3.3.1-大语言模型能做什么"
+        },
+        {
+          "level": 3,
+          "text": "能力一：理解和生成自然语言",
+          "anchor": "能力一：理解和生成自然语言"
+        },
+        {
+          "level": 3,
+          "text": "能力二：广泛的知识储备",
+          "anchor": "能力二：广泛的知识储备"
+        },
+        {
+          "level": 3,
+          "text": "能力三：推理与规划",
+          "anchor": "能力三：推理与规划"
+        },
+        {
+          "level": 2,
+          "text": "3.3.2 大语言模型不能做什么",
+          "anchor": "3.3.2-大语言模型不能做什么"
+        },
+        {
+          "level": 3,
+          "text": "局限一：知识截断",
+          "anchor": "局限一：知识截断"
+        },
+        {
+          "level": 3,
+          "text": "局限二：幻觉",
+          "anchor": "局限二：幻觉"
+        },
+        {
+          "level": 3,
+          "text": "局限三：计算能力弱",
+          "anchor": "局限三：计算能力弱"
+        },
+        {
+          "level": 3,
+          "text": "局限四：只会说，不会做",
+          "anchor": "局限四：只会说，不会做"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter03\\3.2-Prompt工程基础.md",
+      "title": "3.2 提示工程：与大语言模型对话的艺术",
+      "path": "/chapter03/3.2-Prompt工程基础",
+      "summary": "同样是问ChatGPT\"帮我写一段代码\"，有人得到了完美的解决方案，有人却只收获一堆无法运行的代码。区别在哪里？答案是提示词（Prompt）的设计。\r \r 提示工程（Prompt Engineering）是一门与大语言模型有效沟通的技术。它不需要数学基础，也不涉及模型训练，却直接决定了你能从大语言模型那里获得多少价值。\r \r 对于智能体开发者来说，提示工程更是核心技能——智能体的\"人格\"、\"能力\"...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "3.2.1 提示词的基本结构",
+          "anchor": "3.2.1-提示词的基本结构"
+        },
+        {
+          "level": 3,
+          "text": "三种角色，三种用途",
+          "anchor": "三种角色，三种用途"
+        },
+        {
+          "level": 2,
+          "text": "3.2.2 System Prompt设计原则",
+          "anchor": "3.2.2-system-prompt设计原则"
+        },
+        {
+          "level": 3,
+          "text": "要素一：角色定义",
+          "anchor": "要素一：角色定义"
+        },
+        {
+          "level": 3,
+          "text": "要素二：能力声明",
+          "anchor": "要素二：能力声明"
+        },
+        {
+          "level": 3,
+          "text": "要素三：行为约束",
+          "anchor": "要素三：行为约束"
+        },
+        {
+          "level": 3,
+          "text": "要素四：输出格式规范",
+          "anchor": "要素四：输出格式规范"
+        },
+        {
+          "level": 2,
+          "text": "3.2.3 完整System Prompt示例",
+          "anchor": "3.2.3-完整system-prompt示例"
+        },
+        {
+          "level": 2,
+          "text": "3.2.4 User Prompt优化技术",
+          "anchor": "3.2.4-user-prompt优化技术"
+        },
+        {
+          "level": 3,
+          "text": "技巧一：提供充分上下文",
+          "anchor": "技巧一：提供充分上下文"
+        },
+        {
+          "level": 3,
+          "text": "技巧二：Few-shot学习",
+          "anchor": "技巧二：few-shot学习"
+        },
+        {
+          "level": 3,
+          "text": "技巧三：思维链(Chain-of-Thought)",
+          "anchor": "技巧三：思维链(chain-of-thought)"
+        },
+        {
+          "level": 2,
+          "text": "3.2.5 提示词调试：一门实验科学",
+          "anchor": "3.2.5-提示词调试：一门实验科学"
+        },
+        {
+          "level": 3,
+          "text": "基本流程",
+          "anchor": "基本流程"
+        },
+        {
+          "level": 3,
+          "text": "常见问题与解决方案",
+          "anchor": "常见问题与解决方案"
+        },
+        {
+          "level": 3,
+          "text": "Temperature：控制\"创造力\"的旋钮",
+          "anchor": "temperature：控制\"创造力\"的旋钮"
+        },
+        {
+          "level": 2,
+          "text": "3.2.6 动手实践：构建智能体提示系统",
+          "anchor": "3.2.6-动手实践：构建智能体提示系统"
+        },
+        {
+          "level": 3,
+          "text": "第一步：定义工具接口",
+          "anchor": "第一步：定义工具接口"
+        },
+        {
+          "level": 3,
+          "text": "第二步：动态生成System Prompt",
+          "anchor": "第二步：动态生成system-prompt"
+        },
+        {
+          "level": 2,
+          "text": "可用工具",
+          "anchor": "可用工具"
+        },
+        {
+          "level": 2,
+          "text": "工作方式",
+          "anchor": "工作方式"
+        },
+        {
+          "level": 2,
+          "text": "输出格式(JSON)",
+          "anchor": "输出格式(json)"
+        },
+        {
+          "level": 2,
+          "text": "操作规则",
+          "anchor": "操作规则"
+        },
+        {
+          "level": 2,
+          "text": "示例",
+          "anchor": "示例"
+        },
+        {
+          "level": 3,
+          "text": "第三步：测试与迭代",
+          "anchor": "第三步：测试与迭代"
+        },
+        {
+          "level": 2,
+          "text": "3.2.7 进阶：动态提示词组装",
+          "anchor": "3.2.7-进阶：动态提示词组装"
+        },
+        {
+          "level": 2,
+          "text": "3.2.8 提示工程不是万能药",
+          "anchor": "3.2.8-提示工程不是万能药"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter03\\3.1-语言模型简史.md",
+      "title": "3.1 语言模型简史:从统计到神经网络",
+      "path": "/chapter03/3.1-语言模型简史",
+      "summary": "当你在手机上打字时，输入法会自动联想下一个词；当ChatGPT回答问题时，它正在逐字预测最可能的下一个词。这些看似不同的应用，背后都依赖同一种技术——语言模型（Language Model）。\r \r 语言模型的核心任务看似简单：根据已有的文字，预测下一个词最可能是什么。然而，这个简单的任务，经过七十年的演进，最终催生了ChatGPT、Claude这样改变世界的技术。\r \r ---\r \r \r \r 语...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "3.1.1 什么是语言模型",
+          "anchor": "3.1.1-什么是语言模型"
+        },
+        {
+          "level": 2,
+          "text": "3.1.2 语言模型的三代演进",
+          "anchor": "3.1.2-语言模型的三代演进"
+        },
+        {
+          "level": 3,
+          "text": "第一代：统计语言模型（1990s-2000s）",
+          "anchor": "第一代：统计语言模型（1990s-2000s）"
+        },
+        {
+          "level": 3,
+          "text": "第二代：神经网络语言模型（2000s-2017）",
+          "anchor": "第二代：神经网络语言模型（2000s-2017）"
+        },
+        {
+          "level": 3,
+          "text": "第三代：Transformer与大语言模型（2017-至今）",
+          "anchor": "第三代：transformer与大语言模型（2017-至今）"
+        },
+        {
+          "level": 2,
+          "text": "3.1.3 大语言模型为智能体带来了什么",
+          "anchor": "3.1.3-大语言模型为智能体带来了什么"
+        },
+        {
+          "level": 3,
+          "text": "知识的压缩与检索",
+          "anchor": "知识的压缩与检索"
+        },
+        {
+          "level": 3,
+          "text": "通用的推理能力",
+          "anchor": "通用的推理能力"
+        },
+        {
+          "level": 3,
+          "text": "自然语言接口",
+          "anchor": "自然语言接口"
+        },
+        {
+          "level": 3,
+          "text": "但大语言模型并非万能",
+          "anchor": "但大语言模型并非万能"
+        },
+        {
+          "level": 2,
+          "text": "3.1.4 写给想深入了解的读者",
+          "anchor": "3.1.4-写给想深入了解的读者"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter05\\README.md",
+      "title": "第5章：PromptX 智能体上下文平台",
+      "path": "/chapter05/",
+      "summary": "> 像培养人一样培养 AI —— 填补语义鸿沟，让 AI 成为有认知的专家\r \r 在第4章中，我们亲手实现了 ReAct、Plan-and-Solve 和 Reflection 三种经典的智能体范式。手写代码让我们深刻理解了智能体的工作原理。\r \r 但一个根本性的问题浮出水面：\r \r 为什么 AI 知道一切，却经常\"不懂\"我们的需求？\r \r 这不是 AI 能力的问题，而是语义鸿沟的问题——AI 的...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "本章核心问题",
+          "anchor": "本章核心问题"
+        },
+        {
+          "level": 2,
+          "text": "本章目录",
+          "anchor": "本章目录"
+        },
+        {
+          "level": 2,
+          "text": "学习目标",
+          "anchor": "学习目标"
+        },
+        {
+          "level": 2,
+          "text": "知识图谱",
+          "anchor": "知识图谱"
+        },
+        {
+          "level": 2,
+          "text": "核心理念预览",
+          "anchor": "核心理念预览"
+        },
+        {
+          "level": 3,
+          "text": "\"Chat is All You Need\"",
+          "anchor": "\"chat-is-all-you-need\""
+        },
+        {
+          "level": 3,
+          "text": "语义鸿沟的四个测试",
+          "anchor": "语义鸿沟的四个测试"
+        },
+        {
+          "level": 3,
+          "text": "Engram 记忆的三种类型",
+          "anchor": "engram-记忆的三种类型"
+        },
+        {
+          "level": 2,
+          "text": "学术支撑",
+          "anchor": "学术支撑"
+        },
+        {
+          "level": 3,
+          "text": "认知科学基础",
+          "anchor": "认知科学基础"
+        },
+        {
+          "level": 3,
+          "text": "AI 智能体记忆",
+          "anchor": "ai-智能体记忆"
+        },
+        {
+          "level": 3,
+          "text": "AI 角色研究",
+          "anchor": "ai-角色研究"
+        },
+        {
+          "level": 3,
+          "text": "协议与标准",
+          "anchor": "协议与标准"
+        },
+        {
+          "level": 2,
+          "text": "相关资源",
+          "anchor": "相关资源"
+        },
+        {
+          "level": 3,
+          "text": "官方资源",
+          "anchor": "官方资源"
+        },
+        {
+          "level": 3,
+          "text": "快速体验",
+          "anchor": "快速体验"
+        },
+        {
+          "level": 2,
+          "text": "开始学习",
+          "anchor": "开始学习"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter05\\5.6-本章小结.md",
+      "title": "5.6 本章小结",
+      "path": "/chapter05/5.6-本章小结",
+      "summary": "> 像培养人一样培养 AI\r \r 恭喜你完成第五章！本章深入探讨了 PromptX 智能体上下文平台的核心设计哲学和技术实现。\r \r ---\r \r \r \r \r \r 快速上手 PromptX 的核心功能：\r \r | 功能 | 命令 | 作用 |\r |-----|------|------|\r | 发现 | discover | 查看所有可用角色和工具 |\r | 激活 | action(角色ID) |...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "本章核心内容回顾",
+          "anchor": "本章核心内容回顾"
+        },
+        {
+          "level": 3,
+          "text": "5.1 五分钟体验 PromptX",
+          "anchor": "5.1-五分钟体验-promptx"
+        },
+        {
+          "level": 3,
+          "text": "5.2 语义鸿沟",
+          "anchor": "5.2-语义鸿沟"
+        },
+        {
+          "level": 3,
+          "text": "5.3 Nuwa 角色创建",
+          "anchor": "5.3-nuwa-角色创建"
+        },
+        {
+          "level": 3,
+          "text": "5.4 Luban 工具创建",
+          "anchor": "5.4-luban-工具创建"
+        },
+        {
+          "level": 3,
+          "text": "5.5 Engram 记忆网络与 Monogent 认知架构",
+          "anchor": "5.5-engram-记忆网络与-monogent-认知架构"
+        },
+        {
+          "level": 2,
+          "text": "核心概念关系图",
+          "anchor": "核心概念关系图"
+        },
+        {
+          "level": 3,
+          "text": "技术项目对应",
+          "anchor": "技术项目对应"
+        },
+        {
+          "level": 2,
+          "text": "学习检查清单",
+          "anchor": "学习检查清单"
+        },
+        {
+          "level": 3,
+          "text": "理解层面",
+          "anchor": "理解层面"
+        },
+        {
+          "level": 3,
+          "text": "实践层面",
+          "anchor": "实践层面"
+        },
+        {
+          "level": 2,
+          "text": "常见问题 FAQ",
+          "anchor": "常见问题-faq"
+        },
+        {
+          "level": 3,
+          "text": "Q1：PromptX 和普通的 System Prompt 有什么区别？",
+          "anchor": "q1：promptx-和普通的-system-prompt-有什么区别？"
+        },
+        {
+          "level": 3,
+          "text": "Q2：Engram 记忆和向量数据库有什么关系？",
+          "anchor": "q2：engram-记忆和向量数据库有什么关系？"
+        },
+        {
+          "level": 3,
+          "text": "Q3：什么时候应该使用 PromptX？",
+          "anchor": "q3：什么时候应该使用-promptx？"
+        },
+        {
+          "level": 3,
+          "text": "Q4：如何选择合适的记忆类型（ATOMIC/LINK/PATTERN）？",
+          "anchor": "q4：如何选择合适的记忆类型（atomic/link/pattern）？"
+        },
+        {
+          "level": 3,
+          "text": "Q5：recall 没有找到相关记忆怎么办？",
+          "anchor": "q5：recall-没有找到相关记忆怎么办？"
+        },
+        {
+          "level": 2,
+          "text": "延伸学习",
+          "anchor": "延伸学习"
+        },
+        {
+          "level": 3,
+          "text": "认知科学文献",
+          "anchor": "认知科学文献"
+        },
+        {
+          "level": 3,
+          "text": "AI 智能体研究",
+          "anchor": "ai-智能体研究"
+        },
+        {
+          "level": 3,
+          "text": "官方资源",
+          "anchor": "官方资源"
+        },
+        {
+          "level": 2,
+          "text": "下一步学习建议",
+          "anchor": "下一步学习建议"
+        },
+        {
+          "level": 3,
+          "text": "巩固本章",
+          "anchor": "巩固本章"
+        },
+        {
+          "level": 3,
+          "text": "继续学习",
+          "anchor": "继续学习"
+        },
+        {
+          "level": 2,
+          "text": "结语",
+          "anchor": "结语"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter05\\5.5-Engram记忆网络.md",
+      "title": "5.5 Engram 记忆网络：让 AI 有记忆",
+      "path": "/chapter05/5.5-Engram记忆网络",
+      "summary": "> 智能的本质是网络的形状\r \r 前面几节，我们学习了如何通过角色和工具填补语义鸿沟。但还有一个根本性的问题没有解决：\r \r 每次对话结束，AI 就\"失忆\"了。\r \r PromptX 的 Engram 记忆网络 正是为解决这个问题而设计的。本节将深入探讨：\r \r - 什么是 Engram（记忆痕迹）\r - 语义网络如何工作\r - recall-remember 认知循环\r - 激活扩散机制\r - ...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "认知科学基础",
+          "anchor": "认知科学基础"
+        },
+        {
+          "level": 3,
+          "text": "多存储模型（Multi-Store Model）",
+          "anchor": "多存储模型（multi-store-model）"
+        },
+        {
+          "level": 3,
+          "text": "情境记忆 vs 语义记忆",
+          "anchor": "情境记忆-vs-语义记忆"
+        },
+        {
+          "level": 3,
+          "text": "遗忘曲线（Forgetting Curve）",
+          "anchor": "遗忘曲线（forgetting-curve）"
+        },
+        {
+          "level": 3,
+          "text": "激活扩散模型（Spreading Activation）",
+          "anchor": "激活扩散模型（spreading-activation）"
+        },
+        {
+          "level": 2,
+          "text": "什么是 Engram",
+          "anchor": "什么是-engram"
+        },
+        {
+          "level": 3,
+          "text": "神经科学中的 Engram",
+          "anchor": "神经科学中的-engram"
+        },
+        {
+          "level": 3,
+          "text": "PromptX 中的 Engram",
+          "anchor": "promptx-中的-engram"
+        },
+        {
+          "level": 3,
+          "text": "属性一：content（记忆内容）",
+          "anchor": "属性一：content（记忆内容）"
+        },
+        {
+          "level": 3,
+          "text": "属性二：schema（概念序列）",
+          "anchor": "属性二：schema（概念序列）"
+        },
+        {
+          "level": 3,
+          "text": "属性三：strength（记忆强度）",
+          "anchor": "属性三：strength（记忆强度）"
+        },
+        {
+          "level": 3,
+          "text": "属性四：type（记忆类型）",
+          "anchor": "属性四：type（记忆类型）"
+        },
+        {
+          "level": 2,
+          "text": "语义网络：Cue 和 Network",
+          "anchor": "语义网络：cue-和-network"
+        },
+        {
+          "level": 3,
+          "text": "Cue（线索节点）",
+          "anchor": "cue（线索节点）"
+        },
+        {
+          "level": 3,
+          "text": "FrequencyCue（带频率的线索）",
+          "anchor": "frequencycue（带频率的线索）"
+        },
+        {
+          "level": 3,
+          "text": "Network（语义网络）",
+          "anchor": "network（语义网络）"
+        },
+        {
+          "level": 3,
+          "text": "网络的可视化",
+          "anchor": "网络的可视化"
+        },
+        {
+          "level": 2,
+          "text": "Remember：存储记忆",
+          "anchor": "remember：存储记忆"
+        },
+        {
+          "level": 3,
+          "text": "工作流程",
+          "anchor": "工作流程"
+        },
+        {
+          "level": 3,
+          "text": "示例",
+          "anchor": "示例"
+        },
+        {
+          "level": 2,
+          "text": "Recall：召回记忆",
+          "anchor": "recall：召回记忆"
+        },
+        {
+          "level": 3,
+          "text": "两阶段召回策略",
+          "anchor": "两阶段召回策略"
+        },
+        {
+          "level": 3,
+          "text": "激活扩散机制",
+          "anchor": "激活扩散机制"
+        },
+        {
+          "level": 3,
+          "text": "DMN 模式：默认模式网络",
+          "anchor": "dmn-模式：默认模式网络"
+        },
+        {
+          "level": 2,
+          "text": "认知循环：recall → 思考 → remember",
+          "anchor": "认知循环：recall-→-思考-→-remember"
+        },
+        {
+          "level": 3,
+          "text": "完整的工作流程",
+          "anchor": "完整的工作流程"
+        },
+        {
+          "level": 3,
+          "text": "实战示例",
+          "anchor": "实战示例"
+        },
+        {
+          "level": 2,
+          "text": "权重计算：综合评估记忆价值",
+          "anchor": "权重计算：综合评估记忆价值"
+        },
+        {
+          "level": 3,
+          "text": "权重公式",
+          "anchor": "权重公式"
+        },
+        {
+          "level": 3,
+          "text": "各因素的影响",
+          "anchor": "各因素的影响"
+        },
+        {
+          "level": 2,
+          "text": "记忆的衰减与强化",
+          "anchor": "记忆的衰减与强化"
+        },
+        {
+          "level": 3,
+          "text": "遗忘机制",
+          "anchor": "遗忘机制"
+        },
+        {
+          "level": 3,
+          "text": "强化机制",
+          "anchor": "强化机制"
+        },
+        {
+          "level": 2,
+          "text": "深层认知：智能的网络本质",
+          "anchor": "深层认知：智能的网络本质"
+        },
+        {
+          "level": 3,
+          "text": "稀疏网络 vs 密集网络",
+          "anchor": "稀疏网络-vs-密集网络"
+        },
+        {
+          "level": 3,
+          "text": "记忆网络的演化",
+          "anchor": "记忆网络的演化"
+        },
+        {
+          "level": 3,
+          "text": "这对 AI 意味着什么",
+          "anchor": "这对-ai-意味着什么"
+        },
+        {
+          "level": 2,
+          "text": "实战：构建你的记忆网络",
+          "anchor": "实战：构建你的记忆网络"
+        },
+        {
+          "level": 3,
+          "text": "记忆的最佳实践",
+          "anchor": "记忆的最佳实践"
+        },
+        {
+          "level": 3,
+          "text": "认知循环的养成",
+          "anchor": "认知循环的养成"
+        },
+        {
+          "level": 2,
+          "text": "Monogent：认知架构的完整图景",
+          "anchor": "monogent：认知架构的完整图景"
+        },
+        {
+          "level": 3,
+          "text": "Experience：认知的基本单子",
+          "anchor": "experience：认知的基本单子"
+        },
+        {
+          "level": 3,
+          "text": "双基质模型：Computation vs Generation",
+          "anchor": "双基质模型：computation-vs-generation"
+        },
+        {
+          "level": 3,
+          "text": "Evolution：微演化与宏演化",
+          "anchor": "evolution：微演化与宏演化"
+        },
+        {
+          "level": 3,
+          "text": "七阶段处理管道",
+          "anchor": "七阶段处理管道"
+        },
+        {
+          "level": 3,
+          "text": "Experience Chain：认知发展的追踪",
+          "anchor": "experience-chain：认知发展的追踪"
+        },
+        {
+          "level": 3,
+          "text": "五大认知能力",
+          "anchor": "五大认知能力"
+        },
+        {
+          "level": 3,
+          "text": "Engram 与 Monogent 的关系",
+          "anchor": "engram-与-monogent-的关系"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        },
+        {
+          "level": 3,
+          "text": "Engram 记忆痕迹",
+          "anchor": "engram-记忆痕迹"
+        },
+        {
+          "level": 3,
+          "text": "语义网络",
+          "anchor": "语义网络"
+        },
+        {
+          "level": 3,
+          "text": "认知操作",
+          "anchor": "认知操作"
+        },
+        {
+          "level": 3,
+          "text": "激活扩散",
+          "anchor": "激活扩散"
+        },
+        {
+          "level": 3,
+          "text": "认知循环",
+          "anchor": "认知循环"
+        },
+        {
+          "level": 3,
+          "text": "Monogent 认知架构",
+          "anchor": "monogent-认知架构"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter05\\5.4-Luban工具创建.md",
+      "title": "5.4 Luban：为什么能创建工具",
+      "path": "/chapter05/5.4-Luban工具创建",
+      "summary": "> AI 是用户，人类是指挥官，工具是 AI 的装备\r \r 上一节，我们深入了解了 Nuwa 的角色创建哲学。本节，我们来探讨 Luban（鲁班）——PromptX 中的工具创建专家。\r \r Luban 的设计蕴含着一个颠覆性的观点：\r \r > 工具不是为人类设计的，而是为 AI 设计的\r \r ---\r \r \r \r \r \r 传统的软件工具设计思路：\r \r \r \r 在这个模型中：\r - 人类是工具的...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "传统思维的误区",
+          "anchor": "传统思维的误区"
+        },
+        {
+          "level": 3,
+          "text": "工具是给人用的？",
+          "anchor": "工具是给人用的？"
+        },
+        {
+          "level": 3,
+          "text": "AI 时代的范式转变",
+          "anchor": "ai-时代的范式转变"
+        },
+        {
+          "level": 2,
+          "text": "Luban 的核心理念",
+          "anchor": "luban-的核心理念"
+        },
+        {
+          "level": 3,
+          "text": "理念一：AI 是用户，人类是指挥官",
+          "anchor": "理念一：ai-是用户，人类是指挥官"
+        },
+        {
+          "level": 3,
+          "text": "理念二：工具是 AI 的装备，不是人类的软件",
+          "anchor": "理念二：工具是-ai-的装备，不是人类的软件"
+        },
+        {
+          "level": 3,
+          "text": "理念三：集成优于开发，连接优于创造",
+          "anchor": "理念三：集成优于开发，连接优于创造"
+        },
+        {
+          "level": 2,
+          "text": "Token 经济学：AI 上下文的成本意识",
+          "anchor": "token-经济学：ai-上下文的成本意识"
+        },
+        {
+          "level": 3,
+          "text": "AI 的上下文限制",
+          "anchor": "ai-的上下文限制"
+        },
+        {
+          "level": 3,
+          "text": "问题：返回太多数据",
+          "anchor": "问题：返回太多数据"
+        },
+        {
+          "level": 3,
+          "text": "解决方案：给 AI \"索引\"而非\"全文\"",
+          "anchor": "解决方案：给-ai-\"索引\"而非\"全文\""
+        },
+        {
+          "level": 3,
+          "text": "Token 经济学的核心原则",
+          "anchor": "token-经济学的核心原则"
+        },
+        {
+          "level": 2,
+          "text": "工具的三层结构",
+          "anchor": "工具的三层结构"
+        },
+        {
+          "level": 3,
+          "text": "第一层：接口描述（给 AI 看）",
+          "anchor": "第一层：接口描述（给-ai-看）"
+        },
+        {
+          "level": 3,
+          "text": "第二层：执行逻辑（实际运行）",
+          "anchor": "第二层：执行逻辑（实际运行）"
+        },
+        {
+          "level": 3,
+          "text": "第三层：使用手册（manual）",
+          "anchor": "第三层：使用手册（manual）"
+        },
+        {
+          "level": 2,
+          "text": "适用场景",
+          "anchor": "适用场景"
+        },
+        {
+          "level": 2,
+          "text": "使用示例",
+          "anchor": "使用示例"
+        },
+        {
+          "level": 3,
+          "text": "读取数据",
+          "anchor": "读取数据"
+        },
+        {
+          "level": 3,
+          "text": "写入数据",
+          "anchor": "写入数据"
+        },
+        {
+          "level": 2,
+          "text": "注意事项",
+          "anchor": "注意事项"
+        },
+        {
+          "level": 2,
+          "text": "Luban 创建工具的流程",
+          "anchor": "luban-创建工具的流程"
+        },
+        {
+          "level": 3,
+          "text": "流程概览",
+          "anchor": "流程概览"
+        },
+        {
+          "level": 3,
+          "text": "实战：创建 Jira 工具",
+          "anchor": "实战：创建-jira-工具"
+        },
+        {
+          "level": 2,
+          "text": "内置工具介绍",
+          "anchor": "内置工具介绍"
+        },
+        {
+          "level": 3,
+          "text": "tool://filesystem",
+          "anchor": "tool://filesystem"
+        },
+        {
+          "level": 3,
+          "text": "tool://pdf-reader",
+          "anchor": "tool://pdf-reader"
+        },
+        {
+          "level": 3,
+          "text": "tool://excel-tool",
+          "anchor": "tool://excel-tool"
+        },
+        {
+          "level": 3,
+          "text": "tool://word-tool",
+          "anchor": "tool://word-tool"
+        },
+        {
+          "level": 2,
+          "text": "ToolX：工具运行时",
+          "anchor": "toolx：工具运行时"
+        },
+        {
+          "level": 3,
+          "text": "调用方式",
+          "anchor": "调用方式"
+        },
+        {
+          "level": 3,
+          "text": "mode 参数说明",
+          "anchor": "mode-参数说明"
+        },
+        {
+          "level": 3,
+          "text": "使用流程",
+          "anchor": "使用流程"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        },
+        {
+          "level": 3,
+          "text": "Luban 的核心理念",
+          "anchor": "luban-的核心理念"
+        },
+        {
+          "level": 3,
+          "text": "Token 经济学",
+          "anchor": "token-经济学"
+        },
+        {
+          "level": 3,
+          "text": "工具三层结构",
+          "anchor": "工具三层结构"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter05\\5.3-Nuwa角色创建.md",
+      "title": "5.3 Nuwa：为什么能创建角色",
+      "path": "/chapter05/5.3-Nuwa角色创建",
+      "summary": "> 问题比身份重要，目的比工具重要，过程比结果重要\r \r 上一节，我们理解了语义鸿沟——AI 不知道但角色必须知道的信息。Nuwa（女娲）是 PromptX 中专门用来填补\"身份相关语义鸿沟\"的角色创建专家。\r \r 但 Nuwa 不只是一个\"角色生成器\"。她的设计蕴含了深刻的哲学思考：\r \r - 为什么不直接让用户填写表单？\r - 为什么要通过对话来探索需求？\r - 角色的本质是什么？\r \r --...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "第一性原理：从问题出发",
+          "anchor": "第一性原理：从问题出发"
+        },
+        {
+          "level": 3,
+          "text": "传统的角色创建方式",
+          "anchor": "传统的角色创建方式"
+        },
+        {
+          "level": 3,
+          "text": "Nuwa 的第一性原理",
+          "anchor": "nuwa-的第一性原理"
+        },
+        {
+          "level": 3,
+          "text": "对比：填表式 vs 对话式",
+          "anchor": "对比：填表式-vs-对话式"
+        },
+        {
+          "level": 2,
+          "text": "对话式共创：ISSUE 范式",
+          "anchor": "对话式共创：issue-范式"
+        },
+        {
+          "level": 3,
+          "text": "什么是 ISSUE 范式",
+          "anchor": "什么是-issue-范式"
+        },
+        {
+          "level": 3,
+          "text": "ISSUE 范式实战",
+          "anchor": "issue-范式实战"
+        },
+        {
+          "level": 2,
+          "text": "角色的三层架构",
+          "anchor": "角色的三层架构"
+        },
+        {
+          "level": 3,
+          "text": "为什么是三层而不是一层？",
+          "anchor": "为什么是三层而不是一层？"
+        },
+        {
+          "level": 2,
+          "text": "角色四维度：身份、能力、原则、个性",
+          "anchor": "角色四维度：身份、能力、原则、个性"
+        },
+        {
+          "level": 3,
+          "text": "维度一：身份（Identity）",
+          "anchor": "维度一：身份（identity）"
+        },
+        {
+          "level": 3,
+          "text": "维度二：能力（Capabilities）",
+          "anchor": "维度二：能力（capabilities）"
+        },
+        {
+          "level": 3,
+          "text": "维度三：原则（Principles）",
+          "anchor": "维度三：原则（principles）"
+        },
+        {
+          "level": 3,
+          "text": "维度四：个性（Personality）",
+          "anchor": "维度四：个性（personality）"
+        },
+        {
+          "level": 2,
+          "text": "单一真相源原则",
+          "anchor": "单一真相源原则"
+        },
+        {
+          "level": 3,
+          "text": "问题：概念重复定义",
+          "anchor": "问题：概念重复定义"
+        },
+        {
+          "level": 3,
+          "text": "解决方案：引用而非重复",
+          "anchor": "解决方案：引用而非重复"
+        },
+        {
+          "level": 3,
+          "text": "引用语法",
+          "anchor": "引用语法"
+        },
+        {
+          "level": 2,
+          "text": "Nuwa 创建角色的完整流程",
+          "anchor": "nuwa-创建角色的完整流程"
+        },
+        {
+          "level": 2,
+          "text": "实战：用 Nuwa 创建一个角色",
+          "anchor": "实战：用-nuwa-创建一个角色"
+        },
+        {
+          "level": 3,
+          "text": "需求",
+          "anchor": "需求"
+        },
+        {
+          "level": 3,
+          "text": "Nuwa 的探索对话",
+          "anchor": "nuwa-的探索对话"
+        },
+        {
+          "level": 3,
+          "text": "生成的角色配置",
+          "anchor": "生成的角色配置"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        },
+        {
+          "level": 3,
+          "text": "Nuwa 的设计哲学",
+          "anchor": "nuwa-的设计哲学"
+        },
+        {
+          "level": 3,
+          "text": "ISSUE 范式",
+          "anchor": "issue-范式"
+        },
+        {
+          "level": 3,
+          "text": "三层架构",
+          "anchor": "三层架构"
+        },
+        {
+          "level": 3,
+          "text": "四维度",
+          "anchor": "四维度"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter05\\5.2-语义鸿沟.md",
+      "title": "5.2 语义鸿沟：为什么 AI 需要\"培养\"",
+      "path": "/chapter05/5.2-语义鸿沟",
+      "summary": "> AI 不知道但角色必须知道的信息\r \r 上一节，我们快速体验了 PromptX。你可能已经感受到它的神奇——Writer 能写出\"去 AI 味\"的文案，Nuwa 能通过对话创建角色。\r \r 但这一切是如何实现的？\r \r 答案藏在一个核心概念里：语义鸿沟（Semantic Gap）。\r \r ---\r \r \r \r 假设你是一个创业公司的 CTO，想让 AI 帮你写技术文档：\r \r \r \r 看起来很...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "从一个失败的对话说起",
+          "anchor": "从一个失败的对话说起"
+        },
+        {
+          "level": 2,
+          "text": "API 认证",
+          "anchor": "api-认证"
+        },
+        {
+          "level": 3,
+          "text": "1. 获取 API Key",
+          "anchor": "1.-获取-api-key"
+        },
+        {
+          "level": 3,
+          "text": "2. 认证方式",
+          "anchor": "2.-认证方式"
+        },
+        {
+          "level": 3,
+          "text": "3. 错误处理",
+          "anchor": "3.-错误处理"
+        },
+        {
+          "level": 2,
+          "text": "什么是语义鸿沟",
+          "anchor": "什么是语义鸿沟"
+        },
+        {
+          "level": 3,
+          "text": "定义",
+          "anchor": "定义"
+        },
+        {
+          "level": 3,
+          "text": "语义鸿沟的本质",
+          "anchor": "语义鸿沟的本质"
+        },
+        {
+          "level": 2,
+          "text": "识别语义鸿沟的四个测试",
+          "anchor": "识别语义鸿沟的四个测试"
+        },
+        {
+          "level": 3,
+          "text": "测试一：Google 测试",
+          "anchor": "测试一：google-测试"
+        },
+        {
+          "level": 3,
+          "text": "测试二：ChatGPT 测试",
+          "anchor": "测试二：chatgpt-测试"
+        },
+        {
+          "level": 3,
+          "text": "测试三：上下文测试",
+          "anchor": "测试三：上下文测试"
+        },
+        {
+          "level": 3,
+          "text": "测试四：特异性测试",
+          "anchor": "测试四：特异性测试"
+        },
+        {
+          "level": 3,
+          "text": "四测合一",
+          "anchor": "四测合一"
+        },
+        {
+          "level": 2,
+          "text": "避免知识污染",
+          "anchor": "避免知识污染"
+        },
+        {
+          "level": 3,
+          "text": "常见的知识污染",
+          "anchor": "常见的知识污染"
+        },
+        {
+          "level": 3,
+          "text": "正确的做法",
+          "anchor": "正确的做法"
+        },
+        {
+          "level": 2,
+          "text": "Chat is All You Need：PromptX 的世界观",
+          "anchor": "chat-is-all-you-need：promptx-的世界观"
+        },
+        {
+          "level": 3,
+          "text": "传统思维的误区",
+          "anchor": "传统思维的误区"
+        },
+        {
+          "level": 3,
+          "text": "PromptX 的世界观",
+          "anchor": "promptx-的世界观"
+        },
+        {
+          "level": 3,
+          "text": "三层架构",
+          "anchor": "三层架构"
+        },
+        {
+          "level": 2,
+          "text": "填补语义鸿沟的三种策略",
+          "anchor": "填补语义鸿沟的三种策略"
+        },
+        {
+          "level": 3,
+          "text": "策略一：角色定义（Role）",
+          "anchor": "策略一：角色定义（role）"
+        },
+        {
+          "level": 3,
+          "text": "策略二：知识注入（Knowledge）",
+          "anchor": "策略二：知识注入（knowledge）"
+        },
+        {
+          "level": 3,
+          "text": "策略三：记忆积累（Memory）",
+          "anchor": "策略三：记忆积累（memory）"
+        },
+        {
+          "level": 2,
+          "text": "语义鸿沟与角色、工具、记忆的关系",
+          "anchor": "语义鸿沟与角色、工具、记忆的关系"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        },
+        {
+          "level": 3,
+          "text": "核心概念",
+          "anchor": "核心概念"
+        },
+        {
+          "level": 3,
+          "text": "四个识别测试",
+          "anchor": "四个识别测试"
+        },
+        {
+          "level": 3,
+          "text": "Chat is All You Need",
+          "anchor": "chat-is-all-you-need"
+        },
+        {
+          "level": 3,
+          "text": "三种填补策略",
+          "anchor": "三种填补策略"
+        },
+        {
+          "level": 2,
+          "text": "DPML：像写 HTML 一样写 AI",
+          "anchor": "dpml：像写-html-一样写-ai"
+        },
+        {
+          "level": 3,
+          "text": "为什么需要标记语言？",
+          "anchor": "为什么需要标记语言？"
+        },
+        {
+          "level": 3,
+          "text": "DPML 的核心优势",
+          "anchor": "dpml-的核心优势"
+        },
+        {
+          "level": 3,
+          "text": "\"像写 HTML 一样写 AI\"",
+          "anchor": "\"像写-html-一样写-ai\""
+        },
+        {
+          "level": 3,
+          "text": "DPML 项目",
+          "anchor": "dpml-项目"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter05\\5.1-五分钟体验PromptX.md",
+      "title": "5.1 五分钟体验 PromptX",
+      "path": "/chapter05/5.1-五分钟体验PromptX",
+      "summary": "> 先感受，再理解\r \r 学习任何新工具的最好方式是：先用起来，感受它的魅力，然后再去理解它的原理。\r \r 本节不讲理论，只做三件事：\r 1. 安装 PromptX\r 2. 启动服务\r 3. 体验核心功能\r \r ---\r \r \r \r \r \r 无需安装，直接运行：\r \r \r \r \r \r \r \r \r \r 在 Claude Desktop 配置文件中添加 MCP 服务：\r \r macOS: \r Wind...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "第一步：安装 PromptX",
+          "anchor": "第一步：安装-promptx"
+        },
+        {
+          "level": 3,
+          "text": "方式一：npx 直接运行（推荐）",
+          "anchor": "方式一：npx-直接运行（推荐）"
+        },
+        {
+          "level": 3,
+          "text": "方式二：全局安装",
+          "anchor": "方式二：全局安装"
+        },
+        {
+          "level": 3,
+          "text": "方式三：配置 Claude Code / Cursor",
+          "anchor": "方式三：配置-claude-code-/-cursor"
+        },
+        {
+          "level": 2,
+          "text": "第二步：发现可用资源",
+          "anchor": "第二步：发现可用资源"
+        },
+        {
+          "level": 3,
+          "text": "使用 discover 工具",
+          "anchor": "使用-discover-工具"
+        },
+        {
+          "level": 2,
+          "text": "第三步：激活一个角色",
+          "anchor": "第三步：激活一个角色"
+        },
+        {
+          "level": 3,
+          "text": "激活角色",
+          "anchor": "激活角色"
+        },
+        {
+          "level": 3,
+          "text": "体验 Writer 的写作风格",
+          "anchor": "体验-writer-的写作风格"
+        },
+        {
+          "level": 2,
+          "text": "第四步：体验记忆功能",
+          "anchor": "第四步：体验记忆功能"
+        },
+        {
+          "level": 3,
+          "text": "查看记忆网络",
+          "anchor": "查看记忆网络"
+        },
+        {
+          "level": 3,
+          "text": "保存新记忆",
+          "anchor": "保存新记忆"
+        },
+        {
+          "level": 2,
+          "text": "第五步：体验角色创建（Nuwa）",
+          "anchor": "第五步：体验角色创建（nuwa）"
+        },
+        {
+          "level": 3,
+          "text": "激活 Nuwa",
+          "anchor": "激活-nuwa"
+        },
+        {
+          "level": 3,
+          "text": "描述你的需求",
+          "anchor": "描述你的需求"
+        },
+        {
+          "level": 2,
+          "text": "第六步：体验工具创建（Luban）",
+          "anchor": "第六步：体验工具创建（luban）"
+        },
+        {
+          "level": 3,
+          "text": "激活 Luban",
+          "anchor": "激活-luban"
+        },
+        {
+          "level": 3,
+          "text": "描述你的需求",
+          "anchor": "描述你的需求"
+        },
+        {
+          "level": 2,
+          "text": "快速回顾",
+          "anchor": "快速回顾"
+        },
+        {
+          "level": 2,
+          "text": "下一步",
+          "anchor": "下一步"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter04\\README.md",
+      "title": "第四章 智能体经典范式",
+      "path": "/chapter04/",
+      "summary": "在上一章中，我们深入探讨了大语言模型的能力与边界，理解了为什么需要通过智能体架构来弥补模型的不足。现在，是时候动手实践了。\r \r 本章将带你从零实现三种经典的智能体范式，并为后续学习Deepractice团队开发的AgentX框架和PromptX认知系统打下基础：\r \r | 范式 | 核心思想 | 适用场景 |\r |------|---------|---------|\r | ReAct | 思考...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "本章目录",
+          "anchor": "本章目录"
+        },
+        {
+          "level": 2,
+          "text": "前置知识",
+          "anchor": "前置知识"
+        },
+        {
+          "level": 2,
+          "text": "配套代码",
+          "anchor": "配套代码"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter04\\4.6-本章小结.md",
+      "title": "4.6 本章小结与练习",
+      "path": "/chapter04/4.6-本章小结",
+      "summary": "在本章中，以第三章掌握的大语言模型知识为基础，我们通过\"亲手造轮子\"的方式，从零开始编码实现了三种业界经典的智能体构建范式：ReAct、Plan-and-Solve与Reflection。我们不仅探索了它们的核心工作原理，还通过具体的实战案例，深入了解了各自的优势、局限与适用场景。\r \r ---\r \r \r \r \r \r 我们构建了一个能与外部世界交互的ReAct智能体。通过\"思考-行动-观察\"的动态...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "核心知识点回顾",
+          "anchor": "核心知识点回顾"
+        },
+        {
+          "level": 3,
+          "text": "ReAct：思考与行动的协同",
+          "anchor": "react：思考与行动的协同"
+        },
+        {
+          "level": 3,
+          "text": "Plan-and-Solve：先谋后动的策略",
+          "anchor": "plan-and-solve：先谋后动的策略"
+        },
+        {
+          "level": 3,
+          "text": "Reflection：自我反思与迭代",
+          "anchor": "reflection：自我反思与迭代"
+        },
+        {
+          "level": 2,
+          "text": "范式选择策略",
+          "anchor": "范式选择策略"
+        },
+        {
+          "level": 2,
+          "text": "习题",
+          "anchor": "习题"
+        },
+        {
+          "level": 3,
+          "text": "概念理解题",
+          "anchor": "概念理解题"
+        },
+        {
+          "level": 3,
+          "text": "实践扩展题",
+          "anchor": "实践扩展题"
+        },
+        {
+          "level": 3,
+          "text": "提示词工程题",
+          "anchor": "提示词工程题"
+        },
+        {
+          "level": 3,
+          "text": "综合设计题",
+          "anchor": "综合设计题"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter04\\4.5-从手写到框架.md",
+      "title": "4.5 从手写到框架：为什么需要 AgentX 与 PromptX",
+      "path": "/chapter04/4.5-从手写到框架",
+      "summary": "在本章前几节中，我们亲手实现了 ReAct、Plan-and-Solve 和 Reflection 三种经典的智能体范式。这个过程让我们深入理解了智能体的核心工作机制——提示词设计、循环控制、工具调用、状态管理等。\r \r 然而，当我们尝试将这些\"手写\"的智能体应用到更复杂的实际场景时，很快就会遇到一系列工程挑战。本节将分析手写实现的局限性，并引入由 Deepractice 团队开发的 AgentX...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "4.5.1 手写智能体的四大工程困境",
+          "anchor": "4.5.1-手写智能体的四大工程困境"
+        },
+        {
+          "level": 3,
+          "text": "问题一：输出解析的脆弱性",
+          "anchor": "问题一：输出解析的脆弱性"
+        },
+        {
+          "level": 3,
+          "text": "问题二：错误处理的缺失",
+          "anchor": "问题二：错误处理的缺失"
+        },
+        {
+          "level": 3,
+          "text": "问题三：状态管理的简陋",
+          "anchor": "问题三：状态管理的简陋"
+        },
+        {
+          "level": 3,
+          "text": "问题四：扩展性的不足",
+          "anchor": "问题四：扩展性的不足"
+        },
+        {
+          "level": 2,
+          "text": "4.5.2 智能体框架的必要性",
+          "anchor": "4.5.2-智能体框架的必要性"
+        },
+        {
+          "level": 2,
+          "text": "4.5.3 AgentX + PromptX：完整的智能体解决方案",
+          "anchor": "4.5.3-agentx-+-promptx：完整的智能体解决方案"
+        },
+        {
+          "level": 3,
+          "text": "AgentX：智能体的\"骨架\"",
+          "anchor": "agentx：智能体的\"骨架\""
+        },
+        {
+          "level": 3,
+          "text": "PromptX：智能体的\"灵魂\"",
+          "anchor": "promptx：智能体的\"灵魂\""
+        },
+        {
+          "level": 3,
+          "text": "完整架构：AgentX + PromptX",
+          "anchor": "完整架构：agentx-+-promptx"
+        },
+        {
+          "level": 2,
+          "text": "4.5.4 学习路径：从手写到框架",
+          "anchor": "4.5.4-学习路径：从手写到框架"
+        },
+        {
+          "level": 3,
+          "text": "何时手写，何时用框架",
+          "anchor": "何时手写，何时用框架"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter04\\4.4-Reflection范式.md",
+      "title": "4.4 Reflection范式",
+      "path": "/chapter04/4.4-Reflection范式",
+      "summary": "在我们已经实现的ReAct和Plan-and-Solve范式中，智能体一旦完成了任务，其工作流程便告结束。然而，它们生成的初始答案，无论是行动轨迹还是最终结果，都可能存在谬误或有待改进之处。Reflection机制的核心思想，正是为智能体引入一种事后（post-hoc）的自我校正循环，使其能够像人类一样，审视自己的工作，发现不足，并进行迭代优化。\r \r ---\r \r \r \r Reflection机...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "4.4.1 Reflection机制的核心思想",
+          "anchor": "4.4.1-reflection机制的核心思想"
+        },
+        {
+          "level": 2,
+          "text": "4.4.2 案例设定与记忆模块设计",
+          "anchor": "4.4.2-案例设定与记忆模块设计"
+        },
+        {
+          "level": 2,
+          "text": "4.4.3 Reflection智能体的编码实现",
+          "anchor": "4.4.3-reflection智能体的编码实现"
+        },
+        {
+          "level": 3,
+          "text": "提示词设计",
+          "anchor": "提示词设计"
+        },
+        {
+          "level": 3,
+          "text": "智能体封装与实现",
+          "anchor": "智能体封装与实现"
+        },
+        {
+          "level": 2,
+          "text": "4.4.4 运行实例与分析",
+          "anchor": "4.4.4-运行实例与分析"
+        },
+        {
+          "level": 2,
+          "text": "4.4.5 Reflection机制的成本收益分析",
+          "anchor": "4.4.5-reflection机制的成本收益分析"
+        },
+        {
+          "level": 3,
+          "text": "主要成本",
+          "anchor": "主要成本"
+        },
+        {
+          "level": 3,
+          "text": "核心收益",
+          "anchor": "核心收益"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter04\\4.3-Plan-and-Solve范式.md",
+      "title": "4.3 Plan-and-Solve范式",
+      "path": "/chapter04/4.3-Plan-and-Solve范式",
+      "summary": "在我们掌握了ReAct这种反应式的、步进决策的智能体范式后，接下来将探讨一种风格迥异但同样强大的方法——Plan-and-Solve。顾名思义，这种范式将任务处理明确地分为两个阶段：先规划 (Plan)，后执行 (Solve)。\r \r 如果说ReAct像一个经验丰富的侦探，根据现场的蛛丝马迹（Observation）一步步推理，随时调整自己的调查方向；那么Plan-and-Solve则更像一位建筑...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "4.3.1 Plan-and-Solve的工作原理",
+          "anchor": "4.3.1-plan-and-solve的工作原理"
+        },
+        {
+          "level": 2,
+          "text": "4.3.2 规划阶段",
+          "anchor": "4.3.2-规划阶段"
+        },
+        {
+          "level": 2,
+          "text": "4.3.3 执行器与状态管理",
+          "anchor": "4.3.3-执行器与状态管理"
+        },
+        {
+          "level": 2,
+          "text": "4.3.4 运行实例与分析",
+          "anchor": "4.3.4-运行实例与分析"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter04\\4.2-ReAct范式.md",
+      "title": "4.2 ReAct范式",
+      "path": "/chapter04/4.2-ReAct范式",
+      "summary": "在准备好LLM客户端和工具执行器后，我们将构建第一个，也是最经典的一个智能体范式——ReAct (Reason + Act)。ReAct由Shunyu Yao于2022年提出[1]，其核心思想是模仿人类解决问题的方式，将推理 (Reasoning) 与行动 (Acting) 显式地结合起来，形成一个\"思考-行动-观察\"的循环。\r \r ---\r \r \r \r 在ReAct诞生之前，主流的方法可以分为两...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "4.2.1 ReAct的工作流程",
+          "anchor": "4.2.1-react的工作流程"
+        },
+        {
+          "level": 2,
+          "text": "4.2.2 ReAct智能体的编码实现",
+          "anchor": "4.2.2-react智能体的编码实现"
+        },
+        {
+          "level": 3,
+          "text": "系统提示词设计",
+          "anchor": "系统提示词设计"
+        },
+        {
+          "level": 3,
+          "text": "核心循环的实现",
+          "anchor": "核心循环的实现"
+        },
+        {
+          "level": 3,
+          "text": "输出解析器的实现",
+          "anchor": "输出解析器的实现"
+        },
+        {
+          "level": 3,
+          "text": "工具调用与执行",
+          "anchor": "工具调用与执行"
+        },
+        {
+          "level": 3,
+          "text": "观测结果的整合",
+          "anchor": "观测结果的整合"
+        },
+        {
+          "level": 2,
+          "text": "4.2.3 运行实例与分析",
+          "anchor": "4.2.3-运行实例与分析"
+        },
+        {
+          "level": 2,
+          "text": "4.2.4 ReAct的特点、局限性与调试技巧",
+          "anchor": "4.2.4-react的特点、局限性与调试技巧"
+        },
+        {
+          "level": 3,
+          "text": "ReAct的主要特点",
+          "anchor": "react的主要特点"
+        },
+        {
+          "level": 3,
+          "text": "ReAct的固有局限性",
+          "anchor": "react的固有局限性"
+        },
+        {
+          "level": 3,
+          "text": "调试技巧",
+          "anchor": "调试技巧"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter04\\4.1-环境准备与基础工具.md",
+      "title": "4.1 环境准备与基础工具",
+      "path": "/chapter04/4.1-环境准备与基础工具",
+      "summary": "在开始构建智能体之前，我们需要搭建开发环境并定义一些基础组件。这些准备工作将在后续实现不同范式时被复用。\r \r ---\r \r \r \r 本章使用 Python 语言，建议使用 Python 3.10 或更高版本。\r \r \r \r - ：用于调用大语言模型 API\r - ：用于管理环境变量\r \r ---\r \r \r \r 在项目根目录创建  文件，配置模型服务信息：\r \r \r \r 这种配置方式的好处是：\r ...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "4.1.1 安装依赖",
+          "anchor": "4.1.1-安装依赖"
+        },
+        {
+          "level": 2,
+          "text": "4.1.2 配置 API 密钥",
+          "anchor": "4.1.2-配置-api-密钥"
+        },
+        {
+          "level": 2,
+          "text": "4.1.3 封装 LLM 客户端",
+          "anchor": "4.1.3-封装-llm-客户端"
+        },
+        {
+          "level": 2,
+          "text": "4.1.4 定义工具执行器",
+          "anchor": "4.1.4-定义工具执行器"
+        },
+        {
+          "level": 2,
+          "text": "4.1.5 实现搜索工具",
+          "anchor": "4.1.5-实现搜索工具"
+        },
+        {
+          "level": 2,
+          "text": "4.1.6 测试基础组件",
+          "anchor": "4.1.6-测试基础组件"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter08\\README.md",
+      "title": "第八章 主流多智能体框架实践",
+      "path": "/chapter08/",
+      "summary": "> 知己知彼 —— 从业界视角审视智能体框架设计\r \r 在第六章中，我们学习了 Deepractice 团队提出的多智能体协作方法论（4P 理论、AI 任务状态机、PATEOAS）。在第七章中，我们深入了解了 AgentX —— Deepractice 团队开发的事件驱动智能体框架。\r \r 那么问题来了：既然我们已经有了 AgentX，为什么还要学习其他框架？\r \r ---\r \r \r \r \r \r ...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "本章定位：为什么需要全局视野",
+          "anchor": "本章定位：为什么需要全局视野"
+        },
+        {
+          "level": 3,
+          "text": "学习主流框架的三个理由",
+          "anchor": "学习主流框架的三个理由"
+        },
+        {
+          "level": 3,
+          "text": "本章学习路径",
+          "anchor": "本章学习路径"
+        },
+        {
+          "level": 3,
+          "text": "学习目标",
+          "anchor": "学习目标"
+        },
+        {
+          "level": 2,
+          "text": "8.1 从手动实现到框架开发",
+          "anchor": "8.1-从手动实现到框架开发"
+        },
+        {
+          "level": 3,
+          "text": "8.1.1 为何需要智能体框架",
+          "anchor": "8.1.1-为何需要智能体框架"
+        },
+        {
+          "level": 3,
+          "text": "8.1.2 主流框架的选型与对比",
+          "anchor": "8.1.2-主流框架的选型与对比"
+        },
+        {
+          "level": 2,
+          "text": "8.2 框架一：AutoGen",
+          "anchor": "8.2-框架一：autogen"
+        },
+        {
+          "level": 3,
+          "text": "8.2.1 AutoGen 的核心机制",
+          "anchor": "8.2.1-autogen-的核心机制"
+        },
+        {
+          "level": 3,
+          "text": "8.2.2 软件开发团队",
+          "anchor": "8.2.2-软件开发团队"
+        },
+        {
+          "level": 3,
+          "text": "8.2.3 核心代码实现",
+          "anchor": "8.2.3-核心代码实现"
+        },
+        {
+          "level": 3,
+          "text": "1. 需求理解与分析",
+          "anchor": "1.-需求理解与分析"
+        },
+        {
+          "level": 3,
+          "text": "技术方案实施",
+          "anchor": "技术方案实施"
+        },
+        {
+          "level": 3,
+          "text": "代码审查",
+          "anchor": "代码审查"
+        },
+        {
+          "level": 3,
+          "text": "8.2.4 AutoGen 的优势与局限性分析",
+          "anchor": "8.2.4-autogen-的优势与局限性分析"
+        },
+        {
+          "level": 2,
+          "text": "8.3 框架二：AgentScope",
+          "anchor": "8.3-框架二：agentscope"
+        },
+        {
+          "level": 3,
+          "text": "8.3.1 AgentScope 的设计",
+          "anchor": "8.3.1-agentscope-的设计"
+        },
+        {
+          "level": 3,
+          "text": "8.3.2 三国狼人杀游戏",
+          "anchor": "8.3.2-三国狼人杀游戏"
+        },
+        {
+          "level": 3,
+          "text": "8.3.3 AgentScope 的优势与局限性分析",
+          "anchor": "8.3.3-agentscope-的优势与局限性分析"
+        },
+        {
+          "level": 2,
+          "text": "8.4 框架三：CAMEL",
+          "anchor": "8.4-框架三：camel"
+        },
+        {
+          "level": 3,
+          "text": "8.4.1 CAMEL 的自主协作",
+          "anchor": "8.4.1-camel-的自主协作"
+        },
+        {
+          "level": 3,
+          "text": "8.4.2 AI科普电子书",
+          "anchor": "8.4.2-ai科普电子书"
+        },
+        {
+          "level": 3,
+          "text": "8.4.3 CAMEL 的优势与局限性分析",
+          "anchor": "8.4.3-camel-的优势与局限性分析"
+        },
+        {
+          "level": 2,
+          "text": "8.5 框架四：LangGraph",
+          "anchor": "8.5-框架四：langgraph"
+        },
+        {
+          "level": 3,
+          "text": "8.5.1 LangGraph 的结构梳理",
+          "anchor": "8.5.1-langgraph-的结构梳理"
+        },
+        {
+          "level": 3,
+          "text": "8.5.2 三步问答助手",
+          "anchor": "8.5.2-三步问答助手"
+        },
+        {
+          "level": 3,
+          "text": "合适的景点推荐：",
+          "anchor": "合适的景点推荐："
+        },
+        {
+          "level": 3,
+          "text": "小贴士：",
+          "anchor": "小贴士："
+        },
+        {
+          "level": 3,
+          "text": "8.5.3 LangGraph 的优势与局限性分析",
+          "anchor": "8.5.3-langgraph-的优势与局限性分析"
+        },
+        {
+          "level": 2,
+          "text": "8.6 本章小结",
+          "anchor": "8.6-本章小结"
+        },
+        {
+          "level": 2,
+          "text": "习题",
+          "anchor": "习题"
+        },
+        {
+          "level": 2,
+          "text": "8.7 与 Deepractice 技术栈对比",
+          "anchor": "8.7-与-deepractice-技术栈对比"
+        },
+        {
+          "level": 3,
+          "text": "8.7.1 从方法论视角审视主流框架",
+          "anchor": "8.7.1-从方法论视角审视主流框架"
+        },
+        {
+          "level": 3,
+          "text": "8.7.2 协作范式对比",
+          "anchor": "8.7.2-协作范式对比"
+        },
+        {
+          "level": 3,
+          "text": "8.7.3 Deepractice 技术栈的独特价值",
+          "anchor": "8.7.3-deepractice-技术栈的独特价值"
+        },
+        {
+          "level": 3,
+          "text": "8.7.4 技术选型决策树",
+          "anchor": "8.7.4-技术选型决策树"
+        },
+        {
+          "level": 3,
+          "text": "8.7.5 融合使用的可能性",
+          "anchor": "8.7.5-融合使用的可能性"
+        },
+        {
+          "level": 3,
+          "text": "8.7.6 本节小结",
+          "anchor": "8.7.6-本节小结"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter02\\README.md",
+      "title": "第二章 智能体发展史",
+      "path": "/chapter02/",
+      "summary": "> 学习目标：回溯人工智能的历史长河，理解现代智能体架构的思想渊源与技术演进\r \r ---\r \r \r \r | 序号 | 章节 | 内容概要 | 预计阅读 |\r |:---:|------|----------|:--------:|\r | 2.1 | 基于符号与逻辑的早期智能体 | PSSH假说、专家系统、SHRDLU | 20分钟 |\r | 2.2 | 构建基于规则的聊天机器人 | ELIZA设...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "📖 章节导航",
+          "anchor": "📖-章节导航"
+        },
+        {
+          "level": 2,
+          "text": "🎯 本章核心问题",
+          "anchor": "🎯-本章核心问题"
+        },
+        {
+          "level": 2,
+          "text": "📊 知识脉络图",
+          "anchor": "📊-知识脉络图"
+        },
+        {
+          "level": 2,
+          "text": "🔑 关键里程碑",
+          "anchor": "🔑-关键里程碑"
+        },
+        {
+          "level": 2,
+          "text": "💡 学习建议",
+          "anchor": "💡-学习建议"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter02\\2.6-习题与讨论.md",
+      "title": "2.6 习题与讨论",
+      "path": "/chapter02/2.6-习题与讨论",
+      "summary": "> 提示：以下的部分习题没有标准答案，旨在帮助学习者建立对智能体发展历史的系统性理解，并培养\"以史为鉴\"的技术洞察力。\r \r ---\r \r \r \r \r \r 物理符号系统假说（PSSH）是符号主义时代的理论基石。请分析：\r \r 1. 该假说的\"充分性论断\"和\"必要性论断\"分别是什么含义？\r \r 2. 结合本章内容，说明符号主义智能体在实践中遇到的哪些问题对该假说的\"充分性\"提出了挑战？\r \r 3. ...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "概念理解题",
+          "anchor": "概念理解题"
+        },
+        {
+          "level": 3,
+          "text": "习题 1：物理符号系统假说分析",
+          "anchor": "习题-1：物理符号系统假说分析"
+        },
+        {
+          "level": 3,
+          "text": "习题 2：专家系统的局限与启示",
+          "anchor": "习题-2：专家系统的局限与启示"
+        },
+        {
+          "level": 2,
+          "text": "设计与分析题",
+          "anchor": "设计与分析题"
+        },
+        {
+          "level": 3,
+          "text": "习题 3：ELIZA扩展实践",
+          "anchor": "习题-3：eliza扩展实践"
+        },
+        {
+          "level": 3,
+          "text": "习题 4：心智社会理论的现代应用",
+          "anchor": "习题-4：心智社会理论的现代应用"
+        },
+        {
+          "level": 2,
+          "text": "综合分析题",
+          "anchor": "综合分析题"
+        },
+        {
+          "level": 3,
+          "text": "习题 5：学习范式对比",
+          "anchor": "习题-5：学习范式对比"
+        },
+        {
+          "level": 3,
+          "text": "习题 6：预训练范式的思考",
+          "anchor": "习题-6：预训练范式的思考"
+        },
+        {
+          "level": 3,
+          "text": "习题 7：2023-2025技术演进分析",
+          "anchor": "习题-7：2023-2025技术演进分析"
+        },
+        {
+          "level": 2,
+          "text": "动手实践题",
+          "anchor": "动手实践题"
+        },
+        {
+          "level": 3,
+          "text": "习题 8：构建时代对比智能体",
+          "anchor": "习题-8：构建时代对比智能体"
+        },
+        {
+          "level": 2,
+          "text": "讨论与交流",
+          "anchor": "讨论与交流"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter02\\2.5-智能体爆发时代.md",
+      "title": "2.5 2023-2025：智能体的爆发时代",
+      "path": "/chapter02/2.5-智能体爆发时代",
+      "summary": "2022年11月ChatGPT的发布，标志着大语言模型正式进入公众视野。但真正引发智能体技术爆发的，是2023年初开始涌现的一系列自主智能体项目和框架。本节将系统梳理这一关键时期的技术演进。\r \r ---\r \r \r \r \r \r 2023年3月，游戏开发者Toran Bruce Richards发布了AutoGPT，这是一个能够自主设定子目标、执行任务、并进行自我迭代的智能体项目。\r \r AutoG...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "2.5.1 自主智能体的爆发（2023）",
+          "anchor": "2.5.1-自主智能体的爆发（2023）"
+        },
+        {
+          "level": 3,
+          "text": "AutoGPT：点燃导火索",
+          "anchor": "autogpt：点燃导火索"
+        },
+        {
+          "level": 3,
+          "text": "BabyAGI：学术界的跟进",
+          "anchor": "babyagi：学术界的跟进"
+        },
+        {
+          "level": 3,
+          "text": "这波热潮的意义",
+          "anchor": "这波热潮的意义"
+        },
+        {
+          "level": 2,
+          "text": "2.5.2 多智能体框架的兴起（2023-2024）",
+          "anchor": "2.5.2-多智能体框架的兴起（2023-2024）"
+        },
+        {
+          "level": 3,
+          "text": "LangChain → LangGraph",
+          "anchor": "langchain-→-langgraph"
+        },
+        {
+          "level": 3,
+          "text": "CrewAI：角色扮演式协作",
+          "anchor": "crewai：角色扮演式协作"
+        },
+        {
+          "level": 3,
+          "text": "AutoGen：对话驱动的协作",
+          "anchor": "autogen：对话驱动的协作"
+        },
+        {
+          "level": 3,
+          "text": "框架对比",
+          "anchor": "框架对比"
+        },
+        {
+          "level": 2,
+          "text": "2.5.3 大模型的快速迭代（2023-2025）",
+          "anchor": "2.5.3-大模型的快速迭代（2023-2025）"
+        },
+        {
+          "level": 3,
+          "text": "OpenAI GPT系列",
+          "anchor": "openai-gpt系列"
+        },
+        {
+          "level": 3,
+          "text": "Anthropic Claude系列",
+          "anchor": "anthropic-claude系列"
+        },
+        {
+          "level": 3,
+          "text": "关键突破",
+          "anchor": "关键突破"
+        },
+        {
+          "level": 2,
+          "text": "2.5.4 MCP协议：智能体的标准化（2024-2025）",
+          "anchor": "2.5.4-mcp协议：智能体的标准化（2024-2025）"
+        },
+        {
+          "level": 3,
+          "text": "背景",
+          "anchor": "背景"
+        },
+        {
+          "level": 3,
+          "text": "Model Context Protocol",
+          "anchor": "model-context-protocol"
+        },
+        {
+          "level": 3,
+          "text": "MCP的核心特性",
+          "anchor": "mcp的核心特性"
+        },
+        {
+          "level": 3,
+          "text": "行业采纳",
+          "anchor": "行业采纳"
+        },
+        {
+          "level": 2,
+          "text": "2.5.5 开发者工具的智能体化",
+          "anchor": "2.5.5-开发者工具的智能体化"
+        },
+        {
+          "level": 3,
+          "text": "GitHub Copilot的演进",
+          "anchor": "github-copilot的演进"
+        },
+        {
+          "level": 3,
+          "text": "Claude Code",
+          "anchor": "claude-code"
+        },
+        {
+          "level": 3,
+          "text": "Cursor",
+          "anchor": "cursor"
+        },
+        {
+          "level": 2,
+          "text": "2.5.6 市场与趋势展望",
+          "anchor": "2.5.6-市场与趋势展望"
+        },
+        {
+          "level": 3,
+          "text": "市场规模",
+          "anchor": "市场规模"
+        },
+        {
+          "level": 3,
+          "text": "开发者活跃度",
+          "anchor": "开发者活跃度"
+        },
+        {
+          "level": 3,
+          "text": "企业采纳",
+          "anchor": "企业采纳"
+        },
+        {
+          "level": 3,
+          "text": "关键趋势",
+          "anchor": "关键趋势"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter02\\2.4-学习范式演进.md",
+      "title": "2.4 学习范式的演进与现代智能体",
+      "path": "/chapter02/2.4-学习范式演进",
+      "summary": "前文探讨的\"心智社会\"理论，在哲学层面为群体智能和去中心化协作指明了方向，但实现路径尚不明确。与此同时，符号主义在应对真实世界复杂性时暴露的根本性挑战也表明仅靠预先编码的规则无法构建真正鲁棒的智能。\r \r 这两条线索共同指向了一个问题：如果智能无法被完全设计，那么它是否可以被学习出来？\r \r 这一设问开启了人工智能的\"学习\"时代。其核心目标不再是手动编码知识，而是构建能从经验和数据中自动获取知识与...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "2.4.1 从符号到联结",
+          "anchor": "2.4.1-从符号到联结"
+        },
+        {
+          "level": 3,
+          "text": "联结主义的核心思想",
+          "anchor": "联结主义的核心思想"
+        },
+        {
+          "level": 3,
+          "text": "范式转变",
+          "anchor": "范式转变"
+        },
+        {
+          "level": 2,
+          "text": "2.4.2 基于强化学习的智能体",
+          "anchor": "2.4.2-基于强化学习的智能体"
+        },
+        {
+          "level": 3,
+          "text": "AlphaGo：强化学习的里程碑",
+          "anchor": "alphago：强化学习的里程碑"
+        },
+        {
+          "level": 3,
+          "text": "强化学习的核心要素",
+          "anchor": "强化学习的核心要素"
+        },
+        {
+          "level": 3,
+          "text": "学习目标",
+          "anchor": "学习目标"
+        },
+        {
+          "level": 2,
+          "text": "2.4.3 基于大规模数据的预训练",
+          "anchor": "2.4.3-基于大规模数据的预训练"
+        },
+        {
+          "level": 3,
+          "text": "预训练-微调范式",
+          "anchor": "预训练-微调范式"
+        },
+        {
+          "level": 3,
+          "text": "涌现能力",
+          "anchor": "涌现能力"
+        },
+        {
+          "level": 2,
+          "text": "2.4.4 基于大语言模型的智能体",
+          "anchor": "2.4.4-基于大语言模型的智能体"
+        },
+        {
+          "level": 3,
+          "text": "LLM智能体的核心架构",
+          "anchor": "llm智能体的核心架构"
+        },
+        {
+          "level": 3,
+          "text": "工作流程",
+          "anchor": "工作流程"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter02\\2.3-心智社会理论.md",
+      "title": "2.3 马文·明斯基的心智社会",
+      "path": "/chapter02/2.3-心智社会理论",
+      "summary": "符号主义的探索和ELIZA的实践，共同指向了一个问题：通过预设规则构建的、单一的、集中的推理引擎，似乎难以通向真正的智能。无论规则库多么庞大，系统在面对真实世界的模糊性、复杂性和无穷变化时，总是显得僵化而脆弱。\r \r 这一困境促使一些顶尖的思考者开始反思人工智能最底层的设计哲学。其中，马文·明斯基（Marvin Minsky）没有继续尝试为单一推理核心添加更多规则，而是在他的《心智社会》（The ...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "2.3.1 对单一整体智能模型的反思",
+          "anchor": "2.3.1-对单一整体智能模型的反思"
+        },
+        {
+          "level": 3,
+          "text": "\"理解\"是什么？",
+          "anchor": "\"理解\"是什么？"
+        },
+        {
+          "level": 3,
+          "text": "\"常识\"是什么？",
+          "anchor": "\"常识\"是什么？"
+        },
+        {
+          "level": 3,
+          "text": "智能体应该如何构建？",
+          "anchor": "智能体应该如何构建？"
+        },
+        {
+          "level": 2,
+          "text": "2.3.2 作为协作体的智能",
+          "anchor": "2.3.2-作为协作体的智能"
+        },
+        {
+          "level": 3,
+          "text": "机构（Agency）的概念",
+          "anchor": "机构（agency）的概念"
+        },
+        {
+          "level": 3,
+          "text": "涌现（Emergence）",
+          "anchor": "涌现（emergence）"
+        },
+        {
+          "level": 3,
+          "text": "案例：搭建积木塔",
+          "anchor": "案例：搭建积木塔"
+        },
+        {
+          "level": 2,
+          "text": "2.3.3 对多智能体系统的理论启发",
+          "anchor": "2.3.3-对多智能体系统的理论启发"
+        },
+        {
+          "level": 3,
+          "text": "具体启发",
+          "anchor": "具体启发"
+        },
+        {
+          "level": 2,
+          "text": "2.3.4 对现代多智能体框架的影响",
+          "anchor": "2.3.4-对现代多智能体框架的影响"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter02\\2.2-构建规则聊天机器人.md",
+      "title": "2.2 构建基于规则的聊天机器人",
+      "path": "/chapter02/2.2-构建规则聊天机器人",
+      "summary": "在探讨了符号主义的理论挑战后，本节我们将通过一个具体的编程实践，来直观地感受基于规则的系统是如何工作的。我们将尝试复现人工智能历史上一个极具影响力的早期聊天机器人——ELIZA。\r \r > 🎯 核心理念：Chat is All You Need\r >\r > 在理解了ELIZA的设计思想后，你完全可以让AI帮你用任何语言实现它。本节的重点是理解原理，而非记忆代码语法。\r \r ---\r \r \r \r ...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "2.2.1 ELIZA 的设计思想",
+          "anchor": "2.2.1-eliza-的设计思想"
+        },
+        {
+          "level": 3,
+          "text": "设计的深层含义",
+          "anchor": "设计的深层含义"
+        },
+        {
+          "level": 2,
+          "text": "2.2.2 模式匹配与文本替换",
+          "anchor": "2.2.2-模式匹配与文本替换"
+        },
+        {
+          "level": 3,
+          "text": "步骤1：关键词识别与排序",
+          "anchor": "步骤1：关键词识别与排序"
+        },
+        {
+          "level": 3,
+          "text": "步骤2：分解规则",
+          "anchor": "步骤2：分解规则"
+        },
+        {
+          "level": 3,
+          "text": "步骤3：重组规则",
+          "anchor": "步骤3：重组规则"
+        },
+        {
+          "level": 3,
+          "text": "步骤4：代词转换",
+          "anchor": "步骤4：代词转换"
+        },
+        {
+          "level": 3,
+          "text": "工作流程伪代码",
+          "anchor": "工作流程伪代码"
+        },
+        {
+          "level": 2,
+          "text": "2.2.3 TypeScript 实现",
+          "anchor": "2.2.3-typescript-实现"
+        },
+        {
+          "level": 3,
+          "text": "规则定义",
+          "anchor": "规则定义"
+        },
+        {
+          "level": 3,
+          "text": "代词转换",
+          "anchor": "代词转换"
+        },
+        {
+          "level": 3,
+          "text": "响应生成",
+          "anchor": "响应生成"
+        },
+        {
+          "level": 3,
+          "text": "主程序（Node.js环境）",
+          "anchor": "主程序（node.js环境）"
+        },
+        {
+          "level": 3,
+          "text": "运行效果",
+          "anchor": "运行效果"
+        },
+        {
+          "level": 2,
+          "text": "2.2.4 规则系统的根本局限",
+          "anchor": "2.2.4-规则系统的根本局限"
+        },
+        {
+          "level": 3,
+          "text": "缺乏语义理解",
+          "anchor": "缺乏语义理解"
+        },
+        {
+          "level": 3,
+          "text": "无上下文记忆",
+          "anchor": "无上下文记忆"
+        },
+        {
+          "level": 3,
+          "text": "规则的扩展性问题",
+          "anchor": "规则的扩展性问题"
+        },
+        {
+          "level": 2,
+          "text": "2.2.5 ELIZA效应的启示",
+          "anchor": "2.2.5-eliza效应的启示"
+        },
+        {
+          "level": 2,
+          "text": "💡 动手实践建议",
+          "anchor": "💡-动手实践建议"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter02\\2.1-符号主义时代.md",
+      "title": "2.1 基于符号与逻辑的早期智能体",
+      "path": "/chapter02/2.1-符号主义时代",
+      "summary": "人工智能领域的早期探索，深受数理逻辑和计算机科学基本原理的影响。在那个时代，研究者们普遍持有一种信念：人类的智能，尤其是逻辑推理能力，可以被形式化的符号体系所捕捉和复现。这一核心思想催生了人工智能的第一个重要范式——符号主义（Symbolicism），也被称为\"逻辑AI\"或\"传统AI\"。\r \r 在符号主义看来，智能行为的核心是基于一套明确规则对符号进行操作。因此，一个智能体可以被视为一个物理符号系...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "2.1.1 物理符号系统假说",
+          "anchor": "2.1.1-物理符号系统假说"
+        },
+        {
+          "level": 2,
+          "text": "2.1.2 专家系统",
+          "anchor": "2.1.2-专家系统"
+        },
+        {
+          "level": 3,
+          "text": "知识库与推理机",
+          "anchor": "知识库与推理机"
+        },
+        {
+          "level": 3,
+          "text": "应用案例：MYCIN系统",
+          "anchor": "应用案例：mycin系统"
+        },
+        {
+          "level": 2,
+          "text": "2.1.3 SHRDLU",
+          "anchor": "2.1.3-shrdlu"
+        },
+        {
+          "level": 3,
+          "text": "SHRDLU的历史地位",
+          "anchor": "shrdlu的历史地位"
+        },
+        {
+          "level": 2,
+          "text": "2.1.4 符号主义面临的根本性挑战",
+          "anchor": "2.1.4-符号主义面临的根本性挑战"
+        },
+        {
+          "level": 3,
+          "text": "（1）常识知识与知识获取瓶颈",
+          "anchor": "（1）常识知识与知识获取瓶颈"
+        },
+        {
+          "level": 3,
+          "text": "（2）框架问题与系统脆弱性",
+          "anchor": "（2）框架问题与系统脆弱性"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter01\\README.md",
+      "title": "第一章 初识智能体",
+      "path": "/chapter01/",
+      "summary": "欢迎来到智能体的世界！在人工智能浪潮席卷全球的今天，智能体（Agent）已成为驱动技术变革与应用创新的核心概念之一。无论你的志向是成为 AI 领域的研究者、工程师，还是希望深刻理解技术前沿的观察者，掌握智能体的本质，都将是你知识体系中不可或缺的一环。\r \r <div align=\"center\">\r   <img src=\"https://raw.githubusercontent.com/dat...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "📚 本章目录",
+          "anchor": "📚-本章目录"
+        },
+        {
+          "level": 2,
+          "text": "🎯 学习目标",
+          "anchor": "🎯-学习目标"
+        },
+        {
+          "level": 2,
+          "text": "🗺️ 知识图谱",
+          "anchor": "🗺️-知识图谱"
+        },
+        {
+          "level": 2,
+          "text": "⏱️ 建议学习时间",
+          "anchor": "⏱️-建议学习时间"
+        },
+        {
+          "level": 2,
+          "text": "📖 本章小结",
+          "anchor": "📖-本章小结"
+        },
+        {
+          "level": 2,
+          "text": "🔗 快速导航",
+          "anchor": "🔗-快速导航"
+        },
+        {
+          "level": 2,
+          "text": "💬 讨论与交流",
+          "anchor": "💬-讨论与交流"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter01\\1.5-习题与讨论.md",
+      "title": "1.5 习题与讨论",
+      "path": "/chapter01/1.5-习题与讨论",
+      "summary": "> 提示：以下的部分习题没有标准答案，重点在于培养学习者对智能体系统批判性的深入思考和动手实践能力。\r \r ---\r \r \r \r \r \r 请分析以下四个  中的主体是否属于智能体，如果是，那么属于哪种类型的智能体（可以从多个分类维度进行分析），并说明理由：\r \r Case A：一台符合冯·诺依曼结构的超级计算机，拥有高达每秒 2EFlop 的峰值算力\r \r Case B：特斯拉自动驾驶系统在高速公...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "概念理解题",
+          "anchor": "概念理解题"
+        },
+        {
+          "level": 3,
+          "text": "习题 1：智能体类型判断",
+          "anchor": "习题-1：智能体类型判断"
+        },
+        {
+          "level": 3,
+          "text": "习题 2：PEAS 模型应用",
+          "anchor": "习题-2：peas-模型应用"
+        },
+        {
+          "level": 2,
+          "text": "设计与分析题",
+          "anchor": "设计与分析题"
+        },
+        {
+          "level": 3,
+          "text": "习题 3：Workflow vs Agent 方案选择",
+          "anchor": "习题-3：workflow-vs-agent-方案选择"
+        },
+        {
+          "level": 3,
+          "text": "习题 4：智能体功能扩展",
+          "anchor": "习题-4：智能体功能扩展"
+        },
+        {
+          "level": 2,
+          "text": "思考探索题",
+          "anchor": "思考探索题"
+        },
+        {
+          "level": 3,
+          "text": "习题 5：双系统理论与智能体设计",
+          "anchor": "习题-5：双系统理论与智能体设计"
+        },
+        {
+          "level": 3,
+          "text": "习题 6：智能体系统的局限性",
+          "anchor": "习题-6：智能体系统的局限性"
+        },
+        {
+          "level": 2,
+          "text": "动手实践题",
+          "anchor": "动手实践题"
+        },
+        {
+          "level": 3,
+          "text": "习题 7：构建你自己的智能体",
+          "anchor": "习题-7：构建你自己的智能体"
+        },
+        {
+          "level": 2,
+          "text": "讨论与交流",
+          "anchor": "讨论与交流"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter01\\1.4-智能体应用生态.md",
+      "title": "1.4 智能体的应用生态",
+      "path": "/chapter01/1.4-智能体应用生态",
+      "summary": "上一节，我们通过亲手构建一个智能体，深入理解了其内部的运作循环。不过在更广泛的应用场景中，我们的角色正越来越多地转变为使用者与协作者。\r \r 基于智能体在任务中的角色和自主性程度，其协作模式主要分为两种：\r 1. 作为高效工具，深度融入我们的工作流\r 2. 作为自主的协作者，与其他智能体协作完成复杂目标\r \r ---\r \r \r \r 在这种模式下，智能体被深度集成到开发者的工作流中，作为一种强大的辅...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "1.4.1 作为开发者工具的智能体",
+          "anchor": "1.4.1-作为开发者工具的智能体"
+        },
+        {
+          "level": 3,
+          "text": "GitHub Copilot",
+          "anchor": "github-copilot"
+        },
+        {
+          "level": 3,
+          "text": "Claude Code",
+          "anchor": "claude-code"
+        },
+        {
+          "level": 3,
+          "text": "Cursor",
+          "anchor": "cursor"
+        },
+        {
+          "level": 3,
+          "text": "Trae",
+          "anchor": "trae"
+        },
+        {
+          "level": 3,
+          "text": "工具对比总结",
+          "anchor": "工具对比总结"
+        },
+        {
+          "level": 2,
+          "text": "1.4.2 作为自主协作者的智能体",
+          "anchor": "1.4.2-作为自主协作者的智能体"
+        },
+        {
+          "level": 3,
+          "text": "主流框架与架构范式",
+          "anchor": "主流框架与架构范式"
+        },
+        {
+          "level": 3,
+          "text": "框架选择指南",
+          "anchor": "框架选择指南"
+        },
+        {
+          "level": 2,
+          "text": "1.4.3 Workflow vs Agent",
+          "anchor": "1.4.3-workflow-vs-agent"
+        },
+        {
+          "level": 3,
+          "text": "Workflow：按部就班的执行者",
+          "anchor": "workflow：按部就班的执行者"
+        },
+        {
+          "level": 3,
+          "text": "Agent：自主达成目标",
+          "anchor": "agent：自主达成目标"
+        },
+        {
+          "level": 3,
+          "text": "核心差异对比",
+          "anchor": "核心差异对比"
+        },
+        {
+          "level": 3,
+          "text": "如何选择？",
+          "anchor": "如何选择？"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter01\\1.3-构建第一个智能体.md",
+      "title": "1.3 动手实践：构建你的第一个智能体",
+      "path": "/chapter01/1.3-构建第一个智能体",
+      "summary": "在前面的小节，我们学习了智能体的任务环境、核心运行机制以及  交互范式。理论知识固然重要，但最好的学习方式是亲手实践。\r \r 在本节中，我们将引导你理解如何构建一个可以工作的智能旅行助手。但与传统教程不同，我们不会让你从零手写每一行代码——\r \r > 🎯 核心理念：Chat is All You Need\r >\r > 在 AI 时代，你不需要成为某种编程语言的专家才能构建智能体。你需要的是：\r ...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "1.3.1 理解任务目标",
+          "anchor": "1.3.1-理解任务目标"
+        },
+        {
+          "level": 3,
+          "text": "我们要构建什么？",
+          "anchor": "我们要构建什么？"
+        },
+        {
+          "level": 3,
+          "text": "智能体需要展现的能力",
+          "anchor": "智能体需要展现的能力"
+        },
+        {
+          "level": 2,
+          "text": "1.3.2 智能体的核心组件",
+          "anchor": "1.3.2-智能体的核心组件"
+        },
+        {
+          "level": 3,
+          "text": "组件一：系统提示词（System Prompt）",
+          "anchor": "组件一：系统提示词（system-prompt）"
+        },
+        {
+          "level": 3,
+          "text": "组件二：工具函数（Tools）",
+          "anchor": "组件二：工具函数（tools）"
+        },
+        {
+          "level": 3,
+          "text": "组件三：主循环（Agent Loop）",
+          "anchor": "组件三：主循环（agent-loop）"
+        },
+        {
+          "level": 2,
+          "text": "1.3.3 用 TypeScript 实现（ES6+ 风格）",
+          "anchor": "1.3.3-用-typescript-实现（es6+-风格）"
+        },
+        {
+          "level": 3,
+          "text": "工具定义",
+          "anchor": "工具定义"
+        },
+        {
+          "level": 3,
+          "text": "智能体主循环",
+          "anchor": "智能体主循环"
+        },
+        {
+          "level": 2,
+          "text": "可用工具",
+          "anchor": "可用工具"
+        },
+        {
+          "level": 2,
+          "text": "输出格式",
+          "anchor": "输出格式"
+        },
+        {
+          "level": 2,
+          "text": "完成任务",
+          "anchor": "完成任务"
+        },
+        {
+          "level": 2,
+          "text": "1.3.4 运行效果演示",
+          "anchor": "1.3.4-运行效果演示"
+        },
+        {
+          "level": 2,
+          "text": "1.3.5 用 AI 辅助你构建智能体",
+          "anchor": "1.3.5-用-ai-辅助你构建智能体"
+        },
+        {
+          "level": 3,
+          "text": "🚀 实践建议：让 AI 帮你写代码",
+          "anchor": "🚀-实践建议：让-ai-帮你写代码"
+        },
+        {
+          "level": 3,
+          "text": "💡 这就是 \"Chat is All You Need\" 的含义",
+          "anchor": "💡-这就是-\"chat-is-all-you-need\"-的含义"
+        },
+        {
+          "level": 2,
+          "text": "1.3.6 核心能力总结",
+          "anchor": "1.3.6-核心能力总结"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter01\\1.2-智能体如何工作.md",
+      "title": "1.2 智能体的构成与运行原理",
+      "path": "/chapter01/1.2-智能体如何工作",
+      "summary": "在上一节中，我们了解了智能体的定义、演进历程和分类体系。本节将深入探讨智能体的内部运作机制：它是如何感知环境、做出决策、执行行动的？\r \r ---\r \r \r \r 要理解智能体的运作，我们必须先理解它所处的任务环境。在人工智能领域，通常使用 PEAS 模型来精确描述一个任务环境：\r \r | 维度 | 含义 | 说明 |\r |------|------|------|\r | Performance |...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "1.2.1 任务环境（PEAS 模型）",
+          "anchor": "1.2.1-任务环境（peas-模型）"
+        },
+        {
+          "level": 3,
+          "text": "环境的关键特性",
+          "anchor": "环境的关键特性"
+        },
+        {
+          "level": 2,
+          "text": "1.2.2 智能体循环（Agent Loop）",
+          "anchor": "1.2.2-智能体循环（agent-loop）"
+        },
+        {
+          "level": 3,
+          "text": "阶段一：感知 (Perception)",
+          "anchor": "阶段一：感知-(perception)"
+        },
+        {
+          "level": 3,
+          "text": "阶段二：思考 (Thought)",
+          "anchor": "阶段二：思考-(thought)"
+        },
+        {
+          "level": 3,
+          "text": "阶段三：行动 (Action)",
+          "anchor": "阶段三：行动-(action)"
+        },
+        {
+          "level": 3,
+          "text": "循环闭合",
+          "anchor": "循环闭合"
+        },
+        {
+          "level": 2,
+          "text": "1.2.3 ReAct：让推理与行动交织共舞",
+          "anchor": "1.2.3-react：让推理与行动交织共舞"
+        },
+        {
+          "level": 3,
+          "text": "结构化输出格式",
+          "anchor": "结构化输出格式"
+        },
+        {
+          "level": 3,
+          "text": "示例：旅行助手的输出",
+          "anchor": "示例：旅行助手的输出"
+        },
+        {
+          "level": 3,
+          "text": "观察的生成",
+          "anchor": "观察的生成"
+        },
+        {
+          "level": 3,
+          "text": "完整的交互流程",
+          "anchor": "完整的交互流程"
+        },
+        {
+          "level": 2,
+          "text": "本节小结",
+          "anchor": "本节小结"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "chapter01\\1.1-什么是智能体.md",
+      "title": "1.1 什么是智能体？",
+      "path": "/chapter01/1.1-什么是智能体",
+      "summary": "当你向 ChatGPT 提问时，它会思考、检索、推理，然后给你一个答案。当自动驾驶汽车行驶在路上时，它会感知路况、判断风险、做出决策。当 AlphaGo 落下一枚棋子时，它已经在\"脑海\"中推演了无数种可能的未来。\r \r 这些系统有一个共同的名字：智能体（Agent）。\r \r 在人工智能领域，智能体被定义为任何能够通过传感器（Sensors）感知其所处环境（Environment），并自主地通过执行...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "1.1.1 传统智能体的演进",
+          "anchor": "1.1.1-传统智能体的演进"
+        },
+        {
+          "level": 3,
+          "text": "反射智能体（Simple Reflex Agent）",
+          "anchor": "反射智能体（simple-reflex-agent）"
+        },
+        {
+          "level": 3,
+          "text": "基于模型的反射智能体（Model-Based Reflex Agent）",
+          "anchor": "基于模型的反射智能体（model-based-reflex-agent）"
+        },
+        {
+          "level": 3,
+          "text": "基于目标的智能体（Goal-Based Agent）",
+          "anchor": "基于目标的智能体（goal-based-agent）"
+        },
+        {
+          "level": 3,
+          "text": "基于效用的智能体（Utility-Based Agent）",
+          "anchor": "基于效用的智能体（utility-based-agent）"
+        },
+        {
+          "level": 3,
+          "text": "学习型智能体（Learning Agent）",
+          "anchor": "学习型智能体（learning-agent）"
+        },
+        {
+          "level": 2,
+          "text": "1.1.2 大语言模型驱动的新范式",
+          "anchor": "1.1.2-大语言模型驱动的新范式"
+        },
+        {
+          "level": 2,
+          "text": "1.1.3 智能体的分类体系",
+          "anchor": "1.1.3-智能体的分类体系"
+        },
+        {
+          "level": 3,
+          "text": "维度一：基于内部决策架构",
+          "anchor": "维度一：基于内部决策架构"
+        },
+        {
+          "level": 3,
+          "text": "维度二：基于时间与反应性",
+          "anchor": "维度二：基于时间与反应性"
+        },
+        {
+          "level": 3,
+          "text": "维度三：基于知识表示",
+          "anchor": "维度三：基于知识表示"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
         }
       ],
       "tags": []
@@ -560,124 +7296,6 @@
       "tags": []
     },
     {
-      "id": "docs\\chapter14\\index.md",
-      "title": "第14章：自动化深度研究智能体",
-      "path": "/docs/chapter14/",
-      "summary": "> 🔄 本章待用 AgentX + PromptX 重写 构建能够自动执行深度研究任务的智能体系统。 1. 问题剖析 - 将开放主题拆解为可检索的查询 2. 多轮信息采集 - 持续挖掘和整合资料 3. 反思与总结 - 识别知识空白，生成结构化报告 - AgentX 多智能体协作 - PromptX 角色：规划者、研究者、总结者 - 搜索工具集成 - 结果可视化 --- 本章内容待补充，将使用 A...",
-      "headings": [
-        {
-          "level": 2,
-          "text": "项目目标",
-          "anchor": "项目目标"
-        },
-        {
-          "level": 2,
-          "text": "核心能力",
-          "anchor": "核心能力"
-        },
-        {
-          "level": 2,
-          "text": "技术架构",
-          "anchor": "技术架构"
-        },
-        {
-          "level": 2,
-          "text": "章节规划",
-          "anchor": "章节规划"
-        },
-        {
-          "level": 3,
-          "text": "14.1 项目概述与架构设计",
-          "anchor": "14.1-项目概述与架构设计"
-        },
-        {
-          "level": 3,
-          "text": "14.2 研究流程设计",
-          "anchor": "14.2-研究流程设计"
-        },
-        {
-          "level": 3,
-          "text": "14.3 AgentX 智能体实现",
-          "anchor": "14.3-agentx-智能体实现"
-        },
-        {
-          "level": 3,
-          "text": "14.4 搜索与信息整合",
-          "anchor": "14.4-搜索与信息整合"
-        },
-        {
-          "level": 3,
-          "text": "14.5 报告生成",
-          "anchor": "14.5-报告生成"
-        },
-        {
-          "level": 3,
-          "text": "14.6 实战演示",
-          "anchor": "14.6-实战演示"
-        }
-      ],
-      "tags": []
-    },
-    {
-      "id": "docs\\chapter13\\index.md",
-      "title": "第13章：智能旅行助手",
-      "path": "/docs/chapter13/",
-      "summary": "> 🔄 本章待用 AgentX + PromptX 重写 构建一个完整的智能旅行助手，展示 AgentX 多智能体协作能力。 1. 智能行程规划 - 根据用户偏好自动生成行程 2. 地图可视化 - 景点标注和路线绘制 3. 预算计算 - 自动计算各项费用 4. 行程编辑 - 支持实时调整 5. 导出功能 - PDF/图片导出 - 前端：Vue3 + TypeScript - 后端：Node.js...",
-      "headings": [
-        {
-          "level": 2,
-          "text": "项目目标",
-          "anchor": "项目目标"
-        },
-        {
-          "level": 2,
-          "text": "核心功能",
-          "anchor": "核心功能"
-        },
-        {
-          "level": 2,
-          "text": "技术架构",
-          "anchor": "技术架构"
-        },
-        {
-          "level": 2,
-          "text": "章节规划",
-          "anchor": "章节规划"
-        },
-        {
-          "level": 3,
-          "text": "13.1 项目概述与架构设计",
-          "anchor": "13.1-项目概述与架构设计"
-        },
-        {
-          "level": 3,
-          "text": "13.2 AgentX 多智能体设计",
-          "anchor": "13.2-agentx-多智能体设计"
-        },
-        {
-          "level": 3,
-          "text": "13.3 PromptX 角色定义",
-          "anchor": "13.3-promptx-角色定义"
-        },
-        {
-          "level": 3,
-          "text": "13.4 工具集成与 API 对接",
-          "anchor": "13.4-工具集成与-api-对接"
-        },
-        {
-          "level": 3,
-          "text": "13.5 前端实现",
-          "anchor": "13.5-前端实现"
-        },
-        {
-          "level": 3,
-          "text": "13.6 部署与优化",
-          "anchor": "13.6-部署与优化"
-        }
-      ],
-      "tags": []
-    },
-    {
       "id": "docs\\chapter15\\index.md",
       "title": "第15章：构建赛博小镇",
       "path": "/docs/chapter15/",
@@ -737,6 +7355,65 @@
       "tags": []
     },
     {
+      "id": "docs\\chapter14\\index.md",
+      "title": "第14章：自动化深度研究智能体",
+      "path": "/docs/chapter14/",
+      "summary": "> 🔄 本章待用 AgentX + PromptX 重写 构建能够自动执行深度研究任务的智能体系统。 1. 问题剖析 - 将开放主题拆解为可检索的查询 2. 多轮信息采集 - 持续挖掘和整合资料 3. 反思与总结 - 识别知识空白，生成结构化报告 - AgentX 多智能体协作 - PromptX 角色：规划者、研究者、总结者 - 搜索工具集成 - 结果可视化 --- 本章内容待补充，将使用 A...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "项目目标",
+          "anchor": "项目目标"
+        },
+        {
+          "level": 2,
+          "text": "核心能力",
+          "anchor": "核心能力"
+        },
+        {
+          "level": 2,
+          "text": "技术架构",
+          "anchor": "技术架构"
+        },
+        {
+          "level": 2,
+          "text": "章节规划",
+          "anchor": "章节规划"
+        },
+        {
+          "level": 3,
+          "text": "14.1 项目概述与架构设计",
+          "anchor": "14.1-项目概述与架构设计"
+        },
+        {
+          "level": 3,
+          "text": "14.2 研究流程设计",
+          "anchor": "14.2-研究流程设计"
+        },
+        {
+          "level": 3,
+          "text": "14.3 AgentX 智能体实现",
+          "anchor": "14.3-agentx-智能体实现"
+        },
+        {
+          "level": 3,
+          "text": "14.4 搜索与信息整合",
+          "anchor": "14.4-搜索与信息整合"
+        },
+        {
+          "level": 3,
+          "text": "14.5 报告生成",
+          "anchor": "14.5-报告生成"
+        },
+        {
+          "level": 3,
+          "text": "14.6 实战演示",
+          "anchor": "14.6-实战演示"
+        }
+      ],
+      "tags": []
+    },
+    {
       "id": "docs\\chapter12\\index.md",
       "title": "第12章：智能体性能评估",
       "path": "/docs/chapter12/",
@@ -771,140 +7448,60 @@
       "tags": []
     },
     {
-      "id": "docs\\chapter10\\index.md",
-      "title": "第十章 智能体通信协议",
-      "path": "/docs/chapter10/",
-      "summary": "在前面的章节中，我们构建了功能完备的单体智能体，它们具备推理、工具调用和记忆能力。然而，当我们尝试构建更复杂的 AI 系统时，自然会有疑问：<strong>如何让智能体与外部世界高效交互？如何让多个智能体相互协作？</strong> 这正是智能体通信协议要解决的核心问题。本章将为 HelloAgents 框架引入三种通信协议：<strong>MCP（Model Context Protocol）<...",
+      "id": "docs\\chapter13\\index.md",
+      "title": "第13章：智能旅行助手",
+      "path": "/docs/chapter13/",
+      "summary": "> 🔄 本章待用 AgentX + PromptX 重写 构建一个完整的智能旅行助手，展示 AgentX 多智能体协作能力。 1. 智能行程规划 - 根据用户偏好自动生成行程 2. 地图可视化 - 景点标注和路线绘制 3. 预算计算 - 自动计算各项费用 4. 行程编辑 - 支持实时调整 5. 导出功能 - PDF/图片导出 - 前端：Vue3 + TypeScript - 后端：Node.js...",
       "headings": [
         {
           "level": 2,
-          "text": "10.1 智能体通信协议基础",
-          "anchor": "10.1-智能体通信协议基础"
-        },
-        {
-          "level": 3,
-          "text": "10.1.1 为何需要通信协议",
-          "anchor": "10.1.1-为何需要通信协议"
-        },
-        {
-          "level": 3,
-          "text": "10.1.2 三种协议设计理念比较",
-          "anchor": "10.1.2-三种协议设计理念比较"
-        },
-        {
-          "level": 3,
-          "text": "10.1.3 HelloAgents 通信协议架构设计",
-          "anchor": "10.1.3-helloagents-通信协议架构设计"
-        },
-        {
-          "level": 3,
-          "text": "10.1.4 本章学习目标与快速体验",
-          "anchor": "10.1.4-本章学习目标与快速体验"
+          "text": "项目目标",
+          "anchor": "项目目标"
         },
         {
           "level": 2,
-          "text": "10.2 MCP 协议实战",
-          "anchor": "10.2-mcp-协议实战"
-        },
-        {
-          "level": 3,
-          "text": "10.2.1 MCP 协议概念介绍",
-          "anchor": "10.2.1-mcp-协议概念介绍"
-        },
-        {
-          "level": 3,
-          "text": "10.2.2 使用 MCP 客户端",
-          "anchor": "10.2.2-使用-mcp-客户端"
-        },
-        {
-          "level": 3,
-          "text": "10.2.3 MCP 传输方式详解",
-          "anchor": "10.2.3-mcp-传输方式详解"
-        },
-        {
-          "level": 3,
-          "text": "10.2.4 在智能体中使用 MCP 工具",
-          "anchor": "10.2.4-在智能体中使用-mcp-工具"
-        },
-        {
-          "level": 3,
-          "text": "10.2.5 MCP 社区生态",
-          "anchor": "10.2.5-mcp-社区生态"
+          "text": "核心功能",
+          "anchor": "核心功能"
         },
         {
           "level": 2,
-          "text": "10.3 A2A 协议实战",
-          "anchor": "10.3-a2a-协议实战"
-        },
-        {
-          "level": 3,
-          "text": "10.3.1 协议设计动机",
-          "anchor": "10.3.1-协议设计动机"
-        },
-        {
-          "level": 3,
-          "text": "10.3.2 使用 A2A 协议实战",
-          "anchor": "10.3.2-使用-a2a-协议实战"
-        },
-        {
-          "level": 3,
-          "text": "10.3.3 使用 HelloAgents A2A 工具",
-          "anchor": "10.3.3-使用-helloagents-a2a-工具"
-        },
-        {
-          "level": 3,
-          "text": "10.3.4 在智能体中使用 A2A 工具",
-          "anchor": "10.3.4-在智能体中使用-a2a-工具"
+          "text": "技术架构",
+          "anchor": "技术架构"
         },
         {
           "level": 2,
-          "text": "10.4 ANP 协议实战",
-          "anchor": "10.4-anp-协议实战"
+          "text": "章节规划",
+          "anchor": "章节规划"
         },
         {
           "level": 3,
-          "text": "10.4.1 协议目标",
-          "anchor": "10.4.1-协议目标"
+          "text": "13.1 项目概述与架构设计",
+          "anchor": "13.1-项目概述与架构设计"
         },
         {
           "level": 3,
-          "text": "10.4.2 使用 ANP 服务发现",
-          "anchor": "10.4.2-使用-anp-服务发现"
+          "text": "13.2 AgentX 多智能体设计",
+          "anchor": "13.2-agentx-多智能体设计"
         },
         {
           "level": 3,
-          "text": "10.4.3 实战案例",
-          "anchor": "10.4.3-实战案例"
-        },
-        {
-          "level": 2,
-          "text": "10.5 构建自定义 MCP 服务器",
-          "anchor": "10.5-构建自定义-mcp-服务器"
+          "text": "13.3 PromptX 角色定义",
+          "anchor": "13.3-promptx-角色定义"
         },
         {
           "level": 3,
-          "text": "10.5.1 创建你的第一个 MCP 服务器",
-          "anchor": "10.5.1-创建你的第一个-mcp-服务器"
+          "text": "13.4 工具集成与 API 对接",
+          "anchor": "13.4-工具集成与-api-对接"
         },
         {
           "level": 3,
-          "text": "10.5.2 上传 MCP 服务器",
-          "anchor": "10.5.2-上传-mcp-服务器"
+          "text": "13.5 前端实现",
+          "anchor": "13.5-前端实现"
         },
         {
-          "level": 2,
-          "text": "10.6 本章总结",
-          "anchor": "10.6-本章总结"
-        },
-        {
-          "level": 2,
-          "text": "习题",
-          "anchor": "习题"
-        },
-        {
-          "level": 2,
-          "text": "参考文献",
-          "anchor": "参考文献"
+          "level": 3,
+          "text": "13.6 部署与优化",
+          "anchor": "13.6-部署与优化"
         }
       ],
       "tags": []
@@ -3637,6 +10234,145 @@
           "level": 2,
           "text": "本节要点",
           "anchor": "本节要点"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "docs\\chapter10\\index.md",
+      "title": "第十章 智能体通信协议",
+      "path": "/docs/chapter10/",
+      "summary": "在前面的章节中，我们构建了功能完备的单体智能体，它们具备推理、工具调用和记忆能力。然而，当我们尝试构建更复杂的 AI 系统时，自然会有疑问：<strong>如何让智能体与外部世界高效交互？如何让多个智能体相互协作？</strong> 这正是智能体通信协议要解决的核心问题。本章将为 HelloAgents 框架引入三种通信协议：<strong>MCP（Model Context Protocol）<...",
+      "headings": [
+        {
+          "level": 2,
+          "text": "10.1 智能体通信协议基础",
+          "anchor": "10.1-智能体通信协议基础"
+        },
+        {
+          "level": 3,
+          "text": "10.1.1 为何需要通信协议",
+          "anchor": "10.1.1-为何需要通信协议"
+        },
+        {
+          "level": 3,
+          "text": "10.1.2 三种协议设计理念比较",
+          "anchor": "10.1.2-三种协议设计理念比较"
+        },
+        {
+          "level": 3,
+          "text": "10.1.3 HelloAgents 通信协议架构设计",
+          "anchor": "10.1.3-helloagents-通信协议架构设计"
+        },
+        {
+          "level": 3,
+          "text": "10.1.4 本章学习目标与快速体验",
+          "anchor": "10.1.4-本章学习目标与快速体验"
+        },
+        {
+          "level": 2,
+          "text": "10.2 MCP 协议实战",
+          "anchor": "10.2-mcp-协议实战"
+        },
+        {
+          "level": 3,
+          "text": "10.2.1 MCP 协议概念介绍",
+          "anchor": "10.2.1-mcp-协议概念介绍"
+        },
+        {
+          "level": 3,
+          "text": "10.2.2 使用 MCP 客户端",
+          "anchor": "10.2.2-使用-mcp-客户端"
+        },
+        {
+          "level": 3,
+          "text": "10.2.3 MCP 传输方式详解",
+          "anchor": "10.2.3-mcp-传输方式详解"
+        },
+        {
+          "level": 3,
+          "text": "10.2.4 在智能体中使用 MCP 工具",
+          "anchor": "10.2.4-在智能体中使用-mcp-工具"
+        },
+        {
+          "level": 3,
+          "text": "10.2.5 MCP 社区生态",
+          "anchor": "10.2.5-mcp-社区生态"
+        },
+        {
+          "level": 2,
+          "text": "10.3 A2A 协议实战",
+          "anchor": "10.3-a2a-协议实战"
+        },
+        {
+          "level": 3,
+          "text": "10.3.1 协议设计动机",
+          "anchor": "10.3.1-协议设计动机"
+        },
+        {
+          "level": 3,
+          "text": "10.3.2 使用 A2A 协议实战",
+          "anchor": "10.3.2-使用-a2a-协议实战"
+        },
+        {
+          "level": 3,
+          "text": "10.3.3 使用 HelloAgents A2A 工具",
+          "anchor": "10.3.3-使用-helloagents-a2a-工具"
+        },
+        {
+          "level": 3,
+          "text": "10.3.4 在智能体中使用 A2A 工具",
+          "anchor": "10.3.4-在智能体中使用-a2a-工具"
+        },
+        {
+          "level": 2,
+          "text": "10.4 ANP 协议实战",
+          "anchor": "10.4-anp-协议实战"
+        },
+        {
+          "level": 3,
+          "text": "10.4.1 协议目标",
+          "anchor": "10.4.1-协议目标"
+        },
+        {
+          "level": 3,
+          "text": "10.4.2 使用 ANP 服务发现",
+          "anchor": "10.4.2-使用-anp-服务发现"
+        },
+        {
+          "level": 3,
+          "text": "10.4.3 实战案例",
+          "anchor": "10.4.3-实战案例"
+        },
+        {
+          "level": 2,
+          "text": "10.5 构建自定义 MCP 服务器",
+          "anchor": "10.5-构建自定义-mcp-服务器"
+        },
+        {
+          "level": 3,
+          "text": "10.5.1 创建你的第一个 MCP 服务器",
+          "anchor": "10.5.1-创建你的第一个-mcp-服务器"
+        },
+        {
+          "level": 3,
+          "text": "10.5.2 上传 MCP 服务器",
+          "anchor": "10.5.2-上传-mcp-服务器"
+        },
+        {
+          "level": 2,
+          "text": "10.6 本章总结",
+          "anchor": "10.6-本章总结"
+        },
+        {
+          "level": 2,
+          "text": "习题",
+          "anchor": "习题"
+        },
+        {
+          "level": 2,
+          "text": "参考文献",
+          "anchor": "参考文献"
         }
       ],
       "tags": []

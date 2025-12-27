@@ -13,6 +13,7 @@ console.log(chalk.blue('🚀 开始预构建流程...\n'))
 
 const steps = [
   { name: '同步内容', script: 'node scripts/sync-content.js' },
+  { name: '修复 HTML 属性', script: 'node scripts/fix-html-attributes.js' },
   { name: '内容规范检查', script: 'node scripts/lint-content.js' },
   { name: '生成导航配置', script: 'node scripts/generate-nav.js' },
   { name: '生成搜索索引', script: 'node scripts/generate-search-index.js' }
