@@ -29,6 +29,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Sync content
+        run: node scripts/sync-content.js
+
       - name: Check external links
         run: npm run check:links -- --external
         continue-on-error: true

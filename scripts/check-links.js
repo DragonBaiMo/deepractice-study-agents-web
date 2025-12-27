@@ -8,7 +8,14 @@ import path from 'path'
 import { glob } from 'glob'
 import chalk from 'chalk'
 
-const DOCS_DIR = path.resolve('docs')
+const DOCS_DIR_CANDIDATES = [
+  process.env.CHECK_DOCS_DIR,
+  path.resolve('docs/docs'),
+  path.resolve('docs')
+].filter(Boolean)
+const DOCS_DIR = DOCS_DIR_CANDIDATES.find(dir => fs.existsSync(dir)) || null
+const SITE_ROOT_DIR = path.resolve('docs')
+const CONTENT_ROOT_DIR = fs.existsSync(path.resolve('docs/docs')) ? path.resolve('docs/docs') : null
 const CHECK_EXTERNAL = process.argv.includes('--external')
 
 // 统计
@@ -62,7 +69,13 @@ function checkInternalLink(link) {
   
   // 处理相对路径
   if (targetPath.startsWith('/')) {
-    targetPath = path.join(DOCS_DIR, targetPath)
+    const normalized = targetPath.replace(/\\/g, '/')
+    if (normalized.startsWith('/docs/')) {
+      const baseDir = CONTENT_ROOT_DIR || SITE_ROOT_DIR
+      targetPath = path.resolve(baseDir, normalized.replace(/^\/docs\//, ''))
+    } else {
+      targetPath = path.resolve(SITE_ROOT_DIR, normalized.replace(/^\//, ''))
+    }
   } else {
     targetPath = path.resolve(sourceDir, targetPath)
   }
@@ -144,6 +157,12 @@ async function checkExternalLink(link) {
  */
 async function main() {
   console.log(chalk.blue('🔗 检查链接有效性...\n'))
+
+  if (!DOCS_DIR) {
+    console.log(chalk.red(`? 文档目录不存在: ${DOCS_DIR_CANDIDATES.join(", ")}`))
+    process.exit(1)
+  }
+
   
   if (!CHECK_EXTERNAL) {
     console.log(chalk.gray('  提示: 使用 --external 参数检查外部链接\n'))

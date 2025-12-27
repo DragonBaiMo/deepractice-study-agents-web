@@ -39,6 +39,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Sync content
+        run: node scripts/sync-content.js
+
       - name: Lint content
         run: npm run lint
 

@@ -13,7 +13,12 @@ import { glob } from 'glob'
 import matter from 'gray-matter'
 import chalk from 'chalk'
 
-const DOCS_DIR = path.resolve('docs')
+const DOCS_DIR_CANDIDATES = [
+  process.env.LINT_DOCS_DIR,
+  path.resolve('docs/docs'),
+  path.resolve('docs')
+].filter(Boolean)
+const DOCS_DIR = DOCS_DIR_CANDIDATES.find(dir => fs.existsSync(dir)) || null
 const REQUIRED_FIELDS = ['title']
 const RECOMMENDED_FIELDS = ['order', 'tags']
 
@@ -145,6 +150,12 @@ async function checkFile(filePath) {
  */
 async function main() {
   console.log(chalk.blue('📝 检查内容规范...\n'))
+
+  if (!DOCS_DIR) {
+    console.log(chalk.red(`? 文档目录不存在: ${DOCS_DIR_CANDIDATES.join(", ")}`))
+    process.exit(1)
+  }
+
 
   // 查找所有 Markdown 文件
   const files = await glob('**/*.md', { 
