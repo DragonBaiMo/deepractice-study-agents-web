@@ -1,0 +1,183 @@
+/* 
+ * home.css - 首页样式
+ * 职责: Hero 区域、Features 网格、首页布局
+ */
+
+/* --- HOME: GOLDEN RATIO CENTERED LAYOUT (φ = 1.618) --- */
+
+/* 首页整体容器 */
+.VPHome {
+  max-width: 1100px !important;
+  margin: 0 auto !important;
+  padding: 0 48px !important;
+}
+
+/* Hero 区域 - 关键：用 margin-top 而不是 padding-top */
+.VPHero,
+.VPContent.is-home .VPHero,
+.VPHome .VPHero {
+  margin-top: 40px !important;
+  padding-top: 0 !important;
+  padding-bottom: 32px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 900px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Hero 内容 - 水平居中 */
+.VPHero .container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 60px !important;
+  margin: 0 auto !important;
+  max-width: 100% !important;
+}
+
+/* 文字区域 */
+.VPHero .main {
+  flex: 1.618 !important;
+  max-width: 520px !important;
+  text-align: left !important;
+}
+
+/* 图片区域 */
+.VPHero .image {
+  flex: 1 !important;
+  max-width: 180px !important;
+}
+
+/* Logo 强制圆形 */
+.VPImage.image-src {
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  width: 180px !important;
+  height: 180px !important;
+  object-fit: cover !important;
+}
+
+/* 隐藏背景光晕 */
+.VPHero .image-bg {
+  display: none !important;
+}
+
+.VPHero .name {
+  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 12px var(--vp-c-brand-soft));
+}
+
+.VPHero .actions {
+  justify-content: flex-start !important;
+}
+
+.VPHero .actions .action-button {
+  border-radius: var(--btn-radius) !important;
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.VPHero .actions .action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+.VPHero .actions .action-button:active {
+  transform: translateY(1px);
+}
+
+/* Feature Grid */
+.VPFeatures,
+.VPContent.is-home .VPFeatures,
+.VPHome .VPFeatures {
+  padding-top: 20px !important;
+  padding-bottom: 48px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+.VPFeatures .container {
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 3列网格 */
+.VPFeatures .items {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+  justify-content: center !important;
+}
+
+/* 响应式 */
+@media (max-width: 960px) {
+  .VPHome {
+    padding: 0 32px !important;
+  }
+  
+  .VPHero,
+  .VPContent.is-home .VPHero,
+  .VPHome .VPHero {
+    margin-top: 32px !important;
+    padding-bottom: 24px !important;
+  }
+  
+  .VPFeatures,
+  .VPContent.is-home .VPFeatures {
+    padding-top: 16px !important;
+    padding-bottom: 40px !important;
+  }
+  
+  .VPFeatures .items {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .VPHome {
+    padding: 0 20px !important;
+  }
+  
+  .VPHero,
+  .VPContent.is-home .VPHero,
+  .VPHome .VPHero {
+    margin-top: 24px !important;
+    padding-bottom: 20px !important;
+  }
+  
+  .VPFeatures,
+  .VPContent.is-home .VPFeatures {
+    padding-top: 12px !important;
+    padding-bottom: 32px !important;
+  }
+  
+  .VPHero .container {
+    flex-direction: column !important;
+    gap: 32px !important;
+    text-align: center !important;
+  }
+  
+  .VPHero .main {
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+  
+  .VPHero .actions {
+    justify-content: center !important;
+  }
+  
+  .VPHero .image {
+    max-width: 140px !important;
+    order: -1;
+  }
+  
+  .VPFeatures .items {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}

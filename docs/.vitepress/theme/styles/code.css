@@ -1,0 +1,136 @@
+/* 
+ * code.css - 代码块样式
+ * 拆分自: custom.css 第 367-460 行
+ * 职责: 代码块、语法高亮、行内代码样式
+ */
+
+/* Code Blocks - High Contrast */
+.vp-doc div[class*='language-'] {
+  border-radius: var(--inner-radius);
+  margin: 24px 0;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #282c34 !important; /* One Dark Pro background */
+  position: relative;
+}
+
+/* 代码区域横向滚动 */
+.vp-doc div[class*='language-'] > pre {
+  overflow-x: auto !important;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.3) transparent;
+}
+
+.vp-doc div[class*='language-'] > pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+.vp-doc div[class*='language-'] > pre::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+.vp-doc div[class*='language-'] > pre::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.25);
+  border-radius: 4px;
+}
+
+.vp-doc div[class*='language-'] > pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* 代码不换行，允许横向滚动 */
+.vp-doc div[class*='language-'] code {
+  white-space: pre !important;
+  word-wrap: normal !important;
+}
+
+/* 代码文本基础颜色 */
+.vp-doc div[class*='language-'] code {
+  color: #abb2bf !important;
+  text-shadow: none !important;
+}
+
+.vp-doc div[class*='language-'] .line {
+  line-height: 1.7;
+}
+
+/* 语法高亮 - 高对比度颜色 */
+.vp-doc div[class*='language-'] .token.comment,
+.vp-doc div[class*='language-'] .token.prolog,
+.vp-doc div[class*='language-'] .token.doctype,
+.vp-doc div[class*='language-'] .token.cdata {
+  color: #7f848e !important;
+}
+
+.vp-doc div[class*='language-'] .token.punctuation {
+  color: #abb2bf !important;
+}
+
+.vp-doc div[class*='language-'] .token.property,
+.vp-doc div[class*='language-'] .token.tag,
+.vp-doc div[class*='language-'] .token.boolean,
+.vp-doc div[class*='language-'] .token.number,
+.vp-doc div[class*='language-'] .token.constant,
+.vp-doc div[class*='language-'] .token.symbol {
+  color: #d19a66 !important; /* 橙色 */
+}
+
+.vp-doc div[class*='language-'] .token.selector,
+.vp-doc div[class*='language-'] .token.attr-name,
+.vp-doc div[class*='language-'] .token.string,
+.vp-doc div[class*='language-'] .token.char,
+.vp-doc div[class*='language-'] .token.builtin {
+  color: #98c379 !important; /* 绿色 */
+}
+
+.vp-doc div[class*='language-'] .token.operator,
+.vp-doc div[class*='language-'] .token.entity,
+.vp-doc div[class*='language-'] .token.url,
+.vp-doc div[class*='language-'] .token.variable {
+  color: #56b6c2 !important; /* 青色 */
+}
+
+.vp-doc div[class*='language-'] .token.atrule,
+.vp-doc div[class*='language-'] .token.attr-value,
+.vp-doc div[class*='language-'] .token.function,
+.vp-doc div[class*='language-'] .token.class-name {
+  color: #61afef !important; /* 蓝色 */
+}
+
+.vp-doc div[class*='language-'] .token.keyword {
+  color: #c678dd !important; /* 紫色 */
+}
+
+.vp-doc div[class*='language-'] .token.regex,
+.vp-doc div[class*='language-'] .token.important {
+  color: #e5c07b !important; /* 黄色 */
+}
+
+/* Line numbers */
+.vp-doc div[class*='language-'] .line-numbers-wrapper {
+  color: #636d83 !important;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.2);
+}
+
+/* 代码块标题栏 */
+.vp-doc div[class*='language-'] > span.lang {
+  color: #9ca3af !important;
+  font-size: 12px;
+}
+
+/* Inline code */
+.vp-doc :not(pre) > code {
+  background: var(--vp-c-bg-soft);
+  color: #c678dd;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  border: 1px solid var(--vp-c-border);
+}
+
+.dark .vp-doc :not(pre) > code {
+  background: rgba(255,255,255,0.08);
+  color: #e5c07b;
+}

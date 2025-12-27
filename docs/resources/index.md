@@ -79,7 +79,7 @@ order: 1
 
 ## 🔗 社区资源
 
-- [Deepractice GitHub](https://github.com/deepractice)
+- [Deepractice GitHub](https://github.com/yejunhao159/deepractice-agents)
 - [Datawhale](https://github.com/datawhalechina)
 - [Hugging Face](https://huggingface.co)
 

@@ -1,0 +1,93 @@
+/* 
+ * content.css - 文档内容区域布局
+ * 拆分自: custom.css 第 262-320 行
+ * 职责: VPContent、VPDoc 容器布局与响应式
+ */
+
+/* --- CONTENT: BALANCED LAYOUT --- */
+.VPContent {
+  padding-top: var(--vp-nav-height) !important;
+}
+
+/* 首页 */
+.VPContent.is-home {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media (min-width: 960px) {
+  /* 只有文档页面才需要侧边栏偏移 */
+  .VPContent:not(.is-home) {
+    padding-left: var(--vp-sidebar-width) !important;
+    padding-right: 0 !important;
+  }
+  
+  .VPDoc {
+    padding: 32px 32px 64px !important;
+    max-width: none !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  /* 内容区域 */
+  .VPDoc .container {
+    max-width: 100% !important;
+  }
+  
+  .VPDoc .content {
+    max-width: 800px !important;
+    padding-right: 32px !important;
+  }
+  
+  /* 右侧目录 */
+  .VPDoc .aside {
+    width: 200px !important;
+    padding-left: 16px !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .VPDoc {
+    padding: 40px 48px 80px !important;
+  }
+  
+  .VPDoc .content {
+    max-width: 860px !important;
+  }
+  
+  .VPDoc .aside {
+    width: 220px !important;
+    padding-left: 24px !important;
+  }
+}
+
+/* Typography Enhancements - Card Effect */
+@media (min-width: 960px) {
+  .VPContent:not(.is-home) {
+    padding-left: var(--vp-sidebar-width) !important;
+  }
+  
+  .VPDoc {
+    padding: 32px 48px 64px !important;
+    max-width: 1000px !important;
+    margin: 32px auto !important;
+    /* Card effect for the document */
+    background: var(--vp-c-surface-1);
+    border: 1px solid var(--vp-c-border);
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .VPDoc {
+    padding: 24px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}

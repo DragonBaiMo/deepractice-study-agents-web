@@ -1,0 +1,74 @@
+/* 
+ * features.css - Feature 卡片样式
+ * 拆分自: custom.css 第 582-640 行
+ * 职责: VPFeature 卡片、Spotlight 效果
+ */
+
+.VPFeature {
+  background-color: var(--vp-c-surface-1) !important;
+  border: 1px solid var(--vp-c-border) !important;
+  border-radius: var(--card-radius) !important;
+  padding: 24px !important;
+  height: 100%;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.VPFeature:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--shadow-md) !important;
+  border-color: var(--vp-c-brand-soft) !important;
+}
+
+/* Spotlight Effect on Bento Items */
+.VPFeature::after, .glass-card::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(
+    800px circle at var(--mouse-x, -100px) var(--mouse-y, -100px),
+    rgba(94, 106, 210, 0.06),
+    transparent 40%
+  );
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.VPFeature:hover::after, .glass-card:hover::after {
+  opacity: 1;
+}
+
+.VPFeature .icon {
+  background: var(--vp-c-bg-soft) !important;
+  border-radius: 12px !important;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.VPFeature .title {
+  font-weight: 700 !important;
+  font-size: 20px !important;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px !important;
+}
+
+.VPFeature .details {
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+/* Mobile Adjustments for Features */
+@media (max-width: 768px) {
+  .VPFeature {
+    padding: 24px !important;
+  }
+}

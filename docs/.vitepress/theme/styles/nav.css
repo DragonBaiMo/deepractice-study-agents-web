@@ -1,0 +1,74 @@
+/* 
+ * nav.css - 导航栏样式
+ * 拆分自: custom.css 第 122-180 行
+ * 职责: 顶部导航栏、搜索按钮样式
+ */
+
+/* --- NAV BAR: FLOATING DOCK --- */
+.VPNav {
+  background-color: rgba(255, 255, 255, 0.6) !important; /* 更通透 */
+  backdrop-filter: blur(12px) saturate(160%);
+  border-bottom: 1px solid var(--vp-c-border) !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.dark .VPNav {
+  background-color: rgba(3, 3, 4, 0.6) !important;
+}
+
+.VPNavBarTitle {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* --- SEARCH: ETHEREAL INPUT --- */
+/* 搜索按钮容器重置 */
+.VPNavBarSearch {
+  margin-right: 12px;
+}
+
+/* 搜索按钮主体 */
+.DocSearch-Button {
+  background: var(--vp-c-bg-soft) !important;
+  border-radius: 12px !important;
+  padding: 0 12px !important;
+  height: 40px !important;
+  border: 1px solid var(--vp-c-border) !important;
+  transition: all 0.2s ease !important;
+  box-shadow: var(--shadow-xs) !important;
+}
+
+.DocSearch-Button:hover {
+  background: var(--vp-c-surface-1) !important;
+  border-color: var(--vp-c-brand-2) !important;
+  box-shadow: 0 0 0 2px var(--vp-c-brand-soft) !important;
+  transform: translateY(-1px);
+}
+
+.DocSearch-Button-Placeholder {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+.DocSearch-Search-Icon {
+  color: var(--vp-c-text-3) !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* 快捷键提示 Ctrl+K */
+.DocSearch-Button-Key {
+  background: rgba(0,0,0,0.05) !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--vp-c-text-3) !important;
+  font-family: var(--vp-font-family-mono) !important;
+  font-size: 11px !important;
+  padding-bottom: 2px !important;
+  border-radius: 4px !important;
+  margin-left: 6px !important;
+  top: 0 !important; /* Fix alignment */
+}
+.dark .DocSearch-Button-Key {
+  background: rgba(255,255,255,0.1) !important;
+}

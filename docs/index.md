@@ -19,7 +19,7 @@ hero:
       link: /learning-map/
     - theme: alt
       text: GitHub
-      link: https://github.com/deepractice/deepractice-agents
+      link: https://github.com/yejunhao159/deepractice-agents
 ---
 
 <HomeFeatures />

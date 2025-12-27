@@ -41,12 +41,11 @@ export default defineConfig({
     sidebar: generateSidebar(),
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/deepractice/deepractice-agents' }
+      { icon: 'github', link: 'https://github.com/yejunhao159/deepractice-agents' }
     ],
 
     footer: {
-      message: '基于 MIT 许可证发布',
-      copyright: 'Copyright © 2024-present Deepractice Team'
+      copyright: '© 2025 Deepractice AI Limited. All rights reserved.'
     },
 
     search: {
@@ -93,7 +92,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/deepractice/deepractice-agents/edit/main/docs/:path',
+      pattern: 'https://github.com/yejunhao159/deepractice-agents/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页'
     }
   },

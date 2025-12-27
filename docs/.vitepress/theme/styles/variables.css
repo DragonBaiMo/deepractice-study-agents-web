@@ -1,0 +1,93 @@
+/* 
+ * variables.css - CSS 变量定义
+ * 拆分自: custom.css 第 1-80 行
+ * 职责: 调色板、阴影、布局尺寸、字体等设计系统变量
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* --- PALETTE: MATTE & ETHEREAL --- */
+  /* Brand: Electric yet restrained Blue/Violet */
+  --vp-c-brand-1: #5E6AD2; /* Deep Indigo */
+  --vp-c-brand-2: #7C88EA; /* Soft Indigo */
+  --vp-c-brand-3: #4F5ABF; /* Darker interaction state */
+  --vp-c-brand-soft: rgba(94, 106, 210, 0.08);
+  --vp-c-brand-glow: rgba(94, 106, 210, 0.4);
+
+  /* Backgrounds: Matte, layered, not flat */
+  --vp-c-bg: #F9FAFB; /* Cool Gray 50 */
+  --vp-c-bg-alt: #FFFFFF;
+  --vp-c-bg-soft: #F3F4F6; /* Cool Gray 100 */
+  
+  /* Surfaces: Floating cards */
+  --vp-c-surface-1: #FFFFFF;
+  --vp-c-surface-2: #FAFAFA;
+  --vp-c-surface-glass: rgba(255, 255, 255, 0.7);
+
+  /* Text: High Contrast & Readability */
+  --vp-c-text-1: #111827; /* Gray 900 */
+  --vp-c-text-2: #4B5563; /* Gray 600 */
+  --vp-c-text-3: #9CA3AF; /* Gray 400 */
+
+  /* Borders: Extremely subtle */
+  --vp-c-border: rgba(0, 0, 0, 0.06);
+  --vp-c-divider: rgba(0, 0, 0, 0.06);
+  --vp-c-gutter: rgba(0, 0, 0, 0.06);
+
+  /* --- PHYSICAL SYSTEM --- */
+  --card-radius: 16px;
+  --btn-radius: 8px;
+  --inner-radius: 12px;
+  
+  /* Shadows: Floating & Diffused */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 8px 16px -4px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.05), 
+    0 10px 10px -5px rgba(0, 0, 0, 0.02),
+    0 0 0 1px rgba(0,0,0,0.03); /* Physical Border */
+  --shadow-glow: 0 0 0 4px rgba(94, 106, 210, 0.15);
+
+  /* Layout - Golden Ratio inspired (1:1.618) */
+  --vp-layout-max-width: 1440px;
+  --vp-sidebar-width: 260px;
+  --vp-aside-width: 220px;
+  
+  /* Typography */
+  --vp-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --vp-font-family-mono: "JetBrains Mono", monospace;
+}
+
+/* Dark Mode: Deep Space Matte */
+.dark {
+  --vp-c-brand-1: #818CF8;
+  --vp-c-brand-2: #6366F1;
+  --vp-c-brand-3: #A5B4FC;
+  --vp-c-brand-soft: rgba(129, 140, 248, 0.12);
+  --vp-c-brand-glow: rgba(129, 140, 248, 0.4);
+
+  --vp-c-bg: #030304; /* Almost Black */
+  --vp-c-bg-alt: #0B0B0D;
+  --vp-c-bg-soft: #141417;
+
+  --vp-c-surface-1: #101012; /* Card Surface */
+  --vp-c-surface-2: #18181B;
+  --vp-c-surface-glass: rgba(16, 16, 18, 0.7);
+
+  --vp-c-text-1: #F9FAFB;
+  --vp-c-text-2: #9CA3AF;
+  --vp-c-text-3: #6B7280;
+
+  --vp-c-border: rgba(255, 255, 255, 0.08);
+  --vp-c-divider: rgba(255, 255, 255, 0.08);
+  --vp-c-gutter: rgba(255, 255, 255, 0.08);
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.6);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 8px 16px -4px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 
+    0 24px 48px -12px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255,255,255,0.08);
+}

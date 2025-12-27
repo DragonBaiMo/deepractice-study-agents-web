@@ -1,0 +1,86 @@
+/* 
+ * sidebar.css - 侧边栏样式
+ * 拆分自: custom.css 第 182-260 行
+ * 职责: 左侧导航侧边栏布局与样式
+ */
+
+/* --- SIDEBAR: UNIFIED & CLEAN (GOLDEN RATIO) --- */
+@media (min-width: 960px) {
+  :root {
+    --vp-sidebar-width: 240px;
+  }
+
+  .VPSidebar {
+    background-color: var(--vp-c-bg-soft) !important;
+    border-right: none !important;
+    padding-left: 0 !important;
+    padding-top: var(--vp-nav-height) !important;
+    width: var(--vp-sidebar-width) !important;
+    backdrop-filter: none;
+    z-index: 10;
+    left: 0 !important; /* 确保靠左 */
+  }
+  
+  .VPSidebar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.03) 20%, rgba(0,0,0,0.03) 80%, transparent);
+  }
+  .dark .VPSidebar::after {
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.03) 20%, rgba(255,255,255,0.03) 80%, transparent);
+  }
+
+  .VPSidebar .nav {
+    padding: 0 16px 0 20px !important; /* 内容往内靠 */
+  }
+}
+
+/* 大屏幕布局 */
+@media (min-width: 1280px) {
+  :root {
+    --vp-sidebar-width: 260px;
+  }
+  
+  .VPSidebar .nav {
+    padding: 0 20px 0 28px !important;
+  }
+}
+
+/* Sidebar Item 样式 */
+.VPSidebarItem.level-0 {
+  padding-bottom: 8px !important;
+}
+
+.VPSidebarItem.level-0 .text {
+  font-weight: 700 !important;
+  color: var(--vp-c-text-1) !important;
+  font-size: 13px !important;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.VPSidebarItem.level-1 .text,
+.VPSidebarItem.level-2 .text {
+  font-size: 14px !important;
+  line-height: 24px !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+/* 选中态优化 */
+.VPSidebarItem.is-active > .item > .link, 
+.VPSidebarItem.is-active > .item > .text {
+  color: var(--vp-c-brand-1) !important;
+  font-weight: 600;
+}
+
+.VPSidebarItem.is-active > .item > .link::before {
+  /* 微调指示线位置 */
+  left: -20px; 
+  width: 2px;
+  background-color: var(--vp-c-brand-1);
+}

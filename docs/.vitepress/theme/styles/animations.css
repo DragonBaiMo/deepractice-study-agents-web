@@ -1,0 +1,30 @@
+/* 
+ * animations.css - 动画定义
+ * 拆分自: custom.css 第 722-750 行
+ * 职责: 关键帧动画、过渡效果
+ */
+
+/* Animations */
+@keyframes fade-in-up {
+  from { 
+    opacity: 0; 
+    transform: translateY(16px); /* 稍微减小位移，更细腻 */
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* 初始隐藏状态 */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.reveal-visible {
+  animation: fade-in-up 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  /* 解决动画结束后 fill-mode 可能导致的问题 */
+  opacity: 1; 
+  transform: translateY(0);
+}

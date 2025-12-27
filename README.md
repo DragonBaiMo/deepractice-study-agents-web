@@ -2,7 +2,7 @@
 
 > 基于 VitePress 构建的企业级教学资料网站
 
-[![Deploy](https://github.com/deepractice/deepractice-agents/actions/workflows/deploy.yml/badge.svg)](https://github.com/deepractice/deepractice-agents/actions/workflows/deploy.yml)
+[![Deploy](https://github.com/yejunhao159/deepractice-agents/actions/workflows/deploy.yml/badge.svg)](https://github.com/yejunhao159/deepractice-agents/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 📖 简介
@@ -26,7 +26,7 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/deepractice/deepractice-agents.git
+git clone https://github.com/yejunhao159/deepractice-agents.git
 cd deepractice-agents/docs-site
 
 # 安装依赖
@@ -182,7 +182,7 @@ console.log('Hello, World!')
 
 - [VitePress](https://vitepress.dev/) - 静态站点生成器
 - [Datawhale Hello-Agents](https://github.com/datawhalechina/hello-agents) - 原始教程内容
-- [Deepractice](https://github.com/deepractice) - 技术支持
+- [Deepractice](https://github.com/yejunhao159/deepractice-agents) - 技术支持
 
 ---
 

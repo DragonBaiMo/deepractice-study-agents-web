@@ -154,6 +154,12 @@ body::before {
   letter-spacing: -0.02em;
 }
 
+/* Force Rounded Logo */
+.VPNavBarTitle .logo,
+.VPHero .image img {
+  border-radius: 50% !important;
+}
+
 /* --- SEARCH: ETHEREAL INPUT --- */
 /* 搜索按钮容器重置 */
 .VPNavBarSearch {
