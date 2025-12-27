@@ -5,6 +5,7 @@ export default defineConfig({
   title: 'Deepractice AI',
   description: '构建下一代智能体系统的深度实践指南',
   lang: 'zh-CN',
+  base: '/deepractice-study-agents-web/',
   
   head: [
     ['link', { rel: 'icon', href: '/logo.png', type: 'image/png' }],
