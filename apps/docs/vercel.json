@@ -1,0 +1,6 @@
+{
+  "installCommand": "cd ../.. && pnpm install",
+  "buildCommand": "cd ../.. && pnpm build --filter=@deepractice/docs",
+  "outputDirectory": ".next",
+  "framework": "nextjs"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@deepractice/config",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    "./eslint": "./eslint.config.mjs",
+    "./typescript": "./tsconfig.json"
+  }
+}

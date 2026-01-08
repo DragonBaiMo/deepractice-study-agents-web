@@ -1,0 +1,76 @@
+---
+title: 智能体工程化实战
+description: 从基础认知到生产级架构，系统化学习智能体开发
+---
+
+# 智能体工程化实战
+
+欢迎来到 **Deepractice AI** 智能体学习平台。本教程将带你从零开始，系统化地学习 AI 智能体的设计与开发。
+
+## 你将学到什么
+
+<Alert type="tip" title="学习目标">
+完成本教程后，你将能够：
+- 理解智能体的核心概念与工作原理
+- 掌握 ReAct、Plan-and-Solve、Reflection 等核心范式
+- 使用 PromptX 和 AgentX 框架构建生产级智能体
+- 设计和实现多智能体协作系统
+</Alert>
+
+## 课程结构
+
+本教程分为四个部分：
+
+### 第一部分：基础认知
+
+建立对智能体和大语言模型的基本理解。
+
+- [第一章：初识智能体](/docs/chapter-01) - 什么是智能体？它如何工作？
+- [第二章：LLM 基础](/docs/chapter-02) - 大语言模型的核心能力
+- [第三章：提示词工程](/docs/chapter-03) - 与 LLM 有效沟通的艺术
+
+### 第二部分：核心范式
+
+掌握构建智能体的关键设计模式。
+
+- [第四章：ReAct 范式](/docs/chapter-04) - 推理与行动的交替循环
+- [第五章：Plan-and-Solve](/docs/chapter-05) - 先规划后执行
+- [第六章：Reflection](/docs/chapter-06) - 自我反思与迭代优化
+
+### 第三部分：框架实战
+
+使用专业框架构建智能体。
+
+- [第七章：PromptX 框架](/docs/chapter-07) - 结构化提示词工程
+- [第八章：AgentX 实战](/docs/chapter-08) - 智能体开发框架
+- [第九章：Monogent 架构](/docs/chapter-09) - 单智能体认知架构
+
+### 第四部分：高级主题
+
+深入探索智能体的高级能力。
+
+- [第十章：记忆系统](/docs/chapter-10) - 短期与长期记忆
+- [第十一章：工具使用](/docs/chapter-11) - 扩展智能体能力
+- [第十二章：多智能体系统](/docs/chapter-12) - 协作与分工
+
+## 开始学习
+
+准备好了吗？让我们从[第一章：初识智能体](/docs/chapter-01)开始你的智能体学习之旅。
+
+<CodePlayground
+  title="Hello Agent"
+  code={`// 一个简单的智能体示例
+const agent = {
+  name: "HelloAgent",
+  think: (input) => \`思考: \${input}\`,
+  act: (thought) => \`行动: 基于 "\${thought}" 执行任务\`
+};
+
+const input = "如何学习智能体开发？";
+const thought = agent.think(input);
+const action = agent.act(thought);
+
+console.log(thought);
+console.log(action);
+`}
+/>

@@ -1,0 +1,103 @@
+---
+title: 什么是智能体
+description: 理解 AI 智能体的定义、核心特征与基本概念
+---
+
+# 什么是智能体
+
+## 定义
+
+**智能体（Agent）** 是一个能够自主感知环境、做出决策并采取行动以实现特定目标的系统。
+
+<Alert type="note" title="核心特征">
+智能体的三个核心特征：
+1. **自主性** - 无需人工干预即可运行
+2. **目标导向** - 围绕特定目标进行决策
+3. **环境交互** - 能够感知并影响外部环境
+</Alert>
+
+## 智能体 vs 传统程序
+
+| 特性 | 传统程序 | 智能体 |
+|------|----------|--------|
+| 执行方式 | 预定义流程 | 动态决策 |
+| 输入处理 | 固定格式 | 自然语言理解 |
+| 错误处理 | 预设异常 | 自适应调整 |
+| 扩展性 | 需要重新编程 | 可通过工具扩展 |
+
+## 一个简单的例子
+
+让我们通过代码来理解智能体的基本结构：
+
+<CodePlayground
+  title="简单智能体示例"
+  code={`// 定义一个简单的智能体
+class SimpleAgent {
+  constructor(name) {
+    this.name = name;
+    this.memory = [];
+  }
+
+  // 感知：接收输入
+  perceive(input) {
+    console.log(\`[\${this.name}] 感知到: \${input}\`);
+    return input;
+  }
+
+  // 思考：处理信息
+  think(perception) {
+    const thought = \`分析 "\${perception}" 并制定计划\`;
+    console.log(\`[\${this.name}] 思考: \${thought}\`);
+    this.memory.push({ perception, thought });
+    return thought;
+  }
+
+  // 行动：执行任务
+  act(thought) {
+    const action = \`执行基于 "\${thought}" 的行动\`;
+    console.log(\`[\${this.name}] 行动: \${action}\`);
+    return action;
+  }
+
+  // 运行一个完整循环
+  run(input) {
+    const perception = this.perceive(input);
+    const thought = this.think(perception);
+    const action = this.act(thought);
+    return { perception, thought, action };
+  }
+}
+
+// 创建并运行智能体
+const agent = new SimpleAgent("学习助手");
+agent.run("帮我理解什么是智能体");
+`}
+/>
+
+## 智能体的组成部分
+
+一个完整的智能体通常包含以下组件：
+
+```
+┌─────────────────────────────────────────┐
+│              智能体 (Agent)              │
+├─────────────────────────────────────────┤
+│  ┌─────────┐  ┌─────────┐  ┌─────────┐  │
+│  │  感知器  │  │  推理器  │  │  执行器  │  │
+│  │ Sensor  │  │ Reasoner│  │ Actuator│  │
+│  └────┬────┘  └────┬────┘  └────┬────┘  │
+│       │            │            │       │
+│       ▼            ▼            ▼       │
+│  ┌─────────────────────────────────┐    │
+│  │         记忆系统 (Memory)        │    │
+│  └─────────────────────────────────┘    │
+│                                         │
+│  ┌─────────────────────────────────┐    │
+│  │         工具集 (Tools)           │    │
+│  └─────────────────────────────────┘    │
+└─────────────────────────────────────────┘
+```
+
+## 下一步
+
+理解了智能体的基本概念后，让我们深入了解[智能体如何工作](/docs/chapter-01/how-agent-works)。

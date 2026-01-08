@@ -1,0 +1,14 @@
+{
+  "docs": {
+    "title": "文档",
+    "type": "page"
+  },
+  "learning-map": {
+    "title": "学习地图",
+    "type": "page"
+  },
+  "resources": {
+    "title": "资源库",
+    "type": "page"
+  }
+}
