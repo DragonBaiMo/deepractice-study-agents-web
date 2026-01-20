@@ -1,0 +1,58 @@
+# 变更摘要：文档结构重构（文件名英文化）与 UI 设计系统升级（Tailwind v4 + 新视觉风格）。
+
+## 文件：apps/docs/src/styles/globals.css
+### L1 [HIGH] 缺失关键 CSS 变量与动画定义
+组件代码中大量使用了未定义的工具类和变量，这将导致 UI 样式（阴影、动画、缓动）失效。
+**缺失项包括：**
+1. `shadow-elevation-2`, `shadow-elevation-3` (在 `card.tsx` 中使用)
+2. `ease-spring` (在 `button.tsx` 中使用)
+3. `animate-fade-in-up`, `animate-float`, `animate-spin` (在 `hero.tsx` / `features.tsx` 中使用)
+4. `shadow-glow-sm`, `shadow-glow-lg` (在 `bento-grid.tsx` 等中使用)
+
+建议在 `globals.css` 中补充这些定义。以下是基于代码意图的修复补丁示例：
+
+```diff
+  @theme {
+    /* ... existing config ... */
+    
++   /* Animations */
++   --animate-fade-in-up: fade-in-up 0.5s ease-out forwards;
++   --animate-float: float 6s ease-in-out infinite;
++   
++   /* Shadows */
++   --shadow-elevation-2: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
++   --shadow-elevation-3: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
++   --shadow-glow-sm: 0 0 15px -3px var(--color-brand-500);
++   --shadow-glow-lg: 0 0 30px -5px var(--color-brand-500);
++
++   /* Transitions */
++   --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
++ @keyframes fade-in-up {
++   0% { opacity: 0; transform: translateY(20px); }
++   100% { opacity: 1; transform: translateY(0); }
++ }
++
++ @keyframes float {
++   0%, 100% { transform: translateY(0); }
++   50% { transform: translateY(-10px); }
++ }
+```
+
+## 文件：apps/docs/src/app/layout.tsx
+### L95：[LOW] 遗留调试代码
+存在 `console.log` 打印 `pageMap`，这类调试信息不应提交到生产代码中。
+
+```diff
+-  // Debug: 打印 pageMap 到控制台
+-  console.log('[DEBUG] pageMap length:', pageMap?.length)
+-  console.log('[DEBUG] pageMap:', JSON.stringify(pageMap, null, 2).slice(0, 2000))
+```
+
+## 业务逻辑变更已确认为无缺陷实现
+代码本身实现正确，无 bug。以下是受影响的行为变化（业务决策的结果，不需修复）：
+
+- 文件：`apps/docs/content/chapter-07/*.mdx`
+  变更：文件名从中文改为英文（如 `react范式.mdx` -> `react-paradigm.mdx`），`_meta.json` 已同步更新。
+  注意点：旧的外部链接（如果存在）将失效，需确认是否有重定向需求（通常文档站内部重组不视为 bug）。

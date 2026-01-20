@@ -1,6 +1,5 @@
 import { generateStaticParamsFor, importPage } from 'nextra/pages'
-import { motion } from 'framer-motion'
-import { Wrapper } from './wrapper'
+import { useMDXComponents } from '../../../../mdx-components'
 
 export const generateStaticParams = generateStaticParamsFor('mdxPath')
 
@@ -14,13 +13,15 @@ interface PageProps {
   params: Promise<{ mdxPath?: string[] }>
 }
 
+const Wrapper = useMDXComponents().wrapper!
+
 export default async function Page(props: PageProps) {
   const params = await props.params
-  const { default: MDXContent } = await importPage(params.mdxPath)
+  const { default: MDXContent, toc, metadata } = await importPage(params.mdxPath)
 
   return (
-    <Wrapper>
-      <MDXContent />
+    <Wrapper toc={toc} metadata={metadata}>
+      <MDXContent {...props} params={params} />
     </Wrapper>
   )
 }

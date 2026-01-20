@@ -71,14 +71,14 @@ const navbar = (
 )
 
 const footer = (
-  <Footer className="border-t border-surface-200/50 bg-surface-50/50 backdrop-blur-sm dark:border-surface-300/20 dark:bg-surface-100/30">
+  <Footer className="border-t border-surface-200 bg-surface-50 dark:border-surface-800 dark:bg-surface-900">
     <div className="mx-auto max-w-7xl px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
-      <div className="flex items-center gap-2 text-text-secondary">
-        <span className="font-semibold text-text-primary">Deepractice AI</span>
+      <div className="flex items-center gap-2 text-surface-600 dark:text-surface-400">
+        <span className="font-semibold text-surface-900 dark:text-surface-100">Deepractice AI</span>
         <span className="text-surface-300">|</span>
         <span className="text-sm">构建下一代智能体系统</span>
       </div>
-      <p className="text-center text-sm text-text-muted font-mono">
+      <p className="text-center text-sm text-surface-500 dark:text-surface-500 font-mono">
         MIT {new Date().getFullYear()} © Deepractice AI
       </p>
     </div>
@@ -90,6 +90,8 @@ export default async function RootLayout({
 }: {
   children: ReactNode
 }) {
+  const pageMap = await getPageMap('/docs')
+
   return (
     <html lang="zh-CN" dir="ltr" suppressHydrationWarning>
       <Head>
@@ -104,19 +106,21 @@ export default async function RootLayout({
           rel="stylesheet"
         />
       </Head>
-      <body className="bg-surface-50 text-text-primary antialiased dark:bg-surface-0 min-h-screen">
+      <body className="bg-surface-0 text-surface-900 antialiased dark:bg-surface-0 min-h-screen">
         <Layout
           navbar={navbar}
-          pageMap={await getPageMap()}
+          pageMap={pageMap}
           docsRepositoryBase="https://github.com/deepractice/deepractice-study-agents-web/tree/main/deepractice-platform/apps/docs"
           footer={footer}
           sidebar={{
             defaultMenuCollapseLevel: 1,
             toggleButton: true,
+            autoCollapse: true,
           }}
           toc={{
             backToTop: true,
-            title: '目录',
+            title: '页面导航',
+            float: true,
           }}
           editLink="在 GitHub 上编辑此页"
           feedback={{
