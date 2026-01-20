@@ -2,6 +2,10 @@
   "name": "@deepractice/config",
   "version": "1.0.0",
   "private": true,
+  "dependencies": {
+    "@eslint/js": "^9.20.0",
+    "typescript-eslint": "^8.23.0"
+  },
   "exports": {
     "./eslint": "./eslint.config.mjs",
     "./typescript": "./tsconfig.json"

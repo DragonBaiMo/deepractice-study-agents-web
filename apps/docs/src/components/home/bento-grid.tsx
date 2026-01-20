@@ -28,7 +28,7 @@ export function BentoGrid() {
                 </div>
                 <h3 className="text-2xl font-bold">AgentX 核心架构</h3>
                 <p className="text-surface-500 dark:text-surface-400 mt-2 max-w-md">
-                  深入剖析智能体的 "大脑" (LLM)、"感知" (Perception)、"记忆" (Memory) 与 "行动" (Action) 四大基石。
+                  深入剖析智能体的 &quot;大脑&quot; (LLM)、&quot;感知&quot; (Perception)、&quot;记忆&quot; (Memory) 与 &quot;行动&quot; (Action) 四大基石。
                 </p>
               </CardHeader>
               <CardContent className="absolute bottom-0 right-0 p-0 w-1/2 h-full hidden md:flex items-end justify-end pointer-events-none">
@@ -113,7 +113,7 @@ export function BentoGrid() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-surface-500 dark:text-surface-400">
-                  赋予智能体"双手"。Function Calling 标准范式、API 编排与沙箱环境安全执行。
+                  赋予智能体&quot;双手&quot;。Function Calling 标准范式、API 编排与沙箱环境安全执行。
                 </p>
               </CardContent>
             </Card>

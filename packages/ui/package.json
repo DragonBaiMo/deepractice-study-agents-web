@@ -9,16 +9,17 @@
     "./*": "./src/*.tsx"
   },
   "scripts": {
-    "lint": "eslint src/",
+    "lint": "pnpm exec eslint ./src --ext .ts,.tsx --config ./eslint.config.mjs",
     "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@deepractice/config": "workspace:*",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.0"
   },
   "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
-  },
-  "devDependencies": {
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "typescript": "^5.7.0"
   }
 }
