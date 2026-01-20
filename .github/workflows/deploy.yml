@@ -25,22 +25,17 @@ jobs:
         with:
           node-version: '20'
           cache: 'pnpm'
-          cache-dependency-path: 'deepractice-platform/pnpm-lock.yaml'
 
       - name: Install dependencies
-        working-directory: deepractice-platform
         run: pnpm install --frozen-lockfile
 
       - name: Type check
-        working-directory: deepractice-platform
         run: pnpm type-check
 
       - name: Lint
-        working-directory: deepractice-platform
         run: pnpm lint
 
       - name: Build
-        working-directory: deepractice-platform
         run: pnpm build
 
   deploy:
@@ -57,4 +52,4 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          working-directory: deepractice-platform/apps/docs
+          working-directory: apps/docs
