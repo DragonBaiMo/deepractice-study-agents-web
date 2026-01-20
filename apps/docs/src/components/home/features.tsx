@@ -1,4 +1,6 @@
+
 import { Card } from '@deepractice/ui/card'
+import { IconBrain, IconRocket, IconTool } from '@/components/icons/common'
 
 export function Features() {
   return (
@@ -55,13 +57,19 @@ export function Features() {
 
                {/* Orbiting Elements */}
                <div className="absolute w-72 h-72 rounded-full border border-dashed border-surface-300 dark:border-surface-600/30 animate-[spin_20s_linear_infinite]">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-xl bg-surface-0 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 shadow-lg flex items-center justify-center text-lg rotate-[0deg] animate-[spin_20s_linear_infinite_reverse]">🧠</div>
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-xl bg-surface-0 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 shadow-lg flex items-center justify-center text-lg rotate-[0deg] animate-[spin_20s_linear_infinite_reverse]">
+                    <IconBrain className="w-5 h-5 text-brand-600 dark:text-brand-400" />
+                  </div>
                </div>
                <div className="absolute w-96 h-96 rounded-full border border-dashed border-surface-300 dark:border-surface-600/30 animate-[spin_25s_linear_infinite_reverse]">
-                   <div className="absolute bottom-1/4 left-0 w-10 h-10 rounded-xl bg-surface-0 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 shadow-lg flex items-center justify-center text-lg rotate-[45deg] animate-[spin_25s_linear_infinite]">🛠️</div>
+                   <div className="absolute bottom-1/4 left-0 w-10 h-10 rounded-xl bg-surface-0 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 shadow-lg flex items-center justify-center text-lg rotate-[45deg] animate-[spin_25s_linear_infinite]">
+                     <IconTool className="w-5 h-5 text-brand-600 dark:text-brand-400" />
+                   </div>
                </div>
                <div className="absolute w-[28rem] h-[28rem] rounded-full border border-dashed border-surface-200 dark:border-surface-700/20 animate-[spin_35s_linear_infinite]">
-                   <div className="absolute right-0 top-1/3 w-10 h-10 rounded-xl bg-surface-0 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 shadow-lg flex items-center justify-center text-lg rotate-[-90deg] animate-[spin_35s_linear_infinite_reverse]">🚀</div>
+                   <div className="absolute right-0 top-1/3 w-10 h-10 rounded-xl bg-surface-0 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 shadow-lg flex items-center justify-center text-lg rotate-[-90deg] animate-[spin_35s_linear_infinite_reverse]">
+                     <IconRocket className="w-5 h-5 text-brand-600 dark:text-brand-400" />
+                   </div>
                </div>
 
             </Card>
@@ -72,3 +80,4 @@ export function Features() {
     </section>
   )
 }
+

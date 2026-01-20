@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ========================================================================
-   DEEPRACTICE DESIGN SYSTEM | VERSION: RESET (Color Only)
+   DEEPRACTICE DESIGN SYSTEM | VERSION: 2025 POLISH
    ======================================================================== */
 
 @theme {
@@ -26,6 +26,9 @@
   --color-surface-700: #334155;
   --color-surface-800: #1e293b;
   --color-surface-900: #0f172a;
+  
+  /* Additional Dark Shades */
+  --color-surface-950: #020617;
 
   /* Typography */
   --font-sans: "Inter", system-ui, sans-serif;
@@ -76,149 +79,31 @@
   --color-surface-200: #2d2d30;
   --color-surface-700: #94a3b8;
   --color-surface-900: #f8fafc;
+  --color-surface-950: #020617;
 
   --color-brand-500: #60a5fa;
 }
 
 /* ========================================================================
-   LAYOUT IMPROVEMENTS
+   GLOBAL UTILITIES
    ======================================================================== */
 
-/* Sidebar styling - VitePress-like appearance */
-aside[class*="sidebar"] {
-  --nextra-sidebar-width: 280px;
-  border-right: 1px solid var(--color-surface-200);
-  background-color: var(--color-surface-50);
-}
-.dark aside[class*="sidebar"] {
-  border-color: var(--color-surface-200);
-  background-color: var(--color-surface-100);
-}
-
-/* Sidebar links styling */
-aside[class*="sidebar"] a {
-  color: var(--color-surface-700);
-  transition: color 0.15s ease;
-}
-aside[class*="sidebar"] a:hover {
-  color: var(--color-brand-600);
-}
-aside[class*="sidebar"] a[aria-current="page"],
-aside[class*="sidebar"] a.active {
-  color: var(--color-brand-600);
-  font-weight: 500;
-}
-.dark aside[class*="sidebar"] a {
-  color: var(--color-surface-300);
-}
-.dark aside[class*="sidebar"] a:hover,
-.dark aside[class*="sidebar"] a[aria-current="page"],
-.dark aside[class*="sidebar"] a.active {
-  color: var(--color-brand-400);
-}
-
-/* TOC (Table of Contents) styling - VitePress-like appearance */
-nav[class*="toc"] {
-  --nextra-toc-width: 220px;
-  border-left: 1px solid var(--color-surface-200);
-  padding-left: 1rem;
-}
-.dark nav[class*="toc"] {
-  border-color: var(--color-surface-200);
-}
-
-/* TOC title */
-nav[class*="toc"] > p:first-child,
-nav[class*="toc"] > div:first-child {
-  font-weight: 600;
-  font-size: 0.875rem;
-  color: var(--color-surface-900);
-  margin-bottom: 0.75rem;
-}
-.dark nav[class*="toc"] > p:first-child,
-.dark nav[class*="toc"] > div:first-child {
-  color: var(--color-surface-100);
-}
-
-/* TOC links */
-nav[class*="toc"] a {
-  color: var(--color-surface-600);
-  font-size: 0.8125rem;
-  line-height: 1.75;
-  transition: color 0.15s ease;
-}
-nav[class*="toc"] a:hover {
-  color: var(--color-brand-600);
-}
-.dark nav[class*="toc"] a {
-  color: var(--color-surface-400);
-}
-.dark nav[class*="toc"] a:hover {
-  color: var(--color-brand-400);
-}
-
-/* Content area styling */
-article[class*="content"],
-main[class*="content"] {
-  max-width: 48rem;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-}
-
-/* Improve page transition performance */
-[class*="transition-hidden"] {
-  opacity: 1 !important;
-}
-
-/* --- MINIMAL TYPOGRAPHY POLISH (Safe) --- */
-/* Only styling the content text itself, absolutely NO layout/container styles */
-
-.nx-prose h1 {
-  letter-spacing: -0.02em;
-  color: var(--color-surface-900);
-}
-
-.nx-prose p {
-  line-height: 1.75;
-  color: #334155;
-}
-.dark .nx-prose p {
-  color: #cbd5e1;
-}
-
-.nx-prose a {
-  color: var(--color-brand-600);
-  text-decoration: none;
-  font-weight: 500;
-}
-.dark .nx-prose a {
-  color: var(--color-brand-400);
-}
-
-/* Code Blocks (Visuals Only) */
-.nx-prose pre {
-  border-radius: 8px !important;
-  border: 1px solid rgba(0,0,0,0.1);
-}
-
-/* Inline Code (Visuals Only) */
-.nx-prose :not(pre) > code {
-  background-color: var(--color-surface-100) !important;
-  color: #ea580c !important; 
-  border-radius: 4px;
-  padding: 0.2em 0.4em;
-}
-.dark .nx-prose :not(pre) > code {
-  background-color: rgba(255,255,255,0.1) !important;
-  color: #fdba74 !important;
-}
-
-/* Utilities */
 .text-gradient {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(to right, var(--color-brand-600), var(--color-brand-400));
+}
+
+.text-gradient-brand {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--color-brand-600), var(--color-brand-400));
+}
+
+.dark .text-gradient-brand {
+  background-image: linear-gradient(to right, var(--color-brand-400), var(--color-brand-300));
 }
 
 .matte-card {
@@ -230,4 +115,206 @@ main[class*="content"] {
 .dark .matte-card {
   background-color: var(--color-surface-100);
   border-color: var(--color-surface-200);
+}
+
+/* ========================================================================
+   CONTENT TYPOGRAPHY & LAYOUT
+   ======================================================================== */
+
+/* Sidebar styling */
+aside[class*="sidebar"] {
+  --nextra-sidebar-width: 280px;
+  border-right: 1px solid var(--color-surface-200);
+  background-color: var(--color-surface-50);
+}
+.dark aside[class*="sidebar"] {
+  border-color: var(--color-surface-800);
+  background-color: var(--color-surface-950);
+}
+
+/* Sidebar links */
+aside[class*="sidebar"] a {
+  color: var(--color-surface-700);
+  transition: color 0.15s ease, background-color 0.15s ease;
+  border-radius: 6px;
+}
+aside[class*="sidebar"] a:hover {
+  color: var(--color-brand-600);
+  background-color: var(--color-surface-100);
+}
+aside[class*="sidebar"] a[aria-current="page"],
+aside[class*="sidebar"] a.active {
+  color: var(--color-brand-600);
+  font-weight: 600;
+  background-color: var(--color-brand-50);
+}
+.dark aside[class*="sidebar"] a {
+  color: var(--color-surface-400);
+}
+.dark aside[class*="sidebar"] a:hover {
+  color: var(--color-brand-400);
+  background-color: var(--color-surface-800);
+}
+.dark aside[class*="sidebar"] a[aria-current="page"],
+.dark aside[class*="sidebar"] a.active {
+  color: var(--color-brand-400);
+  background-color: rgba(96, 165, 250, 0.1);
+}
+
+/* TOC (Table of Contents) */
+nav[class*="toc"] {
+  --nextra-toc-width: 240px;
+  border-left: 1px solid var(--color-surface-200);
+  padding-left: 1.5rem;
+}
+.dark nav[class*="toc"] {
+  border-color: var(--color-surface-800);
+}
+
+/* TOC title */
+nav[class*="toc"] > p:first-child,
+nav[class*="toc"] > div:first-child {
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: -0.01em;
+  color: var(--color-surface-900);
+  margin-bottom: 1rem;
+}
+.dark nav[class*="toc"] > p:first-child,
+.dark nav[class*="toc"] > div:first-child {
+  color: var(--color-surface-100);
+}
+
+/* TOC links */
+nav[class*="toc"] a {
+  color: var(--color-surface-500);
+  font-size: 0.875rem;
+  line-height: 1.8;
+  transition: color 0.15s ease;
+}
+nav[class*="toc"] a:hover {
+  color: var(--color-brand-600);
+}
+nav[class*="toc"] a.active {
+  color: var(--color-brand-600);
+  font-weight: 500;
+}
+.dark nav[class*="toc"] a {
+  color: var(--color-surface-400);
+}
+.dark nav[class*="toc"] a:hover,
+.dark nav[class*="toc"] a.active {
+  color: var(--color-brand-400);
+}
+
+/* Content area */
+article[class*="content"],
+main[class*="content"] {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* PROSE TYPOGRAPHY */
+.nx-prose h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--color-surface-900);
+  margin-bottom: 2rem;
+}
+.dark .nx-prose h1 {
+  color: var(--color-surface-50);
+}
+
+.nx-prose h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--color-surface-900);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.dark .nx-prose h2 {
+  color: var(--color-surface-100);
+}
+
+.nx-prose h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: var(--color-surface-900);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.dark .nx-prose h3 {
+  color: var(--color-surface-100);
+}
+
+.nx-prose p {
+  line-height: 1.8;
+  color: var(--color-surface-700);
+  margin-bottom: 1.25rem;
+}
+.dark .nx-prose p {
+  color: var(--color-surface-300);
+}
+
+.nx-prose a {
+  color: var(--color-brand-600);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+.nx-prose a:hover {
+  border-bottom-color: var(--color-brand-600);
+}
+.dark .nx-prose a {
+  color: var(--color-brand-400);
+}
+.dark .nx-prose a:hover {
+  border-bottom-color: var(--color-brand-400);
+}
+
+/* Code Blocks */
+.nx-prose pre {
+  border-radius: 12px !important;
+  border: 1px solid var(--color-surface-200);
+  background-color: var(--color-surface-50) !important;
+  box-shadow: none !important;
+  margin: 1.5rem 0;
+}
+.dark .nx-prose pre {
+  border-color: var(--color-surface-800);
+  background-color: var(--color-surface-950) !important;
+}
+
+/* Inline Code */
+.nx-prose :not(pre) > code {
+  background-color: var(--color-surface-100) !important;
+  color: var(--color-surface-900) !important; 
+  border: 1px solid var(--color-surface-200);
+  border-radius: 6px;
+  padding: 0.2em 0.4em;
+  font-size: 0.875em;
+  font-weight: 500;
+}
+.dark .nx-prose :not(pre) > code {
+  background-color: rgba(255,255,255,0.05) !important;
+  color: var(--color-surface-200) !important;
+  border-color: rgba(255,255,255,0.1);
+}
+
+/* Images */
+.nx-prose img {
+  border-radius: 12px;
+  border: 1px solid var(--color-surface-200);
+  box-shadow: var(--shadow-paper);
+}
+.dark .nx-prose img {
+  border-color: var(--color-surface-800);
+  opacity: 0.9;
 }
