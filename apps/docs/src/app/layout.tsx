@@ -1,4 +1,4 @@
-import { Footer, Layout, Navbar } from 'nextra-theme-docs'
+import { Layout, Navbar } from 'nextra-theme-docs'
 import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
@@ -73,7 +73,9 @@ const navbar = (
 )
 
 const footer = (
-  <Footer className="relative border-t border-surface-200/60 bg-surface-50/60 dark:border-surface-800/50 dark:bg-surface-950/40">
+  <footer
+    className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] border-t border-surface-200/60 bg-surface-50/30 dark:border-surface-800/50 dark:bg-surface-950/10"
+  >
     <div className="absolute inset-0 opacity-70 pointer-events-none bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px]" />
 
     <div className="relative mx-auto w-full max-w-7xl px-6 py-12">
@@ -155,7 +157,7 @@ const footer = (
         </p>
       </div>
     </div>
-  </Footer>
+  </footer>
 )
 
 export default async function RootLayout({
@@ -179,7 +181,7 @@ export default async function RootLayout({
           rel="stylesheet"
         />
       </Head>
-      <body className="bg-surface-0 text-surface-900 antialiased dark:bg-surface-0 min-h-screen">
+      <body className="bg-surface-0 text-surface-900 antialiased dark:bg-surface-0 min-h-screen overflow-x-hidden">
         <Layout
           navbar={navbar}
           pageMap={pageMap}
