@@ -60,6 +60,9 @@ class DeepracticeContentSync:
         self.dry_run = dry_run
         self.full_sync = full_sync
 
+        # 根目录额外页面（非章节）
+        self.root_pages_meta: Dict[str, str] = {}
+
         # 统计
         self.stats = {
             "scanned": 0,
@@ -177,6 +180,22 @@ class DeepracticeContentSync:
             "Monogent架构深入": "monogent-deep",
             "Experience与Evolution实战": "experience-evolution",
             "七阶段管道实现": "seven-stage-pipeline",
+
+            # Chapter 07 (paradigms)
+            "环境准备与基础工具": "environment-setup",
+            "ReAct范式": "react-pattern",
+            "Plan-and-Solve范式": "plan-and-solve",
+            "Reflection范式": "reflection",
+            "范式与框架对照": "paradigm-framework-compare",
+
+            # Chapter 09 extras
+            "双基质策略设计": "dual-matrix-strategy",
+            "与AgentX-PromptX集成": "agentx-promptx-integration",
+
+            # Root pages
+            "前言": "preface",
+            "教材章节重构建议-完整版": "restructure-suggestions-full",
+            "章节重构建议": "restructure-suggestions",
         }
 
         if title in slug_map:
@@ -189,6 +208,34 @@ class DeepracticeContentSync:
         slug = slug.strip('-')
 
         return slug if slug else "page"
+
+    def sync_root_pages(self) -> None:
+        """同步源 docs 根目录下的非章节 Markdown 页面"""
+        # 只处理根目录的 .md，跳过 index.md（由 sync_index 处理）
+        for md_file in sorted(self.source_dir.glob("*.md")):
+            self.stats["scanned"] += 1
+
+            if md_file.name.lower() == "index.md":
+                continue
+
+            title = Path(md_file.name).stem
+            slug = self.generate_slug(title)
+            target = self.target_dir / f"{slug}.mdx"
+
+            try:
+                content = self.convert_md_to_mdx(md_file, title)
+
+                if self.dry_run:
+                    self.log(f"[DRY-RUN] {md_file.name} -> {target.name}", "DRY")
+                else:
+                    target.write_text(content, encoding="utf-8")
+                    self.log(f"{md_file.name} -> {target.name}")
+
+                self.root_pages_meta[slug] = title
+                self.stats["updated"] += 1
+            except Exception as e:
+                self.stats["errors"] += 1
+                self.log(f"错误 {md_file.name}: {e}", "ERROR")
 
     def sanitize_for_mdx(self, content: str) -> str:
         """清理内容使其兼容 MDX"""
@@ -433,6 +480,10 @@ description: "{description}"
         """生成根目录的 _meta.json"""
         meta = {"index": "课程首页"}
 
+        # 根目录页面（除 index 以外）
+        for slug, title in sorted(self.root_pages_meta.items()):
+            meta[slug] = title
+
         # 添加所有存在的章节
         for i in range(1, 17):
             chapter_name = f"chapter-{str(i).zfill(2)}"
@@ -511,6 +562,7 @@ description: "{description}"
         # 同步根文件
         print("\n[根目录] 同步中...")
         self.sync_index()
+        self.sync_root_pages()
         self.generate_root_meta()
 
         # 报告
@@ -533,12 +585,24 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="预览模式")
     parser.add_argument("--full", action="store_true", help="全量同步")
     parser.add_argument("--chapter", type=str, help="只同步指定章节")
+    parser.add_argument(
+        "--source",
+        type=str,
+        help="源 docs 目录路径（例如 .tmp/deepractice-agents/docs）"
+    )
+    parser.add_argument(
+        "--target",
+        type=str,
+        help="目标 content 目录路径（默认: apps/docs/content）"
+    )
     args = parser.parse_args()
 
     # 路径配置
     script_dir = Path(__file__).parent
-    source_dir = Path(r"I:\CustomBuild\Project\deepractice-study-agents-web\deepractice-agents-main\docs")
-    target_dir = script_dir / "content"
+    source_dir = Path(args.source) if args.source else Path(
+        r"I:\CustomBuild\Project\deepractice-study-agents-web\deepractice-agents-main\docs"
+    )
+    target_dir = Path(args.target) if args.target else (script_dir / "content")
 
     syncer = DeepracticeContentSync(
         source_dir=source_dir,

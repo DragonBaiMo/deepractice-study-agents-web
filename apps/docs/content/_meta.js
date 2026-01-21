@@ -45,5 +45,10 @@ export default {
   'chapter-15': '第15章 最佳实践',
   'chapter-16': '第16章 未来展望',
   'learning-map': '学习地图',
-  resources: '资源库'
+  resources: '资源库',
+  '---import': {
+    type: 'separator',
+    title: '导入测试'
+  },
+  'import-agents': 'deepractice-agents（原始 Markdown 导入）'
 }
