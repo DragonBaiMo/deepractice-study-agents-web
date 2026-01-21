@@ -10,7 +10,7 @@ import {
 
 export function BentoGrid() {
   return (
-    <section className="py-24 px-4 md:px-6 relative z-10 border-t border-surface-200/50 dark:border-surface-800/50">
+    <section className="py-24 px-4 md:px-6 relative z-10 border-t border-surface-200/60 bg-surface-50/30 dark:border-surface-800/50 dark:bg-surface-950/10">
       {/* Background decoration to link with section above */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-surface-200 dark:via-surface-800 to-transparent" />
 
@@ -43,7 +43,7 @@ export function BentoGrid() {
                   <div>
                     <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-3">AgentX 核心架构</h3>
                     <p className="text-surface-500 dark:text-surface-400 leading-relaxed">
-                      深入剖析智能体的 "大脑" (LLM)、"感知" (Perception)、"记忆" (Memory) 与 "行动" (Action) 四大基石，构建可进化的认知模型。
+                      深入剖析智能体的 &quot;大脑&quot; (LLM)、&quot;感知&quot; (Perception)、&quot;记忆&quot; (Memory) 与 &quot;行动&quot; (Action) 四大基石，构建可进化的认知模型。
                     </p>
                   </div>
                   <div className="flex items-center gap-2 text-sm font-medium text-brand-600 dark:text-brand-400 group-hover:translate-x-1 transition-transform">
@@ -115,7 +115,7 @@ export function BentoGrid() {
               </div>
               <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-3">Tool Use & API</h3>
               <p className="text-sm text-surface-500 dark:text-surface-400 leading-relaxed">
-                赋予智能体"双手"。Function Calling 标准范式、API 编排与沙箱环境安全执行。
+                赋予智能体&quot;双手&quot;。Function Calling 标准范式、API 编排与沙箱环境安全执行。
               </p>
             </div>
           </Link>
