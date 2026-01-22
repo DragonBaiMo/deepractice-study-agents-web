@@ -1,0 +1,34 @@
+name: Verify Imported Markdown
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Checkout deepractice-agents content
+        uses: actions/checkout@v4
+        with:
+          repository: DragonBaiMo/deepractice-agents
+          path: .tmp/deepractice-agents
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Dry-run sync check
+        run: |
+          python apps/docs/sync_from_source.py \
+            --dry-run \
+            --source .tmp/deepractice-agents/docs \
+            --target apps/docs/content/import-agents

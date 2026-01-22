@@ -602,7 +602,9 @@ def main():
     source_dir = Path(args.source) if args.source else Path(
         r"I:\CustomBuild\Project\deepractice-study-agents-web\deepractice-agents-main\docs"
     )
+    source_dir = source_dir.resolve()
     target_dir = Path(args.target) if args.target else (script_dir / "content")
+    target_dir = target_dir.resolve()
 
     syncer = DeepracticeContentSync(
         source_dir=source_dir,

@@ -21,6 +21,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Checkout deepractice-agents content
+        uses: actions/checkout@v4
+        with:
+          repository: DragonBaiMo/deepractice-agents
+          path: .tmp/deepractice-agents
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
 
@@ -30,8 +36,20 @@ jobs:
           node-version: '20'
           cache: 'pnpm'
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Sync latest markdown content
+        run: |
+          python apps/docs/sync_from_source.py \
+            --full \
+            --source .tmp/deepractice-agents/docs \
+            --target apps/docs/content/import-agents
 
       - name: Type check
         run: pnpm type-check
