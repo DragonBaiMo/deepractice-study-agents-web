@@ -35,7 +35,7 @@ export function Hero() {
 
         {/* Action Dock */}
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          <Link href="/docs">
+          <Link href="/docs/">
             <Button size="lg" className="rounded-full px-8 shadow-glow-sm hover:shadow-glow-lg transition-shadow">
               开始阅读
               <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

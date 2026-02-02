@@ -134,13 +134,13 @@ const footer = (
             GitHub
           </a>
           <Link
-            href="/docs/learning-map"
+            href="/docs/learning-map/"
             className="text-surface-600 hover:text-brand-600 transition-colors dark:text-surface-400 dark:hover:text-brand-400"
           >
             学习地图
           </Link>
           <Link
-            href="/docs/resources"
+            href="/docs/resources/"
             className="text-surface-600 hover:text-brand-600 transition-colors dark:text-surface-400 dark:hover:text-brand-400"
           >
             资源库

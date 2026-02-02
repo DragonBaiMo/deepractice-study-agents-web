@@ -21,6 +21,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       primary: [
         'bg-brand-600 text-white',
         'hover:bg-brand-500 hover:shadow-glow-sm',
+        'dark:bg-brand-500 dark:hover:bg-brand-400',
         'focus-visible:ring-brand-500',
         'shadow-md shadow-brand-500/20'
       ].join(' '),

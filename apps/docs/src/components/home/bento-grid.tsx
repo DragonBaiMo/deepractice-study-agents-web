@@ -30,7 +30,7 @@ export function BentoGrid() {
         <div className="grid grid-cols-1 md:grid-cols-6 gap-6 auto-rows-[320px]">
           
           {/* Card 1: Core Architecture (Large) */}
-          <Link href="/docs/chapter-05" className="md:col-span-4 group relative">
+          <Link href="/docs/chapter-05/" className="md:col-span-4 group relative">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-500/20 to-purple-500/20 rounded-[20px] blur opacity-0 group-hover:opacity-100 transition duration-500" />
             <div className="relative h-full bg-surface-0 dark:bg-surface-900 rounded-2xl border border-surface-200 dark:border-surface-800 overflow-hidden group-hover:border-surface-300 dark:group-hover:border-surface-700 transition-colors">
               <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]" />
@@ -74,7 +74,7 @@ export function BentoGrid() {
           </Link>
 
           {/* Card 2: PromptX */}
-          <Link href="/docs/chapter-07" className="md:col-span-2 group relative">
+          <Link href="/docs/chapter-07/" className="md:col-span-2 group relative">
             <div className="relative h-full bg-surface-0 dark:bg-surface-900 rounded-2xl border border-surface-200 dark:border-surface-800 p-8 transition-all hover:-translate-y-1 hover:shadow-elevation-2">
               <div className="w-10 h-10 rounded-lg bg-surface-100 dark:bg-surface-800 flex items-center justify-center mb-6 text-surface-600 dark:text-surface-400 group-hover:bg-brand-500 group-hover:text-white transition-colors">
                 <IconMessage className="w-5 h-5" />
@@ -90,7 +90,7 @@ export function BentoGrid() {
           </Link>
 
           {/* Card 3: RAG (Vertical) */}
-          <Link href="/docs/chapter-08" className="md:col-span-2 group relative">
+          <Link href="/docs/chapter-08/" className="md:col-span-2 group relative">
             <div className="relative h-full bg-surface-0 dark:bg-surface-900 rounded-2xl border border-surface-200 dark:border-surface-800 p-8 transition-all hover:-translate-y-1 hover:shadow-elevation-2">
               <div className="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mb-6 text-emerald-600 dark:text-emerald-400">
                 <IconDatabase className="w-5 h-5" />
@@ -108,7 +108,7 @@ export function BentoGrid() {
           </Link>
 
           {/* Card 4: Tool Use */}
-          <Link href="/docs/chapter-09" className="md:col-span-2 group relative">
+          <Link href="/docs/chapter-09/" className="md:col-span-2 group relative">
             <div className="relative h-full bg-surface-0 dark:bg-surface-900 rounded-2xl border border-surface-200 dark:border-surface-800 p-8 transition-all hover:-translate-y-1 hover:shadow-elevation-2">
               <div className="w-10 h-10 rounded-lg bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center mb-6 text-amber-600 dark:text-amber-400">
                 <IconApi className="w-5 h-5" />
@@ -121,7 +121,7 @@ export function BentoGrid() {
           </Link>
 
           {/* Card 5: Multi-Agent */}
-          <Link href="/docs/chapter-06" className="md:col-span-2 group relative">
+          <Link href="/docs/chapter-06/" className="md:col-span-2 group relative">
             <div className="relative h-full bg-surface-0 dark:bg-surface-900 rounded-2xl border border-surface-200 dark:border-surface-800 p-8 transition-all hover:-translate-y-1 hover:shadow-elevation-2">
               <div className="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-6 text-purple-600 dark:text-purple-400">
                 <IconUsers className="w-5 h-5" />
